@@ -1,8 +1,5 @@
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
@@ -10,6 +7,7 @@ body {
 :root {
     --bg-color: #000;
 }
+
 
 /*---  SECTION HEADER  ---*/
 
@@ -19,24 +17,33 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 16px;
+    text-align: center;
 }
 
 .logo img {
-    width: 180px;
+    width: 200px;
     height: auto;
+    margin: 5px;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0;
+.nav-principal {
+    margin: 0px 0 15px 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-container:first-child {
+    margin-bottom: 15px; 
 }
 
 .nav-container {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .nav-container a {
@@ -44,7 +51,29 @@ header {
     color: #fff;
 }
 
-.redes-logo.vivo {
+.nav-container li {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container .fa {
+    font-size: 12.5px;
+    margin-right: 2.5px;
+    
+}
+
+.nav-secundario {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.redes-logo {
     font-size: 16px;
     margin-bottom: 8px;
 }
@@ -52,17 +81,35 @@ header {
 .redes-sociales {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.redes-logo {
+    background-color: #FF8DA8;
+    border-radius: 50%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
 .redes-logo a {
-    font-size: 20px;
     color: #fff;
     text-decoration: none;
 }
 
-.redes-logo a:hover {
-    color: #007BFF; /* Cambia esto al color que prefieras */
+/*---  SECTION MAIN  ---*/
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 
 /*---  SECTION FOOTER  ---*/
 
@@ -73,3 +120,39 @@ footer {
     padding: 15px 0;
 }
 
+
+/*---  MEDIA QUERYS  ---*/
+
+@media (max-width: 500px) {
+    .redes-sociales {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .redes-sociales li:nth-child(1),
+    .redes-sociales li:nth-child(2),
+    .redes-sociales li:nth-child(3) {
+        background-color: lightblue;
+        order: 1;
+    }
+
+    .redes-sociales li:nth-child(4),
+    .redes-sociales li:nth-child(5),
+    .redes-sociales li:last-child {
+        background-color: green;
+        order: 2; 
+}
+
+@media (max-width: 600px) {
+    .redes-logo {
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .redes-logo a {
+        font-size: 18px; 
+    }
+}
+
+}
