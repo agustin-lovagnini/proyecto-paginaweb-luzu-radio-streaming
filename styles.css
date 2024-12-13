@@ -1,3 +1,5 @@
+/*---  VARIABLES GLOBALES  ---*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,19 +7,17 @@
 }
 
 :root {
-    --bg-color: #000;
+    --bg-color-primario: #fff;
+    --bg-color-secundario: #000;
+    --bg-color-icons: #FF8DA8;
+    --font-principal: "Roboto", sans-serif;
 }
 
 
-/*---  SECTION HEADER  ---*/
+/**---  SECTION HEADER  ---*/
 
 header {
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    text-align: center;
+    background-color: var(--bg-color-secundario);
 }
 
 .logo img {
@@ -26,67 +26,50 @@ header {
     margin: 5px;
 }
 
-.nav-principal {
-    margin: 0px 0 15px 0;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+/* ?---  Navecación principal  ---*/
 
-.nav-container:first-child {
-    margin-bottom: 15px; 
-}
+
 
 .nav-container {
+    background-color: var(--bg-color-icons);
+    border-radius: 9px;
     list-style: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     text-align: center;
 }
 
 .nav-container a {
     text-decoration: none;
-    color: #fff;
+    color: var(--bg-color-primario);
+    display: flex;
+    align-items: center;
 }
 
 .nav-container li {
-    color: #fff;
+    color: var(--bg-color-primario);
     display: flex;
     align-items: center;
-}
-
-.nav-container .fa {
-    font-size: 12.5px;
-    margin-right: 2.5px;
-    
-}
-
-.nav-secundario {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
+
+
+.vivo-container .vivo {
+    margin-left: 2.8px;
+    font-family: var(--font-principal);
+    font-weight: 900;
+}
+
+.progr-container {
+    font-family: var(--font-principal);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+}
+
 
 .redes-logo {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.redes-sociales {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.redes-logo {
-    background-color: #FF8DA8;
+    background-color: var(--bg-color-icons);
     border-radius: 50%;
     padding: 10px;
     width: 50px;
@@ -95,14 +78,17 @@ header {
     justify-content: center;
     align-items: center;
     margin: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
+
 
 .redes-logo a {
     color: #fff;
     text-decoration: none;
 }
 
-/*---  SECTION MAIN  ---*/
+/**---  SECTION MAIN  ---*/
 
 main {
     min-height: 100%;
@@ -111,48 +97,186 @@ main {
 }
 
 
-/*---  SECTION FOOTER  ---*/
+/**---  SECTION FOOTER  ---*/
 
 footer {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-secundario);
     color: #fff;
     text-align: center;
     padding: 15px 0;
 }
 
 
-/*---  MEDIA QUERYS  ---*/
+/**---  MEDIA QUERYS  ---*/
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        text-align: center;
+    }
+    
+    .nav-principal {
+        margin: 0 0 15px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-container .fa {
+        font-size: 17.5px;
+    }
+
+    .nav-container:first-child {
+        margin-bottom: 15px;
+    }
+
+    .nav-secundario {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .redes-sociales {
         display: flex;
+        gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .redes-sociales li:nth-child(1),
-    .redes-sociales li:nth-child(2),
-    .redes-sociales li:nth-child(3) {
-        background-color: lightblue;
-        order: 1;
-    }
-
-    .redes-sociales li:nth-child(4),
-    .redes-sociales li:nth-child(5),
-    .redes-sociales li:last-child {
-        background-color: green;
-        order: 2; 
-}
-
-@media (max-width: 600px) {
     .redes-logo {
-        width: 40px; 
-        height: 40px; 
+        width: 40px;
+        height: 40px;
     }
 
     .redes-logo a {
-        font-size: 18px; 
+        font-size: 18px;
     }
 }
 
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    header {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 0 20px;
+    }
+    
+    .logo {
+        margin-right: auto;  
+    }
+    
+    .nav-principal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    .vivo-container,
+    .progr-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    .vivo-container .vivo {
+        margin-left: 2.8px;
+    }
+
+    .vivo-container{
+        transition: color 0.3s ease;
+    }
+
+    .vivo-container:hover .vivo{
+        color: #FF0033;
+    }
+    
+    .nav-container:last-child {
+        margin-right: 18px;
+    }
+
+    .redes-sociales {
+        margin: 9px 0 9px 0;
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .redes-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .redes-logo a {
+        font-size: 18px;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+@media (min-width: 1024px) {
+    header {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .redes-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .redes-logo a {
+        font-size: 2rem;
+    }
+
+    .vivo-container a {
+        transition: color 0.6s ease, transform 0.3s ease;
+    }
+
+    .vivo-container:hover a {
+        color: #FF0033;
+        transform: scale(1.2);
+    }
+}*/
