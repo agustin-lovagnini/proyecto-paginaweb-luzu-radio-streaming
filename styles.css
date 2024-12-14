@@ -7,10 +7,17 @@
 }
 
 :root {
+    /*--- HEADER ---*/
+    --font-principal: "Roboto", sans-serif;
+
+    /*--- HEADER ---*/
     --bg-color-primario: #fff;
     --bg-color-secundario: #000;
     --bg-color-icons: #FF8DA8;
-    --font-principal: "Roboto", sans-serif;
+    
+    /*--- FOOTER ---*/
+    --color-icons-footer: #000;
+    --bg-color-icons-footer: #797d7f;
 }
 
 
@@ -44,6 +51,7 @@ header {
     color: var(--bg-color-primario);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-container li {
@@ -53,9 +61,12 @@ header {
     list-style: none;
 }
 
+.vivo-container .fa {
+    font-size: 80%;
+    margin-right: 2.5px;
+}
 
 .vivo-container .vivo {
-    margin-left: 2.8px;
     font-family: var(--font-principal);
     font-weight: 900;
 }
@@ -66,7 +77,6 @@ header {
     font-size: 15px;
     text-decoration: none;
 }
-
 
 .redes-logo {
     background-color: var(--bg-color-icons);
@@ -82,9 +92,8 @@ header {
     margin-bottom: 8px;
 }
 
-
 .redes-logo a {
-    color: #fff;
+    color: var(--bg-color-primario);
     text-decoration: none;
 }
 
@@ -106,6 +115,39 @@ footer {
     padding: 15px 0;
 }
 
+.footer-redes-logo {
+    background-color: var(--bg-color-icons-footer);
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 10px 15px;
+    font-size: 16px;
+    
+}
+
+.footer-redes-logo a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+.footer-programacion-diaria a {
+    color: var(--bg-color-icons-footer);
+    text-decoration: none;
+    font-family: var(--font-principal);
+}
+
+
+
+
+
+
+
+
 
 /**---  MEDIA QUERYS  ---*/
 
@@ -126,10 +168,6 @@ footer {
         align-items: center;
         justify-content: center;
         width: 100%;
-    }
-    
-    .nav-container .fa {
-        font-size: 17.5px;
     }
 
     .nav-container:first-child {
@@ -161,8 +199,30 @@ footer {
     .redes-logo a {
         font-size: 18px;
     }
+
+
+/*--- FOOTER MOBILE ---*/
+
+
+.footer-redes-sociales {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0 10px 0;
 }
 
+.footer-programacion-diaria {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+}
 
 
 
@@ -188,7 +248,6 @@ footer {
         gap: 20px;
     }
 
-
     .vivo-container,
     .progr-container {
         display: flex;
@@ -200,16 +259,28 @@ footer {
         margin-left: 2.8px;
     }
 
-    .vivo-container{
-        transition: color 0.3s ease;
+    .vivo-container a {
+        transition: color 0.8s ease;
     }
 
-    .vivo-container:hover .vivo{
+    .vivo-container a:hover .vivo {
         color: #FF0033;
     }
-    
+
+    .vivo-container a:hover .fa {
+        color: #FF0033; 
+    }
+
+    .nav-container {
+        transition: transform 0.3s ease;
+    }
+
     .nav-container:last-child {
         margin-right: 18px;
+    }
+
+    .nav-container:hover{
+        transform: scale(1.1);
     }
 
     .redes-sociales {
@@ -228,6 +299,65 @@ footer {
     .redes-logo a {
         font-size: 18px;
     }
+
+    .redes-logo:hover {
+        transform: scale(1.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .redes-logo:nth-child(1):hover{
+        background-color: #33CBBE;
+    }
+
+    .redes-logo:nth-child(2):hover{
+        background-color: #EFBC13;
+    }
+
+    .redes-logo:nth-child(3):hover{
+        background-color: #F1CFE8;
+    }
+
+    .redes-logo:nth-child(4):hover{
+        background-color: #E5143C;
+    }
+
+    .redes-logo:nth-child(5):hover{
+        background-color: #00C7B0;
+    }
+
+    .redes-logo:last-child:hover{
+        background-color: #F0F0F0;
+    }
+
+/*--- FOOTER MOBILE ---*/
+
+
+.footer-redes-sociales {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+
+
+.footer-programacion-diaria {
+    margin-bottom: 15px;
+}
+
+.footer-programacion-diaria a {
+    transition: color 0.3s ease;
+}
+
+
+.footer-programacion-diaria a:hover {
+    color: var(--bg-color-primario);
+}
+
+
+
+
 
 }
 
