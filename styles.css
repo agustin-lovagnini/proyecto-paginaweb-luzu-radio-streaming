@@ -1,5 +1,4 @@
 /*---  VARIABLES GLOBALES  ---*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,22 +6,18 @@
 }
 
 :root {
-    /*--- HEADER ---*/
-    --font-principal: "Roboto", sans-serif;
-
-    /*--- HEADER ---*/
+    /*--- COLORES ---*/
     --bg-color-primario: #fff;
     --bg-color-secundario: #000;
     --bg-color-icons: #FF8DA8;
-    
-    /*--- FOOTER ---*/
     --color-icons-footer: #000;
     --bg-color-icons-footer: #797d7f;
+
+    /*--- TIPOGRAFIA ---*/
+    --font-principal: "Roboto", sans-serif;
 }
 
-
 /**---  SECTION HEADER  ---*/
-
 header {
     background-color: var(--bg-color-secundario);
 }
@@ -30,35 +25,35 @@ header {
 .logo img {
     width: 200px;
     height: auto;
-    margin: 5px;
+    margin: 0 30px 0 7px;
 }
+
+
 
 /* ?---  Navecación principal  ---*/
-
-
-
-.nav-container {
+.nav-container a,
+.redes-logo a {
     background-color: var(--bg-color-icons);
-    border-radius: 9px;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    text-align: center;
+    color: var(--bg-color-primario);
 }
 
-.nav-container a, .nav-container li {
-    color: var(--bg-color-primario);
-    display: flex;
-    align-items: center;
+.nav-container a,
+.programacion-diaria-container,
+.redes-logo a,
+.footer-redes-logo a,
+.footer-programacion-diaria a {
+    text-decoration: none;
 }
+
 
 .nav-container a {
-    text-decoration: none;
+    border-radius: 9px;
+    margin: 0;
+    text-align: center;
+    display: flex;
     justify-content: center;
-}
-
-.nav-container li {
-    list-style: none;
+    align-items: center;
+    padding: 10px;
 }
 
 .vivo-container .fa {
@@ -66,7 +61,9 @@ header {
     margin-right: 2.5px;
 }
 
-.vivo-container .vivo, .progr-container, .footer-programacion-diaria a {
+.vivo-container .vivo,
+.programacion-diaria-container,
+.footer-programacion-diaria a {
     font-family: var(--font-principal);
 }
 
@@ -74,101 +71,74 @@ header {
     font-weight: 900;
 }
 
-.progr-container {
+.programacion-diaria-container {
     font-weight: 600;
     font-size: 15px;
-    text-decoration: none;
 }
 
-.redes-logo {
-    background-color: var(--bg-color-icons);
+.footer-redes-sociales,
+.redes-sociales {
+    list-style: none;
+}
+
+
+.redes-logo a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
     border-radius: 50%;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
-    font-size: 16px;
-    margin-bottom: 8px;
+    padding: 10px;
 }
 
-.redes-logo a {
-    color: var(--bg-color-primario);
-    text-decoration: none;
+.shop img {
+    width: 40px; 
+    height: 40px;
 }
 
 /**---  SECTION MAIN  ---*/
-
 main {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-
 /**---  SECTION FOOTER  ---*/
-
 footer {
     background-color: var(--bg-color-secundario);
     color: #fff;
-    text-align: center;
     padding: 15px;
+    text-align: center;
 }
 
-.footer-redes-logo {
+.footer-redes-logo a {
     background-color: var(--bg-color-icons-footer);
-    border-radius: 50%;
-    padding: 10px;
     width: 30px;
     height: 30px;
+    margin: 5px 0 10px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #000;
+    font-size: 16px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px 0 10px 15px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;}
-
-.footer-redes-logo a {
-    color: #000;
-    text-decoration: none;
+    padding: 10px;
 }
 
-.footer-redes-logo:hover {
-    background-color:#fff;
+.footer-redes-logo a:hover {
+    background-color: #fff;
     transform: scale(1.2);
 }
 
 .footer-programacion-diaria a {
     color: var(--bg-color-icons-footer);
-    text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**---  MEDIA QUERYS  ---*/
-
 @media (max-width: 600px) {
-    
     header {
         display: flex;
         flex-direction: column;
@@ -176,14 +146,22 @@ footer {
         padding: 16px;
         text-align: center;
     }
-    
-    .nav-principal {
-        margin: 0 0 15px 0;
+
+    .logo img {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .nav-principal, .nav-secundario {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         width: 100%;
+    }
+
+    .nav-principal {
+        margin-bottom: 15px;
+        justify-content: center;
     }
 
     .nav-container:first-child {
@@ -192,19 +170,16 @@ footer {
 
     .nav-secundario {
         list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
     }
 
-    .redes-sociales {
+    .redes-sociales, .footer-redes-sociales {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
+
     .redes-logo {
         width: 40px;
         height: 40px;
@@ -214,38 +189,29 @@ footer {
         font-size: 18px;
     }
 
+    /*--- FOOTER MOBILE ---*/
 
-/*--- FOOTER MOBILE ---*/
+    .footer-redes-sociales {
+        margin: 10px 0;
+    }
 
-.footer-redes-sociales {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0 10px 0;
+    .footer-programacion-diaria {
+        margin-bottom: 15px;
+    }
 }
-
-.footer-programacion-diaria {
-    margin-bottom: 15px;
-}}
-
-
-
-
 
 @media (min-width: 600px) and (max-width: 1024px) {
-
     header {
         display: flex;
-        align-items: center; 
-        justify-content: space-between; 
-        padding: 0 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 9px;
     }
-    
+
     .logo {
-        margin-right: auto;  
+        margin-right: auto;
     }
-    
+
     .nav-principal {
         display: flex;
         align-items: center;
@@ -254,10 +220,10 @@ footer {
     }
 
     .vivo-container,
-    .progr-container {
+    .programacion-diaria-container {
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
     }
 
     .vivo-container .vivo {
@@ -268,7 +234,8 @@ footer {
         transition: color 0.8s ease;
     }
 
-    .vivo-container a:hover .vivo, .vivo-container a:hover .fa {
+    .vivo-container a:hover .vivo,
+    .vivo-container a:hover .fa {
         color: #FF0033;
     }
 
@@ -280,118 +247,69 @@ footer {
         margin-right: 18px;
     }
 
-    .nav-container:hover{
+    .nav-container:hover {
         transform: scale(1.1);
     }
 
-    .redes-sociales {
-        margin: 9px 0 9px 0;
+    .redes-sociales, .footer-redes-sociales {
         display: flex;
-        gap: 5px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .redes-logo {
-        width: 40px;
-        height: 40px;
+    .redes-sociales {
+        margin: 9px 0 9px 0;
+        gap: 5px;
     }
 
     .redes-logo a {
         font-size: 18px;
+        margin: 2px;
     }
 
-    .redes-logo:hover {
+    .redes-logo a:hover {
         transform: scale(1.1);
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .redes-logo:nth-child(1):hover{
-        background-color: #33CBBE;
+    .redes-logo:nth-child(1) a:hover { background-color: #33CBBE; }
+    .redes-logo:nth-child(2) a:hover { background-color: #EFBC13; }
+    .redes-logo:nth-child(3) a:hover { background-color: #F1CFE8; }
+    .redes-logo:nth-child(4) a:hover { background-color: #E5143C; }
+    .redes-logo:nth-child(5) a:hover { background-color: #00C7B0; }
+    .redes-logo:last-child a:hover { background-color: #F0F0F0; }
+
+    /**--- FOOTER MOBILE ---*/
+    .footer-redes-sociales {
+        gap: 10px;
+        margin: 10px 0 10px 0;
     }
 
-    .redes-logo:nth-child(2):hover{
-        background-color: #EFBC13;
+    .footer-programacion-diaria {
+        margin-bottom: 15px;
     }
 
-    .redes-logo:nth-child(3):hover{
-        background-color: #F1CFE8;
+    .footer-programacion-diaria a {
+        transition: color 0.3s ease;
     }
 
-    .redes-logo:nth-child(4):hover{
-        background-color: #E5143C;
+    .footer-programacion-diaria a:hover {
+        color: var(--bg-color-primario);
     }
-
-    .redes-logo:nth-child(5):hover{
-        background-color: #00C7B0;
-    }
-
-    .redes-logo:last-child:hover{
-        background-color: #F0F0F0;
-    }
-
-/*--- FOOTER MOBILE ---*/
-
-
-.footer-redes-sociales {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0 10px 0;
 }
-
-
-
-.footer-programacion-diaria {
-    margin-bottom: 15px;
-}
-
-.footer-programacion-diaria a {
-    transition: color 0.3s ease;
-}
-
-
-.footer-programacion-diaria a:hover {
-    color: var(--bg-color-primario);
-}
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 1024px) {
-
-header {
+    header {
         display: flex;
-        align-items: center; 
-        justify-content: space-between; 
-        padding: 0 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 9px;
     }
-    
+
     .logo {
-        margin-right: auto;  
+        margin-right: auto;
     }
-    
+
     .nav-principal {
         display: flex;
         align-items: center;
@@ -400,10 +318,10 @@ header {
     }
 
     .vivo-container,
-    .progr-container {
+    .programacion-diaria-container {
         display: flex;
         justify-content: center;
-        align-items: center;  
+        align-items: center;
     }
 
     .vivo-container .vivo {
@@ -414,12 +332,9 @@ header {
         transition: color 0.8s ease;
     }
 
-    .vivo-container a:hover .vivo {
-        color: #FF0033;
-    }
-
+    .vivo-container a:hover .vivo,
     .vivo-container a:hover .fa {
-        color: #FF0033; 
+        color: #FF0033;
     }
 
     .nav-container {
@@ -430,81 +345,53 @@ header {
         margin-right: 18px;
     }
 
-    .nav-container:hover{
+    .nav-container:hover {
         transform: scale(1.1);
     }
 
-    .redes-sociales {
-        margin: 9px 0 9px 0;
+    .redes-sociales, .footer-redes-sociales {
         display: flex;
-        gap: 5px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .redes-logo {
-        width: 40px;
-        height: 40px;
+    .redes-sociales {
+        margin: 9px 0 9px 0;
+        gap: 5px;
     }
 
     .redes-logo a {
         font-size: 18px;
+        margin: 2px;
     }
 
-    .redes-logo:hover {
+    .redes-logo a:hover {
         transform: scale(1.1);
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .redes-logo:nth-child(1):hover{
-        background-color: #33CBBE;
+    .redes-logo:nth-child(1) a:hover { background-color: #33CBBE; }
+    .redes-logo:nth-child(2) a:hover { background-color: #EFBC13; }
+    .redes-logo:nth-child(3) a:hover { background-color: #F1CFE8; }
+    .redes-logo:nth-child(4) a:hover { background-color: #E5143C; }
+    .redes-logo:nth-child(5) a:hover { background-color: #00C7B0; }
+    .redes-logo:last-child a:hover { background-color: #F0F0F0; }
+
+    /**--- FOOTER MOBILE ---*/
+    .footer-redes-sociales {
+        gap: 10px;
+        margin: 10px 0 10px 0;
     }
 
-    .redes-logo:nth-child(2):hover{
-        background-color: #EFBC13;
+    .footer-programacion-diaria {
+        margin-bottom: 15px;
     }
 
-    .redes-logo:nth-child(3):hover{
-        background-color: #F1CFE8;
+    .footer-programacion-diaria a {
+        transition: color 0.3s ease;
     }
 
-    .redes-logo:nth-child(4):hover{
-        background-color: #E5143C;
+    .footer-programacion-diaria a:hover {
+        color: var(--bg-color-primario);
     }
-
-    .redes-logo:nth-child(5):hover{
-        background-color: #00C7B0;
-    }
-
-    .redes-logo:last-child:hover{
-        background-color: #F0F0F0;
-    }
-
-/*--- FOOTER MOBILE ---*/
-
-
-.footer-redes-sociales {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0 10px 0;
-}
-
-
-.footer-programacion-diaria {
-    margin-bottom: 15px;
-}
-
-.footer-programacion-diaria a {
-    transition: color 0.3s ease;
-}
-
-
-.footer-programacion-diaria a:hover {
-    color: var(--bg-color-primario);
-}
-
-
-
 }
