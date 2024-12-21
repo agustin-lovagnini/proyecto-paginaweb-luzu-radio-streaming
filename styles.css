@@ -17,9 +17,16 @@
     --font-principal: "Roboto", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /**---  SECTION HEADER  ---*/
 header {
     background-color: var(--bg-color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 200;
 }
 
 .logo img {
@@ -163,11 +170,6 @@ footer {
     padding: 10px;
 }
 
-.footer-redes-logo a:hover {
-    background-color: #fff;
-    transform: scale(1.2);
-}
-
 .footer-programacion-diaria a {
     color: var(--bg-color-icons-footer);
 }
@@ -217,13 +219,15 @@ footer {
 
     .redes-sociales {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         gap: 15px;
         background-color: var(--bg-color-secundario);
         border-radius: 20px;
         position: absolute;
-        top: 80px;
+        top: 92px;
         right: 0;
         left: 0;
         padding: 0;
@@ -233,11 +237,13 @@ footer {
         transition: max-height 0.5s ease, opacity 0.5s ease;
     }
 
+
     .redes-sociales.active {
         max-height: 500px;
         opacity: 1;
         padding: 20px 0;
     }
+
 
     .redes-logo {
         width: 40px;
@@ -297,20 +303,22 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 9px;
+        padding: 20px 12px;
     }
 
     .logo {
-        margin-right: auto;
+        margin-right: 20px;
+    }
+
+    .nav-principal,
+    .nav-secundario {
+        display: flex;
+        align-items: center;
     }
 
     .nav-principal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        gap: 10px;
+        flex: 1;
+        gap: 20px;
     }
 
     .vivo-container,
@@ -334,26 +342,36 @@ footer {
     }
 
     .nav-container {
-        transition: transform 0.3s ease;
-        margin: 0;
-        flex: 1;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav-container:last-child {
         margin-right: 18px;
     }
 
-    .nav-container:hover {
+    .vivo-container a:hover {
         transform: scale(1.1);
+        transition: transform 0.3s ease; 
+    }
+    
+    
+    .programacion-diaria-container a:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease; 
     }
 
     .redes-sociales {
-        margin: 9px 0 9px 0;
-        gap: 5px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .redes-logo {
+        display: flex;
+        align-items: center;
     }
 
     .redes-logo a {
@@ -374,9 +392,9 @@ footer {
     .redes-logo:last-child a:hover { background-color: #F0F0F0; }
 
     .shop {
+        margin-left: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
     .shop:hover {
         transform: scale(1.1);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -416,6 +434,7 @@ footer {
     .footer-programacion-diaria a:hover {
         color: var(--bg-color-primario);
     }
+    
 }
 
 
@@ -456,20 +475,22 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 9px;
+        padding: 20px 12px;
     }
 
     .logo {
-        margin-right: auto;
+        margin-right: 20px;
+    }
+
+    .nav-principal,
+    .nav-secundario {
+        display: flex;
+        align-items: center;
     }
 
     .nav-principal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        gap: 10px;
+        flex: 1;
+        gap: 20px;
     }
 
     .vivo-container,
@@ -493,26 +514,36 @@ footer {
     }
 
     .nav-container {
-        transition: transform 0.3s ease;
-        margin: 0;
-        flex: 1;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav-container:last-child {
         margin-right: 18px;
     }
 
-    .nav-container:hover {
+    .vivo-container a:hover {
         transform: scale(1.1);
+        transition: transform 0.3s ease; 
+    }
+    
+    
+    .programacion-diaria-container a:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease; 
     }
 
     .redes-sociales {
-        margin: 9px 0 9px 0;
-        gap: 5px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .redes-logo {
+        display: flex;
+        align-items: center;
     }
 
     .redes-logo a {
@@ -533,9 +564,9 @@ footer {
     .redes-logo:last-child a:hover { background-color: #F0F0F0; }
 
     .shop {
+        margin-left: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
     .shop:hover {
         transform: scale(1.1);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -575,4 +606,5 @@ footer {
     .footer-programacion-diaria a:hover {
         color: var(--bg-color-primario);
     }
+    
 }
