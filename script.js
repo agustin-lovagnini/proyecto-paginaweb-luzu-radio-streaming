@@ -21,7 +21,7 @@ buttonHamburguesa.addEventListener('click', () => {
 
 
 function ajustarMenu() {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 1024) {
         if (!redesSociales.contains(programacionDiaria)) {
             redesSociales.appendChild(programacionDiaria); 
         }
