@@ -109,6 +109,44 @@ main {
     flex-direction: column;
 }
 
+/*?---  BANNER RESUMIDO ---*/
+
+.link-resumido h2 {
+    font-family: var(--font-principal);
+    background-color: var(--bg-color-secundario);
+    color: var(--bg-color-primario);
+    text-align: center;
+    font-size: 10px;
+    border-top: 2px solid var(--bg-color-icons-footer);
+    padding: 6px 0;
+}
+
+.link-resumido a {
+    text-decoration: none;
+}
+
+.content-resumido {
+    background-image: url(multimedia/banner-resumido.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-resumido {
+    color: var(--bg-color-primario);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+    filter: drop-shadow(3px 3px 0 #000);
+}
+
+
 /*?---  RADIO EN VIVO ---*/
 
 .radio-en-vivo {
@@ -116,51 +154,11 @@ main {
     background-size: contain;
     background-position: right center;
     background-repeat: no-repeat;
-    height: 100%;
-    width: auto;
 }
 
 .content-vivo {
     margin: 30px 12px;
 }
-
-
-
-/*?---  BANNER ---*/
-.link-resumido h3 {
-    font-family: var(--font-principal);
-    background-color: var(--bg-color-secundario);
-    color: var(--bg-color-primario);
-    text-align: center;
-    font-size: 10px;
-    border-top: 2px solid var(--bg-color-icons-footer);
-}
-
-.link-resumido {
-    position: relative;
-    display: inline-block;
-}
-
-.link-resumido img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.link-resumido a {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5px 10px;
-    z-index: 200;
-}
-
-.link-resumido a img {
-    filter: drop-shadow(3px 3px 0px #000);
-}
-
-
-
 
 
 /*?--- GALERIA ---*/
@@ -238,7 +236,9 @@ footer {
 
 
 /**---  MEDIA QUERYS  ---*/
-@media (max-width: 600px) {
+
+
+@media (max-width: 600px)  {
     header {
         display: flex;
         flex-direction: column;
@@ -358,13 +358,14 @@ footer {
     
     /**--- MAIN MOBILE ---*/
 
-    .link-resumido a {
-        top: 29px;
-    }
-    
-    .imagenes-galeria {
-        grid-template-columns: 1fr; 
-    }
+/*?---  BANNER RESUMIDO ---*/
+.link-resumido h2 {
+    font-size: 10px;
+}
+
+
+
+/*?---  RADIO EN VIVO MOBILE ---*/
 
     .radio-en-vivo {
         display: none; 
@@ -373,6 +374,14 @@ footer {
     .img-ondemand-2 {
         display: none; 
     }
+
+/*?---  RADIO EN VIVO MOBILE ---*/
+
+.imagenes-galeria {
+    grid-template-columns: 1fr; 
+}
+
+
 
 
 
@@ -415,7 +424,7 @@ footer {
 
 
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
     header {
         display: flex;
         flex-direction: column;
@@ -468,14 +477,67 @@ footer {
         display: inline-block;
     }
 
-    .redes-sociales, .shop {
+    .secciones-redes {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes-logo a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        background-color: var(--bg-color-icons);
+        border-radius: 50%;
+    }
+
+    .programacion-diaria-container {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .programacion-diaria-container a {
+        color: var(--bg-color-primario);
+        background-color: var(--bg-color-icons);
+        text-decoration: none;
+        border-radius: 9px;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .shop {
+        order: 3;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .redes-sociales {
         order: 1;
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -497,54 +559,40 @@ footer {
         max-height: 500px;
         opacity: 1;
         padding: 20px 0;
-    }
-
-    .programacion-diaria-container {
-        order: 2;
-    }
-
-    .programacion-diaria-container a{
-        color: var(--bg-color-primario);
-        background-color: var(--bg-color-icons);
-        text-decoration: none;
-        border-radius: 9px;
-        margin: 0;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .redes-logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .redes-logo a {
-        font-size: 18px;
-    }
-
-    .shop {
-        order: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        z-index: 3000;
     }
 
     
     /**--- MAIN MOBILE ---*/
 
-    .link-resumido a {
-        top: 42px;
-    }
 
-    .radio-en-vivo iframe {
-        width: 100%;
-        max-width: 625px;
-        height: 350px;
-    }
+/*?---  BANNER RESUMIDO ---*/
 
+.content-resumido {
+    height: 100%;
+    width: auto;
+}
+
+.text-resumido {
+    color: var(--bg-color-primario);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+    filter: drop-shadow(3px 3px 0 #000);
+}
+
+
+/*?---  RADIO EN VIVO MOBILE ---*/
+
+.radio-en-vivo iframe {
+    width: 100%;
+    max-width: 625px;
+    height: 350px;
+}
+
+
+/*?---  RADIO EN VIVO MOBILE ---*/
     .imagenes-galeria {
         grid-template-columns: 1fr; 
     }
@@ -711,33 +759,34 @@ footer {
 
 
     /**--- MAIN MOBILE ---*/
-
+    
     .programa img:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         border: solid 3px var(--bg-color-icons);
     }
+    
+/*?---  BANNER RESUMIDO ---*/
 
-    .link-resumido img {
-        width: 130%; 
-        height: auto;
-    }
 
-    .link-resumido a {
-        top: 42px;
-    }
 
-    .radio-en-vivo {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        padding: 20px; 
-    }
+/*?---  RADIO EN VIVO MOBILE ---*/
 
-    .radio-en-vivo iframe {
-        width: 1024px;
-        height: 560px;
-    }
+.radio-en-vivo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px; 
+}
+
+
+/*?---  RADIO EN VIVO MOBILE ---*/
+
+    
+
+
+
+
 
 
 
