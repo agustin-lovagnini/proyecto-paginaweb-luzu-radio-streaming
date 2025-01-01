@@ -177,7 +177,10 @@ main {
     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
 }
 
-.img-ondemand-1,
+.img-ondemand-1 {
+    border-bottom: 2px solid var(--bg-color-icons);
+}
+
 .img-ondemand-2,
 .img-ondemand-3 {
     border-top: 2px solid var(--bg-color-icons);
@@ -255,12 +258,13 @@ footer {
         bottom: 20px; 
         right: 20px;
         font-weight: 900;
+        border: 1px solid var(--bg-color-primario);
         background-color: var(--bg-color-icons); 
         font-family: var(--font-principal);
         color: white;
-        padding: 8px 18px;
+        padding: 12px 10px;
         border-radius: 50px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
         text-align: center;
         text-decoration: none;
         font-size: 15px;
@@ -424,7 +428,7 @@ footer {
 
 
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
     header {
         display: flex;
         flex-direction: column;
@@ -441,12 +445,13 @@ footer {
         bottom: 20px; 
         right: 20px;
         font-weight: 900;
+        border: 1px solid var(--bg-color-primario);
         background-color: var(--bg-color-icons); 
         font-family: var(--font-principal);
         color: white;
-        padding: 8px 18px;
+        padding: 12px 10px;
         border-radius: 50px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
         text-align: center;
         text-decoration: none;
         font-size: 15px;
@@ -454,8 +459,7 @@ footer {
         display: flex;
         align-items: center;
         gap: 5px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
+        transition: transform 0.3s ease, opacity 0.3s ease;    }
 
     .logo img {
         padding: 15px;
@@ -768,17 +772,22 @@ footer {
     
 /*?---  BANNER RESUMIDO ---*/
 
+.content-resumido {
+    padding: 10px;
+}
 
 
 /*?---  RADIO EN VIVO MOBILE ---*/
 
 .radio-en-vivo {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
     padding: 20px; 
 }
 
+.radio-en-vivo iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 410px;
+}
 
 /*?---  RADIO EN VIVO MOBILE ---*/
 
