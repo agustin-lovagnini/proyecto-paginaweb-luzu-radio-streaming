@@ -370,8 +370,18 @@ footer {
 
 
 
+
+
 @media (min-width: 1024px) {
 
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 12px;
+        flex-direction: row; 
+        text-align: left; 
+    }
 
     .redes-sociales {
         opacity: 1;
@@ -382,16 +392,54 @@ footer {
         display: none;
     }
 
-
     .boton-flotante {
         display: none;
+    }
+
+    .vivo-container {
+        display: block;
     }
 
     .vivo-container .fa {
         font-size: 80%;
         margin-right: 2.5px;
     }
+    
+    .nav-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
 
+    .vivo-container,
+    .programacion-diaria-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vivo-container .vivo {
+        margin-left: 2.8px;
+    }
+
+    .vivo-container a {
+        transition: color 0.8s ease;
+    }
+
+    .vivo-container a:hover .vivo,
+    .vivo-container a:hover .fa {
+        color: #FF0033;
+    }
+
+    .vivo-container a:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease; 
+    }
+
+    .programacion-diaria-container a:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease; 
+    }
 
     .vivo-container .vivo {
         font-weight: 900;
@@ -422,6 +470,42 @@ footer {
     .imagenes-galeria {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .programa img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: solid 3px var(--bg-color-icons);
+    }
+
+    .footer-redes-sociales {
+        gap: 10px;
+        margin: 10px 0 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-redes-sociales a {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-redes-sociales a:hover {
+        color: var(--bg-color-primario);
+        transform: scale(1.1);
+    }
+
+    .footer-programacion-diaria {
+        margin-bottom: 15px;
+    }
+
+    .footer-programacion-diaria a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-programacion-diaria a:hover {
+        color: var(--bg-color-primario);
+    }
+
 }
 
 
@@ -483,25 +567,7 @@ footer {
         gap: 20px;
     }
 
-    .vivo-container,
-    .programacion-diaria-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .vivo-container .vivo {
-        margin-left: 2.8px;
-    }
-
-    .vivo-container a {
-        transition: color 0.8s ease;
-    }
-
-    .vivo-container a:hover .vivo,
-    .vivo-container a:hover .fa {
-        color: #FF0033;
-    }
+    
 
     .nav-container {
         display: flex;
@@ -513,16 +579,7 @@ footer {
         margin-right: 18px;
     }
 
-    .vivo-container a:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease; 
-    }
     
-    
-    .programacion-diaria-container a:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease; 
-    }
 
     .redes-sociales {
         display: flex;
