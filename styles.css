@@ -27,16 +27,26 @@ header {
     position: sticky;
     top: 0;
     z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo a {
+    display: block;
 }
 
 .logo img {
-    width: 200px;
-    height: auto;
-    margin: 0 30px 0 7px;
+    padding: 15px;
+}
+
+.vivo-container {
+    display: none;
 }
 
 .menu-hamburguesa {
-    display: none;
+    display: inline-block;
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -51,9 +61,30 @@ header {
     color: var(--bg-color-icons);
 }
 
+.boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-weight: 900;
+    border: 1px solid var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
+    font-family: var(--font-principal);
+    color: white;
+    padding: 12px 10px;
+    border-radius: 50px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 /* ?---  Navecación principal  ---*/
-.nav-container a, .redes-logo a {
+.nav-container a,
+.redes-logo a {
     text-decoration: none;
     background-color: var(--bg-color-icons);
     color: var(--bg-color-primario);
@@ -68,15 +99,18 @@ header {
     text-align: center;
 }
 
-.vivo-container .fa {
-    font-size: 80%;
-    margin-right: 2.5px;
+.nav-secundario {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-.vivo-container .vivo {
-    font-weight: 900;
-    font-family: var(--font-principal);
+.nav-secundario,
+.redes-sociales,
+.shop,
+.imagenes-galeria {
+    width: 100%;
 }
 
 .programacion-diaria-container {
@@ -88,17 +122,70 @@ header {
 
 .redes-sociales {
     list-style: none;
+    order: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    background-color: var(--bg-color-secundario);
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
+
+.redes-sociales.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 20px 0;
+}
+
+.programacion-diaria-container {
+    order: 2;
+}
+
+.programacion-diaria-container a {
+    color: var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
+    text-decoration: none;
+    border-radius: 9px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.redes-sociales,
+.shop {
+    display: flex;
+}
+
 
 .redes-logo a {
     width: 40px;
     height: 40px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 50%;
 }
 
+.shop {
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .shop img {
-    width: 150px; 
+    width: 150px;
     height: auto;
 }
 
@@ -146,26 +233,11 @@ main {
     filter: drop-shadow(3px 3px 0 #000);
 }
 
-
-/*?---  RADIO EN VIVO ---*/
-
-.radio-en-vivo {
-    background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
-    background-size: contain;
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-
-.content-vivo {
-    margin: 30px 12px;
-}
-
-
 /*?--- GALERIA ---*/
 
 .imagenes-galeria {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
 }
@@ -181,15 +253,12 @@ main {
     border-bottom: 2px solid var(--bg-color-icons);
 }
 
-.img-ondemand-2,
 .img-ondemand-3 {
     border-top: 2px solid var(--bg-color-icons);
     border-bottom: 2px solid var(--bg-color-icons);
-}
-
-.img-ondemand-3 {
     margin-bottom: 5px;
 }
+
 
 /**---  SECTION FOOTER  ---*/
 footer {
@@ -202,7 +271,11 @@ footer {
 .footer-redes-sociales {
     list-style: none;
     list-style-type: none;
-    padding: 0;  
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-redes-logo a {
@@ -216,6 +289,10 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+.footer-programacion-diaria {
+    margin-bottom: 15px;
 }
 
 .footer-programacion-diaria a {
@@ -238,389 +315,112 @@ footer {
 
 
 
+
+
+
+
+
+
+
 /**---  MEDIA QUERYS  ---*/
 
 
-@media (max-width: 600px)  {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .vivo-container {
-        display: none;
-    }
-
-    .boton-flotante {
-        position: fixed;
-        bottom: 20px; 
-        right: 20px;
-        font-weight: 900;
-        border: 1px solid var(--bg-color-primario);
-        background-color: var(--bg-color-icons); 
-        font-family: var(--font-principal);
-        color: white;
-        padding: 12px 10px;
-        border-radius: 50px;
-        box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        text-decoration: none;
-        font-size: 15px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .logo img {
-        padding: 15px;
-        margin: 0;
-    }
-
-    .nav-secundario, .redes-sociales, .shop, .imagenes-galeria {
-        width: 100%;
-    }
-
-    .nav-secundario {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-hamburguesa {
-        display: inline-block;
-    }
-
-    .redes-sociales, .shop {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .redes-sociales {
-        order: 1;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 17px;
-        background-color: var(--bg-color-secundario);
-        border-radius: 20px;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        left: 0;
-        padding: 0;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.5s ease;
-    }
-
-    .redes-sociales.active {
-        max-height: 500px;
-        opacity: 1;
-        padding: 20px 0;
-    }
-
-    .programacion-diaria-container {
-        order: 2;
-    }
-
-    .programacion-diaria-container a{
-        color: var(--bg-color-primario);
-        background-color: var(--bg-color-icons);
-        text-decoration: none;
-        border-radius: 9px;
-        margin: 0;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .redes-logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .redes-logo a {
-        font-size: 18px;
-    }
-
-    .shop {
-        order: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    
-    /**--- MAIN MOBILE ---*/
-
-/*?---  BANNER RESUMIDO ---*/
-.link-resumido h2 {
-    font-size: 10px;
-}
-
-
-
-/*?---  RADIO EN VIVO MOBILE ---*/
+@media (max-width: 600px) {
 
     .radio-en-vivo {
-        display: none; 
+        display: none;
     }
 
     .img-ondemand-2 {
-        display: none; 
-    }
-
-/*?---  RADIO EN VIVO MOBILE ---*/
-
-.imagenes-galeria {
-    grid-template-columns: 1fr; 
-}
-
-
-
-
-
-    /** --- FOOTER MOBILE ---*/
-
-    .footer-redes-sociales {
-        margin: 20px 0;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer-programacion-diaria {
-        margin-bottom: 15px;
+        display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (min-width: 600px) and (max-width: 1024px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    
+    
+    .radio-en-vivo {
+        background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
     }
 
-    .vivo-container {
-        display: none;
+    .img-ondemand-2,
+    .img-ondemand-3 {
+        border-top: 2px solid var(--bg-color-icons);
+        border-bottom: 2px solid var(--bg-color-icons);
     }
 
-    .boton-flotante {
-        position: fixed;
-        bottom: 20px; 
-        right: 20px;
-        font-weight: 900;
-        border: 1px solid var(--bg-color-primario);
-        background-color: var(--bg-color-icons); 
-        font-family: var(--font-principal);
-        color: white;
-        padding: 12px 10px;
-        border-radius: 50px;
-        box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        text-decoration: none;
-        font-size: 15px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: transform 0.3s ease, opacity 0.3s ease;    }
-
-    .logo img {
-        padding: 15px;
-        margin: 0;
+    .img-ondemand-3 {
+        margin-bottom: 5px;
     }
 
-    .nav-secundario, .redes-sociales, .shop, .imagenes-galeria {
+    .content-vivo {
+        margin: 30px 12px;
+    }
+
+    .radio-en-vivo iframe {
         width: 100%;
+        max-width: 625px;
+        height: 350px;
     }
+}
 
-    .nav-secundario {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+
+@media (min-width: 1024px) {
+
+
+    .redes-sociales {
+        opacity: 1;
+        overflow: visible;
     }
 
     .menu-hamburguesa {
-        display: inline-block;
-    }
-
-    .secciones-redes {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .redes-sociales {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .redes-logo a {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        text-decoration: none;
-        color: white;
-        background-color: var(--bg-color-icons);
-        border-radius: 50%;
-    }
-
-    .programacion-diaria-container {
-        order: 2;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .programacion-diaria-container a {
-        color: var(--bg-color-primario);
-        background-color: var(--bg-color-icons);
-        text-decoration: none;
-        border-radius: 9px;
-        margin: 0;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .shop {
-        order: 3;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .redes-sociales {
-        order: 1;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 17px;
-        background-color: var(--bg-color-secundario);
-        border-radius: 20px;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        left: 0;
-        padding: 0;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.5s ease;
-    }
-
-    .redes-sociales.active {
-        max-height: 500px;
-        opacity: 1;
-        padding: 20px 0;
-        z-index: 3000;
-    }
-
-    
-    /**--- MAIN MOBILE ---*/
-
-
-/*?---  BANNER RESUMIDO ---*/
-
-.content-resumido {
-    height: 100%;
-    width: auto;
-}
-
-.text-resumido {
-    color: var(--bg-color-primario);
-    text-align: center;
-    font-size: 25px;
-    font-weight: 900;
-    font-family: Arial, sans-serif;
-    filter: drop-shadow(3px 3px 0 #000);
-}
-
-
-/*?---  RADIO EN VIVO MOBILE ---*/
-
-.radio-en-vivo iframe {
-    width: 100%;
-    max-width: 625px;
-    height: 350px;
-}
-
-
-/*?---  RADIO EN VIVO MOBILE ---*/
-    .imagenes-galeria {
-        grid-template-columns: 1fr; 
+        display: none;
     }
 
 
-    /** --- FOOTER MOBILE ---*/
-
-    .footer-redes-sociales {
-        margin: 20px 0;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer-programacion-diaria {
-        margin-bottom: 15px;
-    }
-    
-}
-
-@media (min-width: 1024px) {
     .boton-flotante {
-        display: none; 
+        display: none;
+    }
+
+    .vivo-container .fa {
+        font-size: 80%;
+        margin-right: 2.5px;
+    }
+
+
+    .vivo-container .vivo {
+        font-weight: 900;
+        font-family: var(--font-principal);
+    }
+
+    .radio-en-vivo {
+        background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .content-vivo {
+        margin: 30px 12px;
+    }
+
+    .img-ondemand-2,
+    .img-ondemand-3 {
+        border-top: 2px solid var(--bg-color-icons);
+        border-bottom: 2px solid var(--bg-color-icons);
+    }
+
+    .img-ondemand-3 {
+        margin-bottom: 5px;
+    }
+
+    .imagenes-galeria {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -652,6 +452,12 @@ footer {
 
 
 
+
+
+
+
+
+/*
 
 
 @media (min-width: 1024px) {
@@ -762,7 +568,7 @@ footer {
     
 
 
-    /**--- MAIN MOBILE ---*/
+    *--- MAIN MOBILE ---
     
     .programa img:hover {
         transform: scale(1.05);
@@ -770,14 +576,14 @@ footer {
         border: solid 3px var(--bg-color-icons);
     }
     
-/*?---  BANNER RESUMIDO ---*/
+?---  BANNER RESUMIDO --
 
 .content-resumido {
     padding: 10px;
 }
 
 
-/*?---  RADIO EN VIVO MOBILE ---*/
+?---  RADIO EN VIVO MOBILE ---
 
 .radio-en-vivo {
     padding: 20px; 
@@ -789,17 +595,11 @@ footer {
     height: 410px;
 }
 
-/*?---  RADIO EN VIVO MOBILE ---*/
-
-    
+?---  RADIO EN VIVO MOBILE ---
 
 
 
-
-
-
-
-    /**--- FOOTER MOBILE ---*/
+    *--- FOOTER MOBILE ---
     .footer-redes-sociales {
         gap: 10px;
         margin: 10px 0 10px 0;
@@ -830,3 +630,5 @@ footer {
     }
     
 }
+
+*/
