@@ -251,14 +251,17 @@ main {
 /*?--- GALERIA ---*/
 
 .imagenes-galeria {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
     padding: 20px;
 }
 
-.programa img {
+.programa {
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.img-programa-aqn {
     width: 100%;
+    max-width: 100%; 
     height: auto;
     border-radius: 20px;
     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
@@ -266,6 +269,14 @@ main {
 }
 
 
+.imagen-superpuesta-elenco {
+    position: absolute;
+    bottom: 8px;
+    right: 7px;
+    width: 32%;
+    height: auto;
+    filter: drop-shadow(3px 1px 0 #000);
+}
 
 
 
