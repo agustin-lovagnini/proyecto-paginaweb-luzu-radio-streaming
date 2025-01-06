@@ -26,7 +26,7 @@ header {
     background-color: var(--bg-color-secundario);
     position: sticky;
     top: 0;
-    z-index: 300;
+    z-index: 3000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 100;
+    z-index: 1000;
     background: none;
     border: none;
 }
@@ -76,7 +76,7 @@ header {
     text-align: center;
     text-decoration: none;
     font-size: 15px;
-    z-index: 1000;
+    z-index: 900;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -266,16 +266,30 @@ main {
     border-radius: 20px;
     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
     border: 3px solid var(--bg-color-icons);
+    z-index: 10;
 }
 
-
-.imagen-superpuesta-elenco {
+.imagen-superpuesta{
     position: absolute;
-    bottom: 8px;
+    top: 0;
+    left: 0;
+    width: 99.3%;
+    height: 96%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
+    border-radius: 19px; 
+    pointer-events: none; 
+    z-index: 20;
+
+}
+
+.imagen-elenco {
+    position: absolute;
+    bottom: 1px;
     right: 7px;
     width: 32%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
+    z-index: 30;
 }
 
 
