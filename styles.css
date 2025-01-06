@@ -31,6 +31,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    z-index: 10000;
 }
 
 .logo a {
@@ -259,49 +260,97 @@ main {
     margin-bottom: 20px;
 }
 
-.img-programa-aqn {
+.img-programa {
     width: 100%;
     max-width: 100%; 
     height: auto;
     border-radius: 20px;
     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
     border: 3px solid var(--bg-color-icons);
-    z-index: 10;
+    z-index: 30;
 }
 
-.imagen-superpuesta{
+.imagen-superpuesta {
     position: absolute;
     top: 0;
     left: 0;
     width: 99.3%;
-    height: 96%;
+    height: 96.4%;
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
-    border-radius: 19px; 
+    border-radius: 17px; 
     pointer-events: none; 
     z-index: 20;
 
 }
 
-.imagen-elenco {
+.imagen-elenco-aqn, 
+.imagen-elenco-ndn,
+.imagen-elenco-nqs,
+.imagen-elenco-pyf,
+.imagen-elenco-adm,
+.imagen-elenco-dque,
+.imagen-elenco-edie,
+.imagen-elenco-sm {
     position: absolute;
-    bottom: 1px;
-    right: 7px;
-    width: 32%;
-    height: auto;
     filter: drop-shadow(3px 1px 0 #000);
     z-index: 30;
 }
 
+.imagen-elenco-aqn {
+    bottom: 1px;
+    right: 7px;
+    width: 32%;
+    height: auto;
+}
 
+.imagen-elenco-ndn {
+    bottom: 0px;
+    right: 6px;
+    width: 35%;
+    height: auto;
+}
 
+.imagen-elenco-nqs {
+    bottom: 0px;
+    right: 9px;
+    width: 28%;
+    height: auto;
+}
 
+.imagen-elenco-pyf {
+    bottom: 1px;
+    right: 11px;
+    width: 36%;
+    height: auto;
+}
 
+.imagen-elenco-adm {
+    bottom: 1px;
+    right: 9px;
+    width: 23%;
+    height: auto;
+}
 
+.imagen-elenco-dque {
+    bottom: 0;
+    right: 7px;
+    width: 32%;
+    height: auto;
+}
 
+.imagen-elenco-edie {
+    bottom: 1px;
+    right: 7px;
+    width: 38%;
+    height: auto;
+}
 
-
-
-
+.imagen-elenco-sm {
+    bottom: 1px;
+    right: 16px;
+    width: 36%;
+    height: auto;
+}
 
 /**---  SECTION FOOTER  ---*/
 footer {
