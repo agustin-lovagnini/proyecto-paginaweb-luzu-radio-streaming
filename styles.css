@@ -251,6 +251,13 @@ main {
 
 /*?--- GALERIA ---*/
 
+.galeria-background {
+    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
 .imagenes-galeria {
     padding: 20px;
 }
