@@ -95,7 +95,7 @@ header {
     padding: 10px;
 }
 
-.whatsapp a{
+.whatsapp a {
     background-color: #25D366;
 }
 
@@ -194,13 +194,13 @@ header {
 }
 
 .img-ondemand-1 {
-    width: 100%;
+    width: 150%;
     height: auto;
     border-bottom: 2px solid var(--bg-color-icons);
 }
 
 .img-ondemand-3 {
-    width: 100%;
+    width: 150%;
     height: auto;
     border-top: 2px solid var(--bg-color-icons);
     border-bottom: 2px solid var(--bg-color-icons);
@@ -232,7 +232,7 @@ main {
 }
 
 .content-resumido {
-    background-image: url(multimedia/banner-resumido.png);
+    background-image: url(multimedia/banner-resumido.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,11 +240,12 @@ main {
     height: auto;
     display: flex;
     justify-content: center;
+    padding: 2px 0;
 }
 
 .text-resumido {
     color: var(--bg-color-primario);
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 900;
     font-family: Arial, sans-serif;
     filter: drop-shadow(3px 3px 0 #000);
@@ -254,8 +255,8 @@ main {
 
 .galeria-background {
     background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -263,8 +264,9 @@ main {
     padding: 20px;
 }
 
+
 .programa {
-    position: relative; 
+    position: relative;
     margin-bottom: 20px;
 }
 
@@ -274,7 +276,7 @@ main {
 
 .img-programa {
     width: 100%;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
     box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
@@ -289,13 +291,13 @@ main {
     width: 99.3%;
     height: 96.4%;
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
-    border-radius: 17px; 
-    pointer-events: none; 
+    border-radius: 17px;
+    pointer-events: none;
     z-index: 20;
 
 }
 
-.imagen-elenco-aqn, 
+.imagen-elenco-aqn,
 .imagen-elenco-ndn,
 .imagen-elenco-nqs,
 .imagen-elenco-pyf,
@@ -435,7 +437,7 @@ footer {
         display: none;
     }
 
-/*?---  IMG ONDEMAND   ----*/
+    /*?---  IMG ONDEMAND   ----*/
 
     .img-ondemand-2 {
         display: none;
@@ -444,7 +446,7 @@ footer {
 
 
 @media (min-width: 600px) and (max-width: 1024px) {
-    
+
     /*?---  RADIO EN VIVO   ----*/
 
     .radio-en-vivo {
@@ -463,77 +465,85 @@ footer {
         max-width: 625px;
         height: 350px;
         border-radius: 35px;
-        overflow: hidden; 
+        overflow: hidden;
         border: 5px solid var(--bg-color-icons);
     }
 
-/*?---  IMG ONDEMAND   ----*/
+    /*?---  IMG ONDEMAND   ----*/
 
     .img-ondemand-2 {
-        width: 100%;
+        width: 150%;
         height: auto;
         border-top: 2px solid var(--bg-color-icons);
         border-bottom: 2px solid var(--bg-color-icons);
     }
 
-/*?--- GALERIA ---*/
+    /*?--- GALERIA ---*/
+
+    .imagenes-galeria {
+        padding: 70px;
+    }
+
+    .programa {
+        margin-bottom: 50px;
+    }
 
     .img-programa {
         border-radius: 38px;
         border: 5px solid var(--bg-color-icons);
     }
 
-.imagen-superpuesta {
-    width: 99.6%;
-    height: 97.8%;
-    border-radius: 36px;
-}
+    .imagen-superpuesta {
+        width: 99.6%;
+        height: 97.8%;
+        border-radius: 36px;
+    }
 
     .imagen-elenco-aqn {
         bottom: 1px;
         right: 7px;
         width: 32%;
     }
-    
+
     .imagen-elenco-ndn {
         bottom: 0px;
         right: 6px;
         width: 35%;
     }
-    
+
     .imagen-elenco-nqs {
         bottom: 0px;
-        right: 15px;
+        right: 21px;
         width: 28%;
     }
-    
+
     .imagen-elenco-pyf {
         bottom: 1px;
-        right: 18px;
+        right: 26px;
         width: 36%;
     }
-    
+
     .imagen-elenco-adm {
         bottom: 1px;
-        right: 19px;
+        right: 24px;
         width: 23%;
     }
-    
+
     .imagen-elenco-dque {
         bottom: 0;
-        right: 14px;
+        right: 20px;
         width: 32%;
     }
-    
+
     .imagen-elenco-edie {
         bottom: 1px;
-        right: 10px;
+        right: 17px;
         width: 38%;
     }
-    
+
     .imagen-elenco-sm {
         bottom: 1px;
-        right: 24px;
+        right: 28px;
         width: 36%;
     }
 
@@ -570,11 +580,11 @@ footer {
         align-items: center;
         justify-content: space-between;
         padding: 20px 12px;
-        flex-direction: row; 
-        text-align: left; 
+        flex-direction: row;
+        text-align: left;
     }
 
-    
+
 
 
     .redes-sociales {
@@ -598,7 +608,7 @@ footer {
         font-size: 80%;
         margin-right: 2.5px;
     }
-    
+
     .nav-container {
         display: flex;
         align-items: center;
@@ -627,12 +637,12 @@ footer {
 
     .vivo-container a:hover {
         transform: scale(1.1);
-        transition: transform 0.3s ease; 
+        transition: transform 0.3s ease;
     }
 
     .programacion-diaria-container a:hover {
         transform: scale(1.1);
-        transition: transform 0.3s ease; 
+        transition: transform 0.3s ease;
     }
 
     .vivo-container .vivo {
@@ -640,27 +650,30 @@ footer {
         font-family: var(--font-principal);
     }
 
-/*?---  BANNER RESUMIDO  ---*/
+    /*?---  BANNER RESUMIDO  ---*/
 
-.link-resumido h2 {
-    font-size: 18px;
-}
+    .link-resumido h2 {
+        font-size: 18px;
+    }
 
-.content-resumido {
-    padding: 7px;
-}
+    .content-resumido {
+        padding: 20px 0;
+    }
 
-.text-resumido {
-    font-size: 50px;
-}
+    .text-resumido {
+        font-size: 50px;
+    }
 
     /*?---  RADIO EN VIVO   ----*/
 
     .radio-en-vivo {
-        background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
-        background-size: contain;
-        background-position: right center;
+        background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        text-align: center; /* Centra elementos en línea, como iframe */
     }
 
     .content-vivo {
@@ -668,22 +681,22 @@ footer {
     }
 
     .radio-en-vivo iframe {
+        display: inline-block;
         width: 100%;
-        max-width: 625px;
-        height: 350px;
+        max-width: 900px;
+        height: 450px;
         border-radius: 35px;
-        overflow: hidden; 
+        overflow: hidden;
         border: 5px solid var(--bg-color-icons);
     }
 
-/*?---  IMG ONDEMAND   ----*/
+    /*?---  IMG ONDEMAND   ----*/
 
-.img-ondemand-2 {
-    width: 100%;
-    height: auto;
-    border-top: 2px solid var(--bg-color-icons);
-    border-bottom: 2px solid var(--bg-color-icons);
-}
+    .img-ondemand-2 {
+        height: auto;
+        border-top: 2px solid var(--bg-color-icons);
+        border-bottom: 2px solid var(--bg-color-icons);
+    }
 
     .img-ondemand-1,
     .img-ondemand-2,
