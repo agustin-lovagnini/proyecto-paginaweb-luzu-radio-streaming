@@ -19,28 +19,28 @@ buttonHamburguesa.addEventListener('click', () => {
     }
 });
 
-
 function ajustarMenu() {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 1024) { 
+        if (!redesSociales.contains(shopLink)) {
+            redesSociales.appendChild(shopLink); 
+        }
         if (!redesSociales.contains(programacionDiaria)) {
             redesSociales.appendChild(programacionDiaria); 
         }
-        if (!redesSociales.contains(shopLink)) {
-            redesSociales.appendChild(shopLink);
-        }
-    } else {
+    } else { 
         const navPrincipal = document.querySelector('.nav-principal .nav-container');
         const navSecundario = document.querySelector('.nav-secundario');
 
-        if (!navPrincipal.contains(programacionDiaria)) {
-            navPrincipal.appendChild(programacionDiaria);
+        if (!navPrincipal.contains(shopLink)) {
+            navPrincipal.appendChild(shopLink); 
         }
 
-        if (!navSecundario.contains(shopLink)) {
-            navSecundario.appendChild(shopLink);
+        if (!navSecundario.contains(programacionDiaria)) {
+            navSecundario.appendChild(programacionDiaria); 
         }
     }
 }
+
 
 ajustarMenu();
 window.addEventListener('resize', ajustarMenu);
