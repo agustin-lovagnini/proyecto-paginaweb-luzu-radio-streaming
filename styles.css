@@ -180,7 +180,8 @@ header {
 .shop {
     width: 100%;
     justify-content: center;
-    margin-top: 10px; 
+    margin-top: 10px;
+    background-color: transparent !important; 
 }
 
 .shop img {
@@ -540,22 +541,9 @@ footer {
         opacity: 1;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .menu-hamburguesa, .boton-flotante{
+        display: none;
+    }
 
 
 
@@ -568,13 +556,45 @@ footer {
 
 
     
+    .redes-sociales {
+        position: static;
+        opacity: 1;
+        max-height: none;
+        display: flex; 
+        gap: 20px;
+        padding: 20px 40px;
     
+    }
 
     .nav-container {
         display: flex;
         align-items: center;
         gap: 15px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 40px;
     }
+
+    .nav-container a {
+        font-size: 18px;
+        padding: 10px 15px; 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .vivo-container {
         display: block;
