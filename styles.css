@@ -46,23 +46,9 @@ header {
     display: none;
 }
 
-.menu-hamburguesa {
-    display: inline-block;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-}
-
-.menu-hamburguesa i {
-    font-size: 30px;
-    color: var(--bg-color-icons);
-}
-
 .redes-sociales {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center; 
     align-items: center; 
@@ -93,6 +79,69 @@ header {
     height: auto;
 }
 
+.programacion-diaria-content {
+    font-weight: 600;
+    font-family: var(--font-principal);
+    font-size: 18px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programacion-diaria-content a {
+    text-decoration: none;
+    color: var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
+    border-radius: 9px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+
+/*? ---  Despliegue del menú hamburguesa --- */
+.redes-sociales,
+.shop img,
+.programacion-diaria-content a {
+    margin-bottom: 18px;
+}
+
+.menu-hamburguesa {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+
+}
+
+.menu-hamburguesa i {
+    font-size: 30px;
+    color: var(--bg-color-icons);
+}
+
+.redes-sociales,
+.shop,
+.programacion-diaria-content {
+    display: none; 
+}
+
+.redes-sociales.active,
+.shop.active,
+.programacion-diaria-content.active {
+    display: flex; 
+}
+
+.shop.active {
+    display: block;
+}
+
+
+
 .boton-flotante {
     position: fixed;
     bottom: 20px;
@@ -115,34 +164,10 @@ header {
 
 
 
+
 /* ?---  Navecación principal  ---*//*
-.redes-logo a {
-    text-decoration: none;
-    background-color: var(--bg-color-icons);
-    color: var(--bg-color-primario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 
-.whatsapp a {
-    background-color: #25D366;
-}
 
-.content-nav,
-.redes-sociales,
-.shop,
-.imagenes-galeria {
-    width: 100%;
-}
-
-.programacion-diaria-container {
-    font-weight: 600;
-    font-size: 15px;
-    list-style-type: none;
-    font-family: var(--font-principal);
-}
 
 .redes-sociales {
     list-style: none;
@@ -167,29 +192,9 @@ header {
     display: none;
 }
 
-.programacion-diaria-container {
-    width: 100%; 
-    display: flex;
-    justify-content: center; 
-    font-weight: 600;
-    font-size: 20px;
-    list-style-type: none;
-    font-family: var(--font-principal);
-    margin: 10px 0 20px 0; 
-}
 
-.programacion-diaria-container a {
-    color: var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
-    text-decoration: none;
-    border-radius: 9px;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
+
+
 
 .redes-sociales,
 .shop {
