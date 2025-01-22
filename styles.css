@@ -70,8 +70,14 @@ header {
     font-size: 23px; 
 }
 
-.redes-sociales .fa-whatsapp {
+.redes-sociales .whatsapp-logo {
     background-color: #25D366;
+}
+
+.shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shop img {
@@ -136,9 +142,6 @@ header {
     display: flex; 
 }
 
-.shop.active {
-    display: block;
-}
 
 
 
