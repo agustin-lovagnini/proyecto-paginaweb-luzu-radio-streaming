@@ -1,5 +1,5 @@
 const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
-const menuItems = document.querySelectorAll('.redes-sociales, .shop, .programacion-diaria-content');
+const menuItems = document.querySelectorAll('.content-menu');
 
 buttonHamburguesa.addEventListener('click', () => {
     menuItems.forEach(item => {

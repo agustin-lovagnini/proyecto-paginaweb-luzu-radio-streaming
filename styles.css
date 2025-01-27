@@ -46,6 +46,8 @@ header {
     display: none;
 }
 
+/* ?---  Navecación principal  ---*/
+
 .redes-sociales {
     display: flex;
     flex-wrap: wrap;
@@ -130,20 +132,22 @@ header {
     color: var(--bg-color-icons);
 }
 
-.redes-sociales,
-.shop,
-.programacion-diaria-content {
+.content-menu {
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color-secundario);
+    border-radius: 15px;
+    width: 100%;
     display: none; 
 }
 
-.redes-sociales.active,
-.shop.active,
-.programacion-diaria-content.active {
+.content-menu.active {
+    flex-direction: column;
+    align-items: center;
     display: flex; 
 }
-
-
-
 
 .boton-flotante {
     position: fixed;
@@ -161,68 +165,6 @@ header {
     font-size: 15px;
     z-index: 3000;
 }
-
-
-
-
-
-
-
-/* ?---  Navecación principal  ---*//*
-
-
-
-.redes-sociales {
-    list-style: none;
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center;
-    gap: 17px; 
-    background-color: var(--bg-color-secundario);
-    border-radius: 20px;
-    padding: 40%; 
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    position: absolute; 
-    top: 50px;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-}
-
-.redes-sociales.active {
-    max-height: 500px;
-    display: none;
-}
-
-
-
-
-
-.redes-sociales,
-.shop {
-    display: flex;
-}
-
-.redes-logo a {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border-radius: 50%;
-}
-
-.shop {
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-    background-color: transparent !important; 
-}
-
-.shop img {
-    width: 195px;
-    height: auto;
-}
-*/
 
 /*? --- img-ondemand-1 ---*/
 
