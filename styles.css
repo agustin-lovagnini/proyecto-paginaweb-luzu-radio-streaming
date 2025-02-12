@@ -55,7 +55,7 @@ header {
     justify-content: center; 
     align-items: center; 
     list-style: none; 
-    padding: 10px 0;
+    padding: 10px;
     margin: 0;
 }
 
@@ -134,7 +134,7 @@ header {
 
 .content-menu {
     position: absolute;
-    top: 200%;
+    top: 220%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg-color-secundario);
@@ -516,55 +516,36 @@ footer {
         text-align: left;
     }
 
-    .redes-sociales {
-        opacity: 1;
+    .content-menu {
+        display: flex;  
+        position: static;  
+        transform: none;  
+        width: auto;  
+        justify-content: flex-start;  
+        padding: 10px; 
+        align-items: center;
     }
 
-    .menu-hamburguesa, .boton-flotante{
-        display: none;
+    .redes-sociales,
+    .shop img,
+    .programacion-diaria-content a {
+        margin-bottom: 0;
     }
 
-
-
-
-
-
-
-
-
-
-
-    
-    .redes-sociales {
-        position: static;
-        opacity: 1;
-        max-height: none;
-        display: flex; 
-        gap: 20px;
-        padding: 20px 40px;
-    
+    .menu-hamburguesa,
+    .boton-flotante {
+        display: none;  
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .vivo-container {
         display: block;
         justify-content: center;
         align-items: center;
+        order: -1;
+    }
+
+    .programacion-diaria-content {
+        order: -1;
     }
 
     .vivo-container .fa {
