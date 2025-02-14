@@ -52,9 +52,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; 
-    align-items: center; 
-    list-style: none; 
+    justify-content: center;
+    align-items: center;
+    list-style: none;
     padding: 10px;
     margin: 0;
 }
@@ -63,13 +63,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px; 
-    height: 50px; 
-    background-color: var(--bg-color-icons); 
-    color: var(--bg-color-primario); 
-    text-decoration: none; 
-    border-radius: 50%; 
-    font-size: 23px; 
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-color-icons);
+    color: var(--bg-color-primario);
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 23px;
 }
 
 .redes-sociales .whatsapp-logo {
@@ -141,14 +141,14 @@ header {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100%;
-    display: none; 
+    display: none;
     list-style: none;
 }
 
 .content-menu.active {
     flex-direction: column;
     align-items: center;
-    display: flex; 
+    display: flex;
 }
 
 .boton-flotante {
@@ -518,12 +518,12 @@ footer {
     }
 
     .content-menu {
-        display: flex;  
-        position: static;  
-        transform: none;  
-        width: auto;  
-        justify-content: flex-start;  
-        padding: 10px; 
+        display: flex;
+        position: static;
+        transform: none;
+        width: auto;
+        justify-content: flex-start;
+        padding: 10px;
         align-items: center;
     }
 
@@ -535,25 +535,41 @@ footer {
 
     .menu-hamburguesa,
     .boton-flotante {
-        display: none;  
+        display: none;
+    }
+
+    .programacion-diaria-content a {
+        margin: auto 10px;
     }
 
     .vivo-container {
         display: block;
         justify-content: center;
         align-items: center;
-        order: -1;  
+        order: -1;
     }
 
     .vivo-container a {
+        display: block;
         text-decoration: none;
         color: var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
-    border-radius: 9px;
-    padding: 12px;
-    margin: 10px;
+        background-color: var(--bg-color-icons);
+        border-radius: 9px;
+        padding: 12px;
+        margin: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease; 
+    }
+    
+    .vivo-container a:hover {
+        transform: scale(1.05);
     }
 
+
+
+
+
+
+    
     .programacion-diaria-content {
         order: -1;
     }
@@ -569,26 +585,69 @@ footer {
         margin-left: 2.8px;
     }
 
-    .vivo-container a {
-        transition: color 0.8s ease;
-    }
+.vivo-container a:hover .vivo,
+.vivo-container a:hover .fa {
+    color: #FF0033;
+}
 
-    .vivo-container a:hover .vivo,
-    .vivo-container a:hover .fa {
-        color: #FF0033;
-    }
 
-    .vivo-container a:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
 
-    .programacion-diaria-container a:hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease;
-    }
 
-    
+
+
+
+
+
+
+
+
+
+.programacion-diaria-container a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales li a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales li a:hover {
+    transform: scale(1.1);
+}
+
+
+.shop:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
+}
+
+
+.programacion-diaria-content a:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*?---  BANNER RESUMIDO  ---*/
 
     .link-resumido h2 {
@@ -729,34 +788,3 @@ footer {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
