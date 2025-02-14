@@ -142,6 +142,7 @@ header {
     border-bottom-right-radius: 15px;
     width: 100%;
     display: none; 
+    list-style: none;
 }
 
 .content-menu.active {
@@ -541,7 +542,16 @@ footer {
         display: block;
         justify-content: center;
         align-items: center;
-        order: -1;
+        order: -1;  
+    }
+
+    .vivo-container a {
+        text-decoration: none;
+        color: var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
+    border-radius: 9px;
+    padding: 12px;
+    margin: 10px;
     }
 
     .programacion-diaria-content {
