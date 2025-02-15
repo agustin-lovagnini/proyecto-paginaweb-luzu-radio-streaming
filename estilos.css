@@ -132,7 +132,7 @@ header {
 
 .contenido-menu {
     position: absolute;
-    top: 220%;
+    top: 210px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg-color-secundario);
@@ -140,6 +140,8 @@ header {
     border-bottom-right-radius: 15px;
     width: 100%;
     display: none;
+    padding-top: 5px;
+    padding-bottom: 10px;
     list-style: none;
 }
 
