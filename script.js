@@ -1,5 +1,5 @@
 const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
-const menuItems = document.querySelectorAll('.content-menu');
+const menuItems = document.querySelectorAll('.contenido-menu');
 
 buttonHamburguesa.addEventListener('click', () => {
     menuItems.forEach(item => {
