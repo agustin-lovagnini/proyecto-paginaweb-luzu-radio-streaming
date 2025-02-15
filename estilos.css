@@ -19,7 +19,11 @@ html {
 }
 
 /**---  SECTION HEADER  ---*/
+
 header {
+    background-color: var(--bg-color-secundario);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 15px;
@@ -28,19 +32,7 @@ header {
     top: 0;
 }
 
-header, .contenido-menu.active, main {
-    flex-direction: column;
-}
-
-header, .contenido-menu, .contenido-pagina-resumido h2, footer {
-    background-color: var(--bg-color-secundario);
-}
-
-.redes-sociales, header, .botones-redes, .boton-porgramacion-diaria, .tienda, .contenido-menu.active, main, .contenido-resumido, .footer-redes-sociales, .footer-botones-redes a  {
-    display: flex;
-}
-
-.logo a, .menu-hamburguesa, .programa a, .img-programa,     .contenedor-vivo-escritorio   {
+.logo a {
     display: block;
 }
 
@@ -48,25 +40,17 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
     padding: 15px;
 }
 
-.contenedor-vivo-escritorio, .contenido-menu, .fecha-hora-programas, .menu-hamburguesa,
-.boton-flotante-vivo   {
+.contenedor-vivo-escritorio {
     display: none;
 }
 
-.redes-sociales .botones-redes, .boton-porgramacion-diaria a, .contenedor-vivo-escritorio a, .boton-flotante-vivo   {
-    background-color: var(--bg-color-icons);
-    color: var(--bg-color-primario);
-}
-
-.contenido-resumido, .redes-sociales .botones-redes, .boton-porgramacion-diaria, .tienda, .footer-redes-sociales, .footer-botones-redes a  {
-    justify-content: center;
-}
-
-
 /* ?---  Navecación principal  ---*/
+
 .redes-sociales {
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     align-items: center;
     list-style: none;
     padding: 10px;
@@ -74,9 +58,13 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
 }
 
 .redes-sociales .botones-redes {
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
+    background-color: var(--bg-color-icons);
+    color: var(--bg-color-primario);
     text-decoration: none;
     border-radius: 50%;
     font-size: 23px;
@@ -86,38 +74,38 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
     background-color: #25D366;
 }
 
-.boton-porgramacion-diaria a, .contenedor-vivo-escritorio a {
-    text-decoration: none;
-    border-radius: 9px;
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 15px;
-    margin: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.tienda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tienda img {
+    width: 195px;
+    height: auto;
 }
 
 .boton-porgramacion-diaria {
     font-weight: 600;
     font-family: var(--font-principal);
+    font-size: 18px;
     list-style-type: none;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-/*
-    .contenedor-vivo-escritorio, .contenedor-vivo-escritorio a {
-    display: none;
-    }
-*/
+.boton-porgramacion-diaria a {
+    text-decoration: none;
+    color: var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
+    border-radius: 9px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
 
-    .tienda {
-        align-items: center;
-    }
-    
-    .tienda img {
-        width: 195px;
-        height: auto;
-    }
 
 /*? ---  Despliegue del menú hamburguesa --- */
 .redes-sociales,
@@ -127,12 +115,14 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
 }
 
 .menu-hamburguesa {
+    display: block;
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
     background: none;
     border: none;
+
 }
 
 .menu-hamburguesa i {
@@ -142,19 +132,21 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
 
 .contenido-menu {
     position: absolute;
-    top: 210px;
+    top: 220%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: var(--bg-color-secundario);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    display: none;
     list-style: none;
 }
 
 .contenido-menu.active {
+    flex-direction: column;
     align-items: center;
+    display: flex;
 }
 
 .boton-flotante-vivo {
@@ -163,7 +155,9 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
     right: 20px;
     font-weight: 900;
     border: 1px solid var(--bg-color-primario);
+    background-color: var(--bg-color-icons);
     font-family: var(--font-principal);
+    color: white;
     padding: 12px 10px;
     border-radius: 50px;
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
@@ -173,6 +167,7 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
 }
 
 /*? --- img-ondemand-1 ---*/
+
 .img-ondemand-1 {
     width: 150%;
     height: auto;
@@ -187,15 +182,20 @@ header, .contenido-menu, .contenido-pagina-resumido h2, footer {
     margin-bottom: 2.5%;
 }
 
+
 /**---  SECTION MAIN  ---*/
 main {
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
 }
 
 /*?---  BANNER RESUMIDO  ---*/
+
 .contenido-pagina-resumido h2 {
     font-family: var(--font-principal);
+    background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     text-align: center;
     font-size: 10px;
@@ -214,6 +214,8 @@ main {
     background-size: cover;
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
     padding: 2px 0;
 }
 
@@ -255,6 +257,7 @@ main {
 }
 
 .programa a {
+    display: block;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -262,12 +265,15 @@ main {
 }
 
 .img-programa {
+    display: block;
     width: 100%;
     height: auto;
     z-index: 100;
 }
 
-
+.texto-hover {
+    display: none;
+}
 
 .imagen-superpuesta {
     position: absolute;
@@ -352,6 +358,7 @@ main {
 
 /**---  SECTION FOOTER  ---*/
 footer {
+    background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     padding: 15px;
     text-align: center;
@@ -362,8 +369,10 @@ footer {
     list-style: none;
     list-style-type: none;
     margin: 20px 0;
+    display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-botones-redes a {
@@ -373,6 +382,8 @@ footer {
     color: hsl(0, 0%, 0%);
     font-size: 16px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
 }
@@ -387,16 +398,48 @@ footer {
     text-decoration: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**---  MEDIA QUERYS  ---*/
+
+
 @media (max-width: 600px) {
-    .seccion-streaming-en-vivo, .img-ondemand-2  {
+
+    .seccion-streaming-en-vivo {
+        display: none;
+    }
+
+    /*?---  IMG ONDEMAND   ----*/
+
+    .img-ondemand-2 {
         display: none;
     }
 }
 
+
 @media (min-width: 600px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
+
     .seccion-streaming-en-vivo {
         background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
         background-size: contain;
@@ -418,6 +461,7 @@ footer {
     }
 
     /*?---  IMG ONDEMAND   ----*/
+
     .img-ondemand-2 {
         width: 150%;
         height: auto;
@@ -426,6 +470,7 @@ footer {
     }
 
     /*?--- GALERIA ---*/
+
     .imagenes-galeria {
         text-align: center;
     }
@@ -436,17 +481,42 @@ footer {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px) {
 
     header {
+        display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2px 7px;
+        padding: 20px 12px;
         flex-direction: row;
         text-align: left;
     }
 
     .contenido-menu {
+        display: flex;
         position: static;
         transform: none;
         width: auto;
@@ -455,39 +525,49 @@ footer {
         align-items: center;
     }
 
-    .contenido-menu, .footer-redes-sociales {
-        display: flex;
-    }
-
-    .contenedor-vivo-escritorio, .fecha-hora-programas  {
-        display: block;
-    }
-
     .redes-sociales,
     .tienda img,
     .boton-porgramacion-diaria a {
         margin-bottom: 0;
     }
 
-    .contenedor-vivo-escritorio, .footer-redes-sociales {
-        justify-content: center;
+    .menu-hamburguesa,
+    .boton-flotante-vivo {
+        display: none;
     }
 
     .boton-porgramacion-diaria a {
         margin: auto 10px;
     }
 
-
-
     .contenedor-vivo-escritorio {
+        display: block;
+        justify-content: center;
         align-items: center;
         order: -1;
+    }
+
+    .contenedor-vivo-escritorio a {
+        display: block;
+        text-decoration: none;
+        color: var(--bg-color-primario);
+        background-color: var(--bg-color-icons);
+        border-radius: 9px;
+        padding: 12px;
+        margin: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease; 
     }
     
     .contenedor-vivo-escritorio a:hover {
         transform: scale(1.05);
     }
 
+
+
+
+
+
+    
     .boton-porgramacion-diaria {
         order: -1;
     }
@@ -508,6 +588,18 @@ footer {
     color: #FF0033;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .programacion-diaria-container a:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -521,17 +613,41 @@ footer {
     transform: scale(1.1);
 }
 
+
 .tienda:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     transform: scale(1.05);
 }
+
 
 .boton-porgramacion-diaria a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     transform: scale(1.05); 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*?---  BANNER RESUMIDO  ---*/
+
     .contenido-pagina-resumido h2 {
         font-size: 18px;
     }
@@ -546,6 +662,7 @@ footer {
     }
 
     /*?---  RADIO EN VIVO   ----*/
+
     .seccion-streaming-en-vivo {
         background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
         background-size: cover;
@@ -585,6 +702,7 @@ footer {
     }
 
     /*?--- GALERIA ---*/
+
     .imagenes-galeria {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -605,7 +723,8 @@ footer {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .fecha-hora-programas {
+    .texto-hover {
+        display: block;
         color: white;
         margin: 0;
         font-family: Arial;
@@ -633,11 +752,16 @@ footer {
         transform: scale(1.1);
     }
 
+
+
     /**---  SECTION FOOTER  ---*/
+
     .footer-redes-sociales {
         gap: 10px;
         margin: 10px 0 10px 0;
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .footer-redes-sociales a {
