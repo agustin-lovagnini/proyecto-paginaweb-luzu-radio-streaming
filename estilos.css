@@ -26,7 +26,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 15px;
+    padding: 0px;
     z-index: 5000;
     position: sticky;
     top: 0;
@@ -132,7 +132,7 @@ header {
 
 .contenido-menu {
     position: absolute;
-    top: 210px;
+    top: 220px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg-color-secundario);
@@ -438,9 +438,13 @@ footer {
 }
 
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 420px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
+
+    .contenido-menu {
+        top: 188px;
+    }
 
     .seccion-streaming-en-vivo {
         background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
@@ -512,7 +516,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 12px;
+        padding: 0px 8px;
         flex-direction: row;
         text-align: left;
     }
