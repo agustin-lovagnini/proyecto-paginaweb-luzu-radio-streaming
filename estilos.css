@@ -19,7 +19,6 @@ html {
 }
 
 /**---  SECTION HEADER  ---*/
-
 header {
     background-color: var(--bg-color-secundario);
     display: flex;
@@ -45,7 +44,6 @@ header {
 }
 
 /* ?---  Navecación principal  ---*/
-
 .redes-sociales {
     display: flex;
     flex-wrap: wrap;
@@ -63,11 +61,15 @@ header {
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: var(--bg-color-icons);
-    color: var(--bg-color-primario);
     text-decoration: none;
     border-radius: 50%;
     font-size: 23px;
+}
+
+
+.redes-sociales .botones-redes, .contenedor-vivo-escritorio a, .boton-porgramacion-diaria a, .boton-flotante-vivo {
+    background-color: var(--bg-color-icons);
+    color: var(--bg-color-primario);
 }
 
 .redes-sociales .whatsapp-logo {
@@ -96,16 +98,17 @@ header {
 }
 
 .boton-porgramacion-diaria a {
-    text-decoration: none;
-    color: var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
-    border-radius: 9px;
-    display: inline-block;
     text-align: center;
-    padding: 10px 20px;
-    margin: 0 auto;
 }
 
+.boton-porgramacion-diaria a, .contenedor-vivo-escritorio a {
+    border-radius: 9px;
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px;
+    font-size: 15px;
+}
 
 /*? ---  Despliegue del menú hamburguesa --- */
 .redes-sociales,
@@ -157,9 +160,7 @@ header {
     right: 20px;
     font-weight: 900;
     border: 1px solid var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
     font-family: var(--font-principal);
-    color: white;
     padding: 12px 10px;
     border-radius: 50px;
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
@@ -169,7 +170,6 @@ header {
 }
 
 /*? --- img-ondemand-1 ---*/
-
 .img-ondemand-1 {
     width: 150%;
     height: auto;
@@ -194,7 +194,6 @@ main {
 }
 
 /*?---  BANNER RESUMIDO  ---*/
-
 .contenido-pagina-resumido h2 {
     font-family: var(--font-principal);
     background-color: var(--bg-color-secundario);
@@ -236,7 +235,6 @@ main {
 }
 
 /*?--- GALERIA ---*/
-
 .galeria-fondo-de-pantalla {
     background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
     background-size: cover;
@@ -400,30 +398,7 @@ footer {
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**---  MEDIA QUERYS  ---*/
-
-
 @media (max-width: 600px) {
 
     .seccion-streaming-en-vivo {
@@ -431,7 +406,6 @@ footer {
     }
 
     /*?---  IMG ONDEMAND   ----*/
-
     .img-ondemand-2 {
         display: none;
     }
@@ -441,7 +415,6 @@ footer {
 @media (min-width: 420px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
-
     .contenido-menu {
         top: 188px;
     }
@@ -467,7 +440,6 @@ footer {
     }
 
     /*?---  IMG ONDEMAND   ----*/
-
     .img-ondemand-2 {
         width: 150%;
         height: auto;
@@ -476,7 +448,6 @@ footer {
     }
 
     /*?--- GALERIA ---*/
-
     .imagenes-galeria {
         text-align: center;
     }
@@ -484,31 +455,7 @@ footer {
     .programa {
         width: 82%;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 1024px) {
 
@@ -554,13 +501,6 @@ footer {
     }
 
     .contenedor-vivo-escritorio a {
-        display: block;
-        text-decoration: none;
-        color: var(--bg-color-primario);
-        background-color: var(--bg-color-icons);
-        border-radius: 9px;
-        padding: 12px;
-        margin: 10px;
         transition: background-color 0.3s ease, transform 0.3s ease; 
     }
     
@@ -568,12 +508,6 @@ footer {
         transform: scale(1.05);
     }
 
-
-
-
-
-
-    
     .boton-porgramacion-diaria {
         order: -1;
     }
@@ -594,66 +528,27 @@ footer {
     color: #FF0033;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .programacion-diaria-container a:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-.redes-sociales li a {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
 .redes-sociales li a:hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
     transform: scale(1.1);
 }
-
 
 .tienda:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     transform: scale(1.05);
 }
 
-
 .boton-porgramacion-diaria a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
     transform: scale(1.05); 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*?---  BANNER RESUMIDO  ---*/
-
     .contenido-pagina-resumido h2 {
         font-size: 18px;
     }
@@ -668,7 +563,6 @@ footer {
     }
 
     /*?---  RADIO EN VIVO   ----*/
-
     .seccion-streaming-en-vivo {
         background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
         background-size: cover;
@@ -694,7 +588,6 @@ footer {
     }
 
     /*?---  IMG ONDEMAND   ----*/
-
     .img-ondemand-2 {
         height: auto;
         border-top: 2px solid var(--bg-color-icons);
@@ -708,7 +601,6 @@ footer {
     }
 
     /*?--- GALERIA ---*/
-
     .imagenes-galeria {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -758,10 +650,7 @@ footer {
         transform: scale(1.1);
     }
 
-
-
     /**---  SECTION FOOTER  ---*/
-
     .footer-redes-sociales {
         gap: 10px;
         margin: 10px 0 10px 0;
