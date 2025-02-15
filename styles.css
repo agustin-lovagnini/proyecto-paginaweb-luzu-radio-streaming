@@ -1,19 +1,17 @@
-/*---  VARIABLES GLOBALES  ---*/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     /*--- COLORES ---*/
     --bg-color-primario: #fff;
     --bg-color-secundario: #000;
     --bg-color-icons: #FF8DA8;
     --bg-color-icons-footer: #797d7f;
-
-    /*--- TIPOGRAFIA ---*/
     --font-principal: "Roboto", sans-serif;
+}
+
+/*---  VARIABLES GLOBALES  ---*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
