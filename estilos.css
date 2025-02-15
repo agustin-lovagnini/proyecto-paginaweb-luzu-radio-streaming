@@ -20,14 +20,20 @@ html {
 
 /**---  SECTION HEADER  ---*/
 header {
-    background-color: var(--bg-color-secundario);
-    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 15px;
     z-index: 5000;
     position: sticky;
     top: 0;
+}
+
+header, .contenido-menu.active, main {
+    flex-direction: column;
+}
+
+header, .contenido-menu, .contenido-pagina-resumido h2, footer {
+    background-color: var(--bg-color-secundario);
 }
 
 .redes-sociales, header, .botones-redes, .boton-porgramacion-diaria, .tienda, .contenido-menu.active, main, .contenido-resumido, .footer-redes-sociales, .footer-botones-redes a  {
@@ -42,15 +48,25 @@ header {
     padding: 15px;
 }
 
-.contenedor-vivo-escritorio {
+.contenedor-vivo-escritorio, .contenido-menu, .fecha-hora-programas, .menu-hamburguesa,
+.boton-flotante-vivo   {
     display: none;
 }
+
+.redes-sociales .botones-redes, .boton-porgramacion-diaria a, .contenedor-vivo-escritorio a, .boton-flotante-vivo   {
+    background-color: var(--bg-color-icons);
+    color: var(--bg-color-primario);
+}
+
+.contenido-resumido, .redes-sociales .botones-redes, .boton-porgramacion-diaria, .tienda, .footer-redes-sociales, .footer-botones-redes a  {
+    justify-content: center;
+}
+
 
 /* ?---  Navecación principal  ---*/
 .redes-sociales {
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
     align-items: center;
     list-style: none;
     padding: 10px;
@@ -58,12 +74,9 @@ header {
 }
 
 .redes-sociales .botones-redes {
-    justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: var(--bg-color-icons);
-    color: var(--bg-color-primario);
     text-decoration: none;
     border-radius: 50%;
     font-size: 23px;
@@ -75,8 +88,6 @@ header {
 
 .boton-porgramacion-diaria a, .contenedor-vivo-escritorio a {
     text-decoration: none;
-    color: var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
     border-radius: 9px;
     display: inline-block;
     text-align: center;
@@ -90,7 +101,6 @@ header {
     font-weight: 600;
     font-family: var(--font-principal);
     list-style-type: none;
-    justify-content: center;
     align-items: center;
 }
 
@@ -101,7 +111,6 @@ header {
 */
 
     .tienda {
-        justify-content: center;
         align-items: center;
     }
     
@@ -136,18 +145,15 @@ header {
     top: 210px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--bg-color-secundario);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
-    display: none;
     list-style: none;
 }
 
 .contenido-menu.active {
-    flex-direction: column;
     align-items: center;
 }
 
@@ -157,9 +163,7 @@ header {
     right: 20px;
     font-weight: 900;
     border: 1px solid var(--bg-color-primario);
-    background-color: var(--bg-color-icons);
     font-family: var(--font-principal);
-    color: white;
     padding: 12px 10px;
     border-radius: 50px;
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
@@ -186,14 +190,12 @@ header {
 /**---  SECTION MAIN  ---*/
 main {
     min-height: 100%;
-    flex-direction: column;
     overflow-x: hidden;
 }
 
 /*?---  BANNER RESUMIDO  ---*/
 .contenido-pagina-resumido h2 {
     font-family: var(--font-principal);
-    background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     text-align: center;
     font-size: 10px;
@@ -212,7 +214,6 @@ main {
     background-size: cover;
     width: 100%;
     height: auto;
-    justify-content: center;
     padding: 2px 0;
 }
 
@@ -266,9 +267,7 @@ main {
     z-index: 100;
 }
 
-.texto-hover {
-    display: none;
-}
+
 
 .imagen-superpuesta {
     position: absolute;
@@ -353,7 +352,6 @@ main {
 
 /**---  SECTION FOOTER  ---*/
 footer {
-    background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     padding: 15px;
     text-align: center;
@@ -366,7 +364,6 @@ footer {
     margin: 20px 0;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .footer-botones-redes a {
@@ -376,7 +373,6 @@ footer {
     color: hsl(0, 0%, 0%);
     font-size: 16px;
     border-radius: 50%;
-    justify-content: center;
     align-items: center;
     text-decoration: none;
 }
@@ -393,12 +389,7 @@ footer {
 
 /**---  MEDIA QUERYS  ---*/
 @media (max-width: 600px) {
-    .seccion-streaming-en-vivo {
-        display: none;
-    }
-
-    /*?---  IMG ONDEMAND   ----*/
-    .img-ondemand-2 {
+    .seccion-streaming-en-vivo, .img-ondemand-2  {
         display: none;
     }
 }
@@ -468,7 +459,7 @@ footer {
         display: flex;
     }
 
-    .contenedor-vivo-escritorio, .texto-hover  {
+    .contenedor-vivo-escritorio, .fecha-hora-programas  {
         display: block;
     }
 
@@ -478,17 +469,17 @@ footer {
         margin-bottom: 0;
     }
 
-    .menu-hamburguesa,
-    .boton-flotante-vivo {
-        display: none;
+    .contenedor-vivo-escritorio, .footer-redes-sociales {
+        justify-content: center;
     }
 
     .boton-porgramacion-diaria a {
         margin: auto 10px;
     }
 
+
+
     .contenedor-vivo-escritorio {
-        justify-content: center;
         align-items: center;
         order: -1;
     }
@@ -614,7 +605,7 @@ footer {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .texto-hover {
+    .fecha-hora-programas {
         color: white;
         margin: 0;
         font-family: Arial;
@@ -647,7 +638,6 @@ footer {
         gap: 10px;
         margin: 10px 0 10px 0;
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     .footer-redes-sociales a {
