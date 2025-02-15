@@ -22,10 +22,11 @@ html {
 header {
     background-color: var(--bg-color-secundario);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
-    padding: 0px;
+    justify-content: space-between;
+    padding: 7px 26px;
     z-index: 5000;
     position: sticky;
     top: 0;
@@ -35,8 +36,12 @@ header {
     display: block;
 }
 
+h1 {
+    height: 29px;
+}
+
 .logo img {
-    padding: 15px;
+    width: 150px;
 }
 
 .contenedor-vivo-escritorio {
@@ -51,7 +56,7 @@ header {
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 10px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -114,18 +119,14 @@ header {
 .redes-sociales,
 .tienda img,
 .boton-porgramacion-diaria a {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .menu-hamburguesa {
     display: block;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: none;
     border: none;
-
 }
 
 .menu-hamburguesa i {
@@ -135,7 +136,7 @@ header {
 
 .contenido-menu {
     position: absolute;
-    top: 220px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg-color-secundario);
@@ -368,7 +369,7 @@ footer {
 .footer-redes-sociales {
     list-style: none;
     list-style-type: none;
-    margin: 20px 0;
+    margin: 25px 0;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -377,25 +378,33 @@ footer {
 
 .footer-botones-redes a {
     background-color: var(--bg-color-icons-footer);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: hsl(0, 0%, 0%);
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .footer-programacion-diaria {
     margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .footer-programacion-diaria a {
     color: var(--bg-color-icons-footer);
     font-family: var(--font-principal);
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.texto-info, .texto-copy {
+    font-family: var(--font-principal);
 }
 
 /**---  MEDIA QUERYS  ---*/
@@ -416,7 +425,7 @@ footer {
 
     /*?---  RADIO EN VIVO   ----*/
     .contenido-menu {
-        top: 188px;
+        top: 166px;
     }
 
     .seccion-streaming-en-vivo {
@@ -550,7 +559,7 @@ footer {
 
     /*?---  BANNER RESUMIDO  ---*/
     .contenido-pagina-resumido h2 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .contenido-resumido {
@@ -666,10 +675,6 @@ footer {
     .footer-redes-sociales a:hover {
         color: var(--bg-color-primario);
         transform: scale(1.1);
-    }
-
-    .footer-programacion-diaria {
-        margin-bottom: 15px;
     }
 
     .footer-programacion-diaria a {
