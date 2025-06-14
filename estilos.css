@@ -1,8 +1,8 @@
 :root {
     /*--- COLORES ---*/
-    --bg-color-primario: #fff;
-    --bg-color-secundario: #000;
-    --bg-color-icons: #FF8DA8;
+    --bg-color-primario: #f1f1f1;
+    --bg-color-secundario: #1c1c1c;
+    --bg-color-icons: #ff8a80;
     --bg-color-icons-footer: #797d7f;
     --font-principal: "Roboto", sans-serif;
 }
@@ -26,23 +26,30 @@ header {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    padding: 7px 26px;
+    padding: 20px 26px;
     z-index: 5000;
     position: sticky;
+    height: 70px;
     top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
     display: block;
 }
 
-h1 {
-    height: 29px;
+.logo img {
+    width: clamp(120px, 10vw, 180px);
 }
 
-.logo img {
-    width: 150px;
+h1 {
+    height: clamp(24px, 3vw, 32px);
 }
+
 
 .contenedor-vivo-escritorio {
     display: none;
@@ -64,15 +71,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: clamp(40px, 10vw, 50px);
+    height: clamp(40px, 10vw, 50px);
     text-decoration: none;
     border-radius: 50%;
-    font-size: 23px;
+    font-size: clamp(18px, 5vw, 23px);
 }
 
-
-.redes-sociales .botones-redes, .contenedor-vivo-escritorio a, .boton-porgramacion-diaria a, .boton-flotante-vivo {
+.redes-sociales .botones-redes,
+.contenedor-vivo-escritorio a,
+.boton-programacion-diaria a,
+.boton-flotante-vivo {
     background-color: var(--bg-color-icons);
     color: var(--bg-color-primario);
 }
@@ -88,37 +97,38 @@ h1 {
 }
 
 .tienda img {
-    width: 195px;
+    width: clamp(150px, 12vw, 220px);
     height: auto;
 }
 
-.boton-porgramacion-diaria {
+.boton-programacion-diaria {
     font-weight: 600;
     font-family: var(--font-principal);
-    font-size: 18px;
+    font-size: clamp(15px, 2.5vw, 20px);
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.boton-porgramacion-diaria a {
+.boton-programacion-diaria a {
     text-align: center;
 }
 
-.boton-porgramacion-diaria a, .contenedor-vivo-escritorio a {
+.boton-programacion-diaria a,
+.contenedor-vivo-escritorio a {
     border-radius: 9px;
     display: block;
     text-decoration: none;
     padding: 12px;
     margin: 10px;
-    font-size: 15px;
+    font-size: clamp(13px, 2vw, 16px);
 }
 
 /*? ---  Despliegue del menú hamburguesa --- */
 .redes-sociales,
 .tienda img,
-.boton-porgramacion-diaria a {
+.boton-programacion-diaria a {
     margin-bottom: 12px;
 }
 
@@ -136,23 +146,30 @@ h1 {
 
 .contenido-menu {
     position: absolute;
-    top: 200px;
+    top: 99%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top center;
     background-color: var(--bg-color-secundario);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100%;
-    display: none;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    overflow: hidden;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
     list-style: none;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
 .contenido-menu.active {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    pointer-events: auto;
 }
 
 .boton-flotante-vivo {
@@ -162,26 +179,39 @@ h1 {
     font-weight: 900;
     border: 1px solid var(--bg-color-primario);
     font-family: var(--font-principal);
-    padding: 12px 10px;
+    padding: clamp(8px, 2vw, 12px) clamp(6px, 2vw, 10px);
     border-radius: 50px;
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    font-size: 15px;
+    font-size: clamp(14px, 2vw, 18px);
     z-index: 3000;
 }
 
+
+/* --- Main ---*/
+
+main {
+    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /*? --- img-ondemand-1 ---*/
-.img-ondemand-1 {
-    width: 150%;
+
+.img-ondemand {
+    width: 250%;
     height: auto;
     border-bottom: 2px solid var(--bg-color-icons);
 }
 
+.img-ondemand-1 {
+    position: sticky;
+    top: 70px;
+}
+
 .img-ondemand-3 {
-    width: 150%;
-    height: auto;
     border-top: 2px solid var(--bg-color-icons);
-    border-bottom: 2px solid var(--bg-color-icons);
     margin-bottom: 2.5%;
 }
 
@@ -200,32 +230,37 @@ main {
     background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     text-align: center;
-    font-size: 10px;
+    font-size: clamp(13px, 2.2vw, 16px);
     border-top: 2px solid var(--bg-color-icons-footer);
     padding: 6px 0;
 }
 
-.contenido-pagina-resumido a {
-    text-decoration: none;
-}
-
 .contenido-resumido {
-    background-image: url(multimedia/banner-resumido.svg);
-    background-position: center center;
+    background-color: #c6ff00;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 70px;
     display: flex;
     justify-content: center;
-    padding: 2px 0;
+    align-items: center;
+    padding: 8px 0;
+    gap: 6px;
+}
+
+.lado-izquierdo,
+.lado-derecho {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .marca-resumido {
-    color: var(--bg-color-primario);
-    font-size: 25px;
+    margin: 0;
+    font-size: 24px;
     font-weight: 900;
-    font-family: Arial, sans-serif;
+    font-family: "Archivo Black", sans-serif;
     filter: drop-shadow(3px 3px 0 #000);
     letter-spacing: 2px;
     text-shadow:
@@ -235,13 +270,41 @@ main {
         1px 1px 0 #000;
 }
 
-/*?--- GALERIA ---*/
-.galeria-fondo-de-pantalla {
-    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.marca-resumido a {
+    color: var(--bg-color-primario);
+    text-decoration: none;
+    padding: 4px 8px;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
+
+.r-derecha,
+.r-izquierda {
+    height: 30px;
+    width: auto;
+}
+
+.flecha-blanca-izquierda,
+.flecha-negra-izquierda,
+.flecha-blanca-derecha,
+.flecha-negra-derecha {
+    height: 20px;
+    width: auto;
+}
+
+.flecha-blanca-izquierda,
+.flecha-negra-izquierda {
+    transform: scaleX(-1);
+}
+
+.flecha-blanca-derecha,
+.flecha-blanca-izquierda {
+    display: none !important;
+}
+
+
+
+/*?--- GALERIA ---*/
 
 .imagenes-galeria {
     padding: 20px;
@@ -249,7 +312,7 @@ main {
 
 .programa {
     position: relative;
-    margin-bottom: 10%;
+    margin-bottom: clamp(20px, 5vw, 60px);
     display: inline-block;
     overflow: hidden;
     border: 5px solid var(--bg-color-icons);
@@ -366,22 +429,36 @@ footer {
     z-index: 4000;
 }
 
+.footer-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 15px;
+}
+
+.logo-footer {
+    width: 180px;
+    height: auto;
+}
+
 .footer-redes-sociales {
     list-style: none;
-    list-style-type: none;
     margin: 25px 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
 }
 
 .footer-botones-redes a {
     background-color: var(--bg-color-icons-footer);
-    width: 35px;
-    height: 35px;
-    color: hsl(0, 0%, 0%);
-    font-size: 18px;
+    width: 55px;
+    height: 55px;
+    color: var(--bg-color-secundario);
+    font-size: 25px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -390,21 +467,10 @@ footer {
     margin: 0 10px;
 }
 
-.footer-programacion-diaria {
-    margin-bottom: 15px;
-    margin-top: 20px;
-}
-
-.footer-programacion-diaria a {
-    color: var(--bg-color-icons-footer);
+.texto-info,
+.texto-copy {
     font-family: var(--font-principal);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.texto-info, .texto-copy {
-    font-family: var(--font-principal);
+    margin: 30px 0;
 }
 
 /**---  MEDIA QUERYS  ---*/
@@ -424,9 +490,6 @@ footer {
 @media (min-width: 420px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
-    .contenido-menu {
-        top: 166px;
-    }
 
     .seccion-streaming-en-vivo {
         background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
@@ -450,10 +513,24 @@ footer {
 
     /*?---  IMG ONDEMAND   ----*/
     .img-ondemand-2 {
-        width: 150%;
-        height: auto;
         border-top: 2px solid var(--bg-color-icons);
-        border-bottom: 2px solid var(--bg-color-icons);
+    }
+
+    /*?---  BANNER RESUMIDO  ---*/
+    .marca-resumido {
+        font-size: 35px;
+    }
+
+    .r-derecha,
+    .r-izquierda {
+        height: 55px;
+    }
+
+    .flecha-blanca-izquierda,
+    .flecha-negra-izquierda,
+    .flecha-blanca-derecha,
+    .flecha-negra-derecha {
+        height: 35px;
     }
 
     /*?--- GALERIA ---*/
@@ -475,21 +552,27 @@ footer {
         padding: 0px 8px;
         flex-direction: row;
         text-align: left;
+        height: 110px;
+    }
+
+    .logo img {
+        margin-left: 20px;
     }
 
     .contenido-menu {
         display: flex;
         position: static;
         transform: none;
+        opacity: 1;
+        pointer-events: auto;
         width: auto;
-        justify-content: flex-start;
         padding: 10px;
-        align-items: center;
+        flex-direction: row;
     }
 
     .redes-sociales,
     .tienda img,
-    .boton-porgramacion-diaria a {
+    .boton-programacion-diaria a {
         margin-bottom: 0;
     }
 
@@ -498,7 +581,7 @@ footer {
         display: none;
     }
 
-    .boton-porgramacion-diaria a {
+    .boton-programacion-diaria a {
         margin: auto 10px;
     }
 
@@ -510,14 +593,14 @@ footer {
     }
 
     .contenedor-vivo-escritorio a {
-        transition: background-color 0.3s ease, transform 0.3s ease; 
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    
+
     .contenedor-vivo-escritorio a:hover {
         transform: scale(1.05);
     }
 
-    .boton-porgramacion-diaria {
+    .boton-programacion-diaria {
         order: -1;
     }
 
@@ -532,43 +615,66 @@ footer {
         margin-left: 2.8px;
     }
 
-.contenedor-vivo-escritorio a:hover .boton-vivo-escritorio,
-.contenedor-vivo-escritorio a:hover .fa {
-    color: #FF0033;
-}
+    .contenedor-vivo-escritorio a:hover .boton-vivo-escritorio,
+    .contenedor-vivo-escritorio a:hover .fa {
+        color: #FF0033;
+    }
 
-.programacion-diaria-container a:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
+    .programacion-diaria-container a:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
 
-.redes-sociales li a:hover {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.1);
-}
+    .redes-sociales li a:hover {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform: scale(1.1);
+    }
 
-.tienda:hover {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.05);
-}
+    .tienda:hover {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform: scale(1.05);
+    }
 
-.boton-porgramacion-diaria a:hover {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.05); 
-}
+    .boton-programacion-diaria a:hover {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform: scale(1.05);
+    }
 
     /*?---  BANNER RESUMIDO  ---*/
-    .contenido-pagina-resumido h2 {
-        font-size: 15px;
-    }
+
+
+
 
     .contenido-resumido {
-        padding: 20px 0;
+        gap: 35px;
+        height: 85px;
     }
 
-    .marca-resumido {
-        font-size: 50px;
-        filter: drop-shadow(3px 3px 0 #000);
+    .lado-izquierdo,
+    .lado-derecho {
+        gap: 30px;
+    }
+
+    .marca-resumido a {
+        font-size: 40px;
+    }
+
+    .flecha-blanca-derecha,
+    .flecha-blanca-izquierda {
+        display: block !important;
+    }
+
+    .r-derecha,
+    .r-izquierda {
+        height: 75px;
+        width: auto;
+    }
+
+    .flecha-blanca-izquierda,
+    .flecha-negra-izquierda,
+    .flecha-blanca-derecha,
+    .flecha-negra-derecha {
+        height: 50px;
     }
 
     /*?---  RADIO EN VIVO   ----*/
@@ -597,16 +703,12 @@ footer {
     }
 
     /*?---  IMG ONDEMAND   ----*/
-    .img-ondemand-2 {
-        height: auto;
-        border-top: 2px solid var(--bg-color-icons);
-        border-bottom: 2px solid var(--bg-color-icons);
+    .img-ondemand {
+        width: 100%;
     }
 
-    .img-ondemand-1,
-    .img-ondemand-2,
-    .img-ondemand-3 {
-        width: 100%;
+    .img-ondemand-2 {
+        border-top: 2px solid var(--bg-color-icons);
     }
 
     /*?--- GALERIA ---*/
@@ -632,7 +734,7 @@ footer {
 
     .texto-hover {
         display: block;
-        color: white;
+        color: var(--bg-color-primario);
         margin: 0;
         font-family: Arial;
         font-size: 18px;
@@ -643,7 +745,7 @@ footer {
         text-align: left;
         width: auto;
         height: auto;
-        text-shadow: 1px 1px 7px var(--bg-color-icons);
+        text-shadow: 0px 0px 9px #000;
     }
 
     .programa:hover .imagen-superpuesta {
@@ -660,6 +762,11 @@ footer {
     }
 
     /**---  SECTION FOOTER  ---*/
+    
+    .footer-contenedor {
+        flex-direction: row;
+    }
+    
     .footer-redes-sociales {
         gap: 10px;
         margin: 10px 0 10px 0;
@@ -675,14 +782,6 @@ footer {
     .footer-redes-sociales a:hover {
         color: var(--bg-color-primario);
         transform: scale(1.1);
-    }
-
-    .footer-programacion-diaria a {
-        transition: color 0.3s ease;
-    }
-
-    .footer-programacion-diaria a:hover {
-        color: var(--bg-color-primario);
     }
 
 }
