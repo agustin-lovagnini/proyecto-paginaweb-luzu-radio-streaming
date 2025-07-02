@@ -223,6 +223,8 @@ main {
     margin-bottom: 2.5%;
 }
 
+/*!---  PAGINA DE INICIO  ---*/
+
 /*?---  BANNER RESUMIDO  ---*/
 .contenido-pagina-resumido h2 {
     font-family: var(--font-principal);
@@ -392,6 +394,88 @@ main {
     width: 50%;
 }
 
+/*!--- PAGINA PROGRAMACION DIARIA ---*/
+
+.contenido-programacion-diaria {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px;
+}
+
+.programacion-diaria-programa {
+    display: flex;
+    flex-direction: column;
+}
+
+.programacion-diaria-programa a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    background-color: var(--bg-color-secundario);
+    border: 3px solid var(--bg-color-icons);
+    border-radius: 30px;
+}
+
+.contenedor-programas {
+    position: relative;
+}
+
+.img-contenido-programas {
+    display: inline-block;
+    position: relative;
+}
+
+.programacion-diaria-img-programa {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+    border: 3px solid var(--bg-color-icons);
+}
+
+.programaciondiaria-img-elenco {
+    position: absolute;
+    bottom: 3px;
+    right: 2%;
+    width: 40%;
+    height: auto;
+    filter: drop-shadow(3px 1px 0 #000);
+}
+
+.imagen-elenco-edie {
+    right: 5%;
+}
+
+.informacion-programa {
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--bg-color-primario);
+    font-family: var(--font-principal);
+    border-radius: 25px;
+}
+
+.titulo-programa {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--bg-color-primario);
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.horario-programa {
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    font-weight: 900;
+    top: 10px;
+}
+
+
+
 /**---  SECTION FOOTER  ---*/
 footer {
     background-color: var(--bg-color-secundario);
@@ -534,6 +618,7 @@ footer {
         opacity: 1;
         pointer-events: auto;
         width: auto;
+        height: 100%;
         padding: 10px;
         flex-direction: row;
         background-color: transparent;
@@ -599,22 +684,9 @@ footer {
         color: #FF0033;
     }
 
-    .programacion-diaria-container a:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-
+    .boton-programacion-diaria a:hover,
+    .tienda:hover,
     .redes-sociales li a:hover {
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        transform: scale(1.1);
-    }
-
-    .tienda:hover {
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        transform: scale(1.05);
-    }
-
-    .boton-programacion-diaria a:hover {
         transition: background-color 0.3s ease, transform 0.3s ease;
         transform: scale(1.05);
     }
@@ -738,6 +810,30 @@ footer {
 
     .programa:hover .img-programa {
         transform: scale(1.1);
+    }
+
+    /*!--- PAGINA PROGRAMACION DIARIA ---*/
+
+    .contenido-programacion-diaria {
+        padding: 80px;
+        gap: 50px;
+    }
+
+    .programacion-diaria-programa a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .img-contenido-programas {
+        width: 45%;
+    }
+
+    .informacion-programa {
+        width: 55%;
+        text-align: left;
+        padding: 20px;
     }
 
     /**---  SECTION FOOTER  ---*/

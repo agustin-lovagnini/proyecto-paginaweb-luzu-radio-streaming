@@ -1,0 +1,72 @@
+
+.contenido-programacion-diaria {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.programacion-diaria-programa {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.programacion-diaria-programa a {
+    text-decoration: none;
+    color: var(--bg-color-primario);
+    font-family: var(--font-principal);
+    display: block;
+}
+
+.img-contenido-programas {
+    top: 70px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.programacion-diaria-img-programa {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    display: block;
+    border: 3px solid var(--bg-color-icons);
+}
+
+.programaciondiaria-img-elenco {
+    position: absolute;
+    bottom: 2px;
+    right: 2%;
+    width: 40%;
+    height: auto;
+    filter: drop-shadow(3px 1px 0 #000);
+}
+
+.informacion-programa {
+    padding: 70px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    background-color: var(--bg-color-secundario);
+    border: 3px solid var(--bg-color-icons);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.titulo-programa {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--bg-color-primario);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--bg-color-primario);
+}
+
+.horario-programa {
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    font-weight: 500;
+}
