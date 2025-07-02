@@ -467,6 +467,11 @@ main {
     text-underline-offset: 6px;
 }
 
+.descripcion-programa {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .horario-programa {
     margin: 15px 0 0 0;
     font-size: 18px;
@@ -693,9 +698,6 @@ footer {
 
     /*?---  BANNER RESUMIDO  ---*/
 
-
-
-
     .contenido-resumido {
         gap: 35px;
         height: 85px;
@@ -830,10 +832,29 @@ footer {
         width: 45%;
     }
 
+    .programacion-diaria-programa:nth-child(even) a {
+        flex-direction: row-reverse;
+    }
+
     .informacion-programa {
         width: 55%;
         text-align: left;
         padding: 20px;
+        text-align: center;
+    }
+
+    .titulo-programa {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .descripcion-programa {
+        font-size: 18px;
+    }
+
+    .horario-programa {
+        font-size: 30px;
+        margin: 25px 0 0 0;
     }
 
     /**---  SECTION FOOTER  ---*/
