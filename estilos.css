@@ -35,6 +35,7 @@ header {
     position: sticky;
     height: 70px;
     top: 0;
+    border-bottom: 2px solid var(--bg-color-icons-footer);
 }
 
 .logo {
@@ -43,7 +44,7 @@ header {
 }
 
 .logo a {
-    display: block;
+    display: flex;
 }
 
 .logo img {
@@ -232,7 +233,6 @@ main {
     color: var(--bg-color-primario);
     text-align: center;
     font-size: clamp(13px, 2.2vw, 16px);
-    border-top: 2px solid var(--bg-color-icons-footer);
     padding: 6px 0;
 }
 
@@ -308,7 +308,10 @@ main {
 /*?--- GALERIA ---*/
 
 .imagenes-galeria {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    align-items: center;
 }
 
 .programa {
@@ -548,19 +551,41 @@ footer {
 }
 
 
-@media (min-width: 420px) and (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
 
+    header {
+        height: 90px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .menu-hamburguesa i {
+        font-size: 35px;
+    }
+
     .seccion-streaming-en-vivo {
-        background-image: url(multimedia/ilustraciones/circulo-completo-2048x1885-enVivo.png);
-        background-size: contain;
-        background-position: right center;
-        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        text-align: center;
     }
 
     .streaming-en-vivo {
-        margin: 30px 12px;
+        margin: 30px;
     }
 
     .seccion-streaming-en-vivo iframe {
@@ -572,14 +597,26 @@ footer {
         border: 5px solid var(--bg-color-icons);
     }
 
+    .boton-flotante-vivo {
+        font-size: 24px;
+    }
+
     /*?---  IMG ONDEMAND   ----*/
     .img-ondemand-2 {
         border-top: 2px solid var(--bg-color-icons);
     }
 
     /*?---  BANNER RESUMIDO  ---*/
+    .contenido-resumido {
+        height: 90px;
+    }
+
+    .contenido-pagina-resumido h2 {
+        font-size: 20px;
+    }
+
     .marca-resumido {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .r-derecha,
@@ -602,9 +639,104 @@ footer {
     .programa {
         width: 82%;
     }
+
+    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.svg"] {
+        width: 45%;
+    }
+
+
+    .programaciondiaria-img-elenco[src*="elenco-nadaquenosepamos.svg"] {
+        width: 35%;
+        right: 6%;
+    }
+
+    .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
+        width: 30%;
+        right: 7%;
+    }
+
+    .programaciondiaria-img-elenco[src*="elenco-duquesas.svg"] {
+        width: 35%;
+        right: 6%;
+    }
+
+    .programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
+        width: 45%;
+        right: 6%;
+    }
+
+    .programaciondiaria-img-elenco[src*="elenco-streammaster.svg"] {
+        width: 45%;
+        right: 4%;
+        border-radius: 0 0 25px 0;
+    }
+
+
+    /*!--- PAGINA PROGRAMACION DIARIA ---*/
+
+    .contenido-programacion-diaria {
+        padding: 65px;
+        gap: 60px;
+    }
+
+    .img-contenido-programas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .programacion-diaria-img-programa {
+        width: 90%;
+    }
+
+    .programaciondiaria-img-elenco {
+        bottom: 0;
+    }
+
+    .programacion-diaria-img-programa {
+        border: none;
+    }
+
+    .informacion-programa {
+        margin: 20px;
+    }
+
+    .titulo-programa {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .descripcion-programa {
+        font-size: 28px;
+    }
+
+    .horario-programa {
+        margin: 20px 0 0 0;
+        font-size: 35px;
+    }
+
+    .logo-footer {
+        width: 280px;
+    }
+
+    .footer-botones-redes a {
+        font-size: 70px;
+    }
 }
 
-@media (min-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) {
 
     header {
         padding: 0px 8px;
@@ -769,6 +901,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3%;
+        margin: 50px;
     }
 
     .imagen-superpuesta {
