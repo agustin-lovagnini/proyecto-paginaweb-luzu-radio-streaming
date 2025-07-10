@@ -5,8 +5,6 @@
     --bg-color-icons: #ff8a80;
     --bg-color-icons-footer: #797d7f;
     --font-principal: "Roboto", sans-serif;
-
-
     --borde-icons: 5px solid var(--bg-color-icons);
     --sombra-fuerte: 3px 5px 12px rgba(0, 0, 0, 0.9);
 }
@@ -54,7 +52,6 @@ header {
 h1 {
     height: clamp(24px, 3vw, 32px);
 }
-
 
 .contenedor-vivo-escritorio {
     display: none;
@@ -192,9 +189,7 @@ h1 {
     z-index: 3000;
 }
 
-
 /**---  SECTION MAIN  ---*/
-
 main {
     background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
     background-size: cover;
@@ -204,24 +199,6 @@ main {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-}
-
-/*? --- img-ondemand-1 ---*/
-
-.img-ondemand {
-    width: 250%;
-    height: auto;
-    border-bottom: 2px solid var(--bg-color-icons);
-}
-
-.img-ondemand-1 {
-    position: sticky;
-    top: 70px;
-}
-
-.img-ondemand-3 {
-    border-top: 2px solid var(--bg-color-icons);
-    margin-bottom: 2.5%;
 }
 
 /*!---  PAGINA DE INICIO  ---*/
@@ -303,6 +280,42 @@ main {
     display: none !important;
 }
 
+/*? --- mensaje-ondemand ---*/
+.mensaje-ondemand {
+    background-color: var(--bg-color-secundario);
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--bg-color-icons);
+    border-top: 2px solid var(--bg-color-icons);
+}
+
+.mensaje-ondemand-contenido {
+    color: var(--bg-color-primario);
+    font-family: var(--font-principal);
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 1px;
+    animation: mover 35s linear infinite;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ondemand-3 {
+    margin-bottom: 20px;
+}
+
 
 
 /*?--- GALERIA ---*/
@@ -357,15 +370,17 @@ main {
 
 .imagen-elenco-aqn,
 .imagen-elenco-ndn,
-.imagen-elenco-nqs,
 .imagen-elenco-pyf,
 .imagen-elenco-adm,
-.imagen-elenco-dque,
 .imagen-elenco-edie,
+.imagen-elenco-fm,
+.imagen-elenco-sfl,
+.imagen-elenco-ln,
+.imagen-elenco-avap,
 .imagen-elenco-sm {
     position: absolute;
     bottom: 0;
-    right: 1%;
+    right: 0;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
     z-index: 300;
@@ -376,17 +391,16 @@ main {
     width: 45%;
 }
 
-.imagen-elenco-nqs,
-.imagen-elenco-dque {
+.imagen-elenco-fm,
+.imagen-elenco-sfl,
+.imagen-elenco-ln,
+.imagen-elenco-avap,
+.imagen-elenco-adm {
     width: 36%;
 }
 
 .imagen-elenco-pyf {
-    width: 52%;
-}
-
-.imagen-elenco-adm {
-    width: 28%;
+    width: 50%;
 }
 
 .imagen-elenco-edie {
@@ -396,6 +410,17 @@ main {
 .imagen-elenco-sm {
     width: 50%;
 }
+
+.imagen-elenco-ln,
+.imagen-elenco-edie {
+    -webkit-mask-image: linear-gradient(to left, black 98%, transparent);
+    mask-image: linear-gradient(to left, black 98%, transparent);
+}
+
+.imagen-elenco-edie {
+    right: 2%;
+}
+
 
 /*!--- PAGINA PROGRAMACION DIARIA ---*/
 
@@ -447,7 +472,7 @@ main {
     filter: drop-shadow(3px 1px 0 #000);
 }
 
-.imagen-elenco-edie {
+.programaciondiaria-img-elenco {
     right: 5%;
 }
 
@@ -481,8 +506,6 @@ main {
     font-weight: 900;
     top: 10px;
 }
-
-
 
 /**---  SECTION FOOTER  ---*/
 footer {
@@ -540,27 +563,15 @@ footer {
 /**---  MEDIA QUERYS  ---*/
 @media (max-width: 600px) {
 
+    .ondemand-2 {
+        display: none;
+    }
+
     .seccion-streaming-en-vivo {
         display: none;
     }
 
-    /*?---  IMG ONDEMAND   ----*/
-    .img-ondemand-2 {
-        display: none;
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 601px) and (max-width: 1024px) {
 
@@ -601,10 +612,9 @@ footer {
         font-size: 24px;
     }
 
-    /*?---  IMG ONDEMAND   ----*/
-    .img-ondemand-2 {
-        border-top: 2px solid var(--bg-color-icons);
-    }
+
+
+
 
     /*?---  BANNER RESUMIDO  ---*/
     .contenido-resumido {
@@ -644,20 +654,9 @@ footer {
         width: 45%;
     }
 
-
-    .programaciondiaria-img-elenco[src*="elenco-nadaquenosepamos.svg"] {
-        width: 35%;
-        right: 6%;
-    }
-
     .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
         width: 30%;
         right: 7%;
-    }
-
-    .programaciondiaria-img-elenco[src*="elenco-duquesas.svg"] {
-        width: 35%;
-        right: 6%;
     }
 
     .programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
@@ -670,7 +669,6 @@ footer {
         right: 4%;
         border-radius: 0 0 25px 0;
     }
-
 
     /*!--- PAGINA PROGRAMACION DIARIA ---*/
 
@@ -722,19 +720,14 @@ footer {
     }
 
     .footer-botones-redes a {
-        font-size: 70px;
+        font-size: 50px;
+    }
+
+    .footer-botones-redes a {
+        width: 90px;
+        height: 90px;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 1025px) {
 
@@ -887,21 +880,17 @@ footer {
         border: 5px solid var(--bg-color-icons);
     }
 
-    /*?---  IMG ONDEMAND   ----*/
-    .img-ondemand {
-        width: 100%;
+    iframe {
+        border: none;
     }
 
-    .img-ondemand-2 {
-        border-top: 2px solid var(--bg-color-icons);
-    }
 
     /*?--- GALERIA ---*/
     .imagenes-galeria {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3%;
-        margin: 50px;
+        margin: 50px 30px 0px 30px;
     }
 
     .imagen-superpuesta {
@@ -927,8 +916,8 @@ footer {
         font-weight: 900;
         position: absolute;
         bottom: 3%;
-        left: 3%;
-        text-align: left;
+        left: 4%;
+        text-align: center;
         width: auto;
         height: auto;
         text-shadow: 0px 0px 9px #000;
@@ -944,7 +933,13 @@ footer {
     }
 
     .programa:hover .img-programa {
-        transform: scale(1.1);
+        transform: scale(1.5);
+    }
+
+    .cambios {
+        display: block;
+        font-size: 16px !important;
+        margin-bottom: 6px;
     }
 
     /*!--- PAGINA PROGRAMACION DIARIA ---*/
@@ -1014,5 +1009,4 @@ footer {
         color: var(--bg-color-primario);
         transform: scale(1.1);
     }
-
 }

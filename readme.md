@@ -1,19 +1,19 @@
 # Proyecto: Rediseño Web LuzuTV
 
 ## Introducción
-- **Página actual**: [Google](https://luzutv.com.ar/)
-- **Proposito del rediseño**: Mejorar el diseño, experiencia del usuario, rendimiento, mejorar el diseño responsivo para adaptar a diferentes dispositivos y modificaciones varias.
+Esta es una página no oficial inspirada en LuzuTV, creada con el objetivo de modernizar su diseño, mejorar la experiencia del usuario y optimizar el rendimiento en distintos dispositivos.
 
 ## Objetivos del proyecto
-- Modernizar el diseño para que sea atractivo y responsivo.
+- Modernizar el diseño para hacerlo atractivo y responsivo.
 - Optimizar la velocidad de carga.
-- Mejorar la estructura del contenido para facilitar la navegación.
-- Incorporar nuevas funcionalidades como enlaces a Instagram, Youtube, Twich, TikTok, Twitter, Spotify.
+- Mejorar la estructura y organización del contenido para facilitar la navegación.
+- Incorporar enlaces a redes sociales importantes: Instagram, YouTube, Twitch, TikTok, Twitter, Spotify.
 
 ## Estado inicial de la página
-- Diseño desactualizado.
+- Diseño desactualizado y poco amigable.
 - Navegación poco intuitiva.
-- Falta de accesibilidad (etiquetas, contrastes, etc.).
+- Falta de accesibilidad (uso limitado de etiquetas ARIA y textos alternativos).
+- Falta de adaptabilidad para dispositivos móviles y tabletas.
 
 ## Proceso de rediseño
 
@@ -22,36 +22,42 @@
 - [x] Identificar problemas y áreas de mejora.
 
 ### Etapa 2: Diseño y maquetación
-- [ ] Crear una estructura base en HTML.
-- [ ] Aplicar estilos con CSS.
-- [ ] Hacer pruebas de responsividad (móviles, tabletas, escritorio).
+- [x] Crear estructura base en HTML semántico.
+- [x] Aplicar estilos CSS para un diseño moderno y responsivo (Flexbox, Grid, Media Queries).
+- [x] Integrar Google Fonts y Font Awesome para tipografía e iconos.
+- [x] Realizar pruebas de responsividad en móviles, tabletas y escritorio.
 
 ### Etapa 3: Implementación de funcionalidades
-- [ ] Añadir interactividad con JavaScript.
+- [x] Añadir interactividad con JavaScript (menú hamburguesa, botones dinámicos).
+- [x] Mejorar accesibilidad (atributos aria-label, roles).
+- [ ] Optimizar SEO con meta tags y Open Graph.
 
 ### Etapa 4: Pruebas y ajustes
-- [ ] Comprobar compatibilidad en navegadores.
-- [ ] Realizar pruebas de usabilidad.
-- [ ] Optimizar tiempos de carga.
+- [x] Verificar compatibilidad entre navegadores modernos.
+- [x] Realizar pruebas de usabilidad y accesibilidad.
+- [ ] Optimizar tiempos de carga y rendimiento.
 
 ## Resultados esperados
-- Una página moderna y responsiva.
-- Mejor experiencia de usuario.
-- Mayor interacción y satisfacción de los usuarios.
-
+- Página web moderna, atractiva y totalmente responsiva.
+- Navegación clara, intuitiva y accesible para todos los usuarios.
+- Mejor experiencia de usuario con enlaces sociales visibles y funcionalidad adecuada.
+- Carga rápida optimizada para todos los dispositivos.
 
 ## Tecnologías utilizadas
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap
+- HTML5 semántico
+- CSS3 (Flexbox, Grid, Media Queries)
+- JavaScript ES6+
+- Google Fonts
+- Font Awesome
 
 ## Enlaces útiles
+- Página original: [https://luzutv.com.ar/](https://luzutv.com.ar/)
+- Documentación Font Awesome: [https://fontawesome.com/v4.7.0/](https://fontawesome.com/v4.7.0/)
+- Google Fonts: [https://fonts.google.com/](https://fonts.google.com/)
 
-## Captura de progreso
+### Estado original
 
-## Captura de la web original
-![Progreso del diseño](multimedia/img-inicial/screenshot-1.png)
-![Progreso del diseño](multimedia/img-inicial/screenshot-2.png)
+![Web original - desktop](multimedia/img-inicial/screenshot-1.png)  
+![Web original - móvil](multimedia/img-inicial/screenshot-2.png)
 
 
