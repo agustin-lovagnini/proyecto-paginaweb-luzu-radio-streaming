@@ -32,6 +32,7 @@ header {
     z-index: 5000;
     position: sticky;
     height: 70px;
+    width: 100%;
     top: 0;
     border-bottom: 2px solid var(--bg-color-icons-footer);
 }
@@ -191,14 +192,11 @@ h1 {
 
 /**---  SECTION MAIN  ---*/
 main {
-    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 /*!---  PAGINA DE INICIO  ---*/
@@ -211,6 +209,8 @@ main {
     text-align: center;
     font-size: clamp(13px, 2.2vw, 16px);
     padding: 6px 0;
+    width: 100%;
+    height: auto;
 }
 
 .contenido-resumido {
@@ -319,6 +319,13 @@ main {
 
 
 /*?--- GALERIA ---*/
+
+.galeria-fondo-de-pantalla {
+    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .imagenes-galeria {
     display: flex;
@@ -434,6 +441,8 @@ main {
 .programacion-diaria-programa {
     display: flex;
     flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .programacion-diaria-programa a {
@@ -890,7 +899,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3%;
-        margin: 50px 30px 0px 30px;
+        padding: 80px;
     }
 
     .imagen-superpuesta {
@@ -953,7 +962,6 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 30px;
     }
 
     .img-contenido-programas {
@@ -972,17 +980,17 @@ footer {
     }
 
     .titulo-programa {
-        font-size: 35px;
+        font-size: 30px;
         margin-bottom: 20px;
     }
 
     .descripcion-programa {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .horario-programa {
-        font-size: 30px;
-        margin: 25px 0 0 0;
+        font-size: 25px;
+        margin: 20px 0 0 0;
     }
 
     /**---  SECTION FOOTER  ---*/
