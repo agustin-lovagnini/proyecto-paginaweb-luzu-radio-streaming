@@ -29,7 +29,7 @@ header {
     text-align: center;
     justify-content: space-between;
     padding: 20px 26px;
-    z-index: 5000;
+    z-index: 6000;
     position: sticky;
     height: 70px;
     width: 100%;
@@ -441,7 +441,6 @@ main {
 .programacion-diaria-programa {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -453,6 +452,9 @@ main {
     background-color: var(--bg-color-secundario);
     border: 3px solid var(--bg-color-icons);
     border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5000;
 }
 
 .contenedor-programas {
@@ -462,24 +464,37 @@ main {
 .img-contenido-programas {
     display: inline-block;
     position: relative;
+    overflow: hidden;
 }
 
 .programacion-diaria-img-programa {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 25px;
-    border: 3px solid var(--bg-color-icons);
 }
 
 .programaciondiaria-img-elenco {
     position: absolute;
-    bottom: 3px;
+    bottom: 0;
     right: 2%;
     width: 40%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
 }
+
+img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
+        right: 3px;
+        width: 33%;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
+        width: 60%;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
+        right: 0px;
+        width: 47%;
+    }
 
 .programaciondiaria-img-elenco {
     right: 5%;
@@ -580,6 +595,20 @@ footer {
         display: none;
     }
 
+    .img-contenido-programas {
+        -webkit-mask-image: linear-gradient(to bottom,
+                black 0%,
+                black 60%,
+                rgba(0, 0, 0, 0.8) 75%,
+                rgba(0, 0, 0, 0.4) 90%,
+                transparent 100%);
+        mask-image: linear-gradient(to bottom,
+                black 0%,
+                black 60%,
+                rgba(0, 0, 0, 0.8) 75%,
+                rgba(0, 0, 0, 0.4) 90%,
+                transparent 100%)
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -964,13 +993,40 @@ footer {
         align-items: center;
     }
 
+    .programacion-diaria-programa:nth-child(even) a {
+        flex-direction: row-reverse;
+    }
+
     .img-contenido-programas {
         width: 45%;
     }
 
-    .programacion-diaria-programa:nth-child(even) a {
-        flex-direction: row-reverse;
+    .programacion-diaria-programa:nth-child(even) .programacion-diaria-img-programa {
+        mask-image: linear-gradient(to left, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to left, black 70%, transparent 100%);
+        border-top-right-radius: 27px;
+        border-bottom-right-radius: 27px;
     }
+
+    .programacion-diaria-programa:nth-child(odd) .programacion-diaria-img-programa {
+        mask-image: linear-gradient(to right, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+        border-top-left-radius: 27px;
+        border-bottom-left-radius: 27px;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
+        border-bottom-right-radius: 32px;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
+        width: 50%;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
+        border-bottom-right-radius: 27px;
+    }
+
 
     .informacion-programa {
         width: 55%;
