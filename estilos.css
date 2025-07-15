@@ -74,8 +74,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(55px, 10vw, 50px);
-    height: clamp(55px, 10vw, 50px);
+    width: 55px;
+    height: 55px;
     text-decoration: none;
     border-radius: 50%;
     font-size: 28px;
@@ -100,7 +100,7 @@ h1 {
 }
 
 .tienda img {
-    width: clamp(150px, 12vw, 220px);
+    width: 200px;
     height: auto;
 }
 
@@ -122,9 +122,9 @@ h1 {
     border-radius: 9px;
     display: block;
     text-decoration: none;
-    padding: 12px;
+    padding: 15px;
     margin: 10px;
-    font-size: clamp(15px, 2vw, 12px);
+    font-size: 18px;
 }
 
 /*? ---  Despliegue del menú hamburguesa --- */
@@ -155,8 +155,9 @@ h1 {
     background-color: var(--bg-color-secundario);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-bottom: 2px solid var(--bg-color-icons-footer);
     width: 100%;
-    height: 330px;
+    height: 345px;
     overflow: hidden;
     opacity: 0;
     flex-direction: column;
@@ -186,20 +187,16 @@ h1 {
     border-radius: 50px;
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    font-size: clamp(18px, 2vw, 18px);
     z-index: 3000;
 }
 
 /**---  SECTION MAIN  ---*/
 main {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     min-height: 100vh;
 }
-
-/*!---  PAGINA DE INICIO  ---*/
 
 /*?---  BANNER RESUMIDO  ---*/
 .contenido-pagina-resumido h2 {
@@ -304,11 +301,11 @@ main {
 
 @keyframes mover {
     0% {
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
 }
 
@@ -317,9 +314,8 @@ main {
 }
 
 
-
+/*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
-
 .galeria-fondo-de-pantalla {
     background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
     background-size: cover;
@@ -406,16 +402,14 @@ main {
     width: 36%;
 }
 
-.imagen-elenco-pyf {
+.imagen-elenco-pyf,
+.imagen-elenco-sm {
     width: 50%;
 }
 
 .imagen-elenco-edie {
     width: 48%;
-}
-
-.imagen-elenco-sm {
-    width: 50%;
+    right: 2%;
 }
 
 .imagen-elenco-ln,
@@ -424,17 +418,11 @@ main {
     mask-image: linear-gradient(to left, black 98%, transparent);
 }
 
-.imagen-elenco-edie {
-    right: 2%;
-}
-
-
 /*!--- PAGINA PROGRAMACION DIARIA ---*/
-
 .contenido-programacion-diaria {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 55px;
     padding: 30px;
 }
 
@@ -457,10 +445,6 @@ main {
     z-index: 5000;
 }
 
-.contenedor-programas {
-    position: relative;
-}
-
 .img-contenido-programas {
     display: inline-block;
     position: relative;
@@ -480,24 +464,6 @@ main {
     width: 40%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
-}
-
-img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
-        right: 3px;
-        width: 33%;
-    }
-
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
-        width: 60%;
-    }
-
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
-        right: 0px;
-        width: 47%;
-    }
-
-.programaciondiaria-img-elenco {
-    right: 5%;
 }
 
 .informacion-programa {
@@ -587,6 +553,10 @@ footer {
 /**---  MEDIA QUERYS  ---*/
 @media (max-width: 600px) {
 
+    .programaciondiaria-img-elenco {
+        right: 5%;
+    }
+
     .ondemand-2 {
         display: none;
     }
@@ -609,6 +579,20 @@ footer {
                 rgba(0, 0, 0, 0.4) 90%,
                 transparent 100%)
     }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
+        right: 3px;
+        width: 33%;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
+        width: 60%;
+    }
+
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
+        right: 0px;
+        width: 47%;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -625,6 +609,20 @@ footer {
 
     .menu-hamburguesa i {
         font-size: 35px;
+    }
+
+    .contenido-menu {
+        height: 370px;
+    }
+
+    .redes-sociales .botones-redes {
+        width: 90px;
+        height: 90px;
+        font-size: 40px;
+    }
+
+    .tienda img {
+        width: 290px;
     }
 
     .seccion-streaming-en-vivo {
@@ -646,13 +644,11 @@ footer {
         border: 5px solid var(--bg-color-icons);
     }
 
-    .boton-flotante-vivo {
-        font-size: 24px;
+    .boton-flotante-vivo,
+    .boton-programacion-diaria a {
+        font-size: 25px;
+        padding: 20px;
     }
-
-
-
-
 
     /*?---  BANNER RESUMIDO  ---*/
     .contenido-resumido {
@@ -688,8 +684,21 @@ footer {
         width: 82%;
     }
 
+    .programaciondiaria-img-elenco {
+        right: 5%;
+    }
+
+    img.programaciondiaria-img-elenco[src*="elenco-antesquenadie.svg"] {
+        right: 6%;
+    }
+
     .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.svg"] {
         width: 45%;
+        right: 6%;
+    }
+
+    img.programaciondiaria-img-elenco[src*="elenco-se-fue-larga.svg"] {
+        border-bottom-right-radius: 25px;
     }
 
     .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
@@ -697,15 +706,24 @@ footer {
         right: 7%;
     }
 
+    img.programaciondiaria-img-elenco[src*="elenco la-novela.svg"] {
+        width: 33%;
+        border-bottom-right-radius: 25px;
+    }
+
+    img.programaciondiaria-img-elenco[src*="elenco-algo-va-a-picar.svg"] {
+        width: 33%;
+        border-bottom-right-radius: 25px;
+    }
+
     .programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
         width: 45%;
-        right: 6%;
+        border-bottom-right-radius: 25px;
     }
 
     .programaciondiaria-img-elenco[src*="elenco-streammaster.svg"] {
         width: 45%;
-        right: 4%;
-        border-radius: 0 0 25px 0;
+        border-bottom-right-radius: 25px;
     }
 
     /*!--- PAGINA PROGRAMACION DIARIA ---*/
@@ -725,14 +743,12 @@ footer {
 
     .programacion-diaria-img-programa {
         width: 90%;
+        border-radius: 25px;
+        border: none;
     }
 
     .programaciondiaria-img-elenco {
         bottom: 0;
-    }
-
-    .programacion-diaria-img-programa {
-        border: none;
     }
 
     .informacion-programa {
@@ -758,12 +774,12 @@ footer {
     }
 
     .footer-botones-redes a {
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .footer-botones-redes a {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -790,6 +806,11 @@ footer {
         padding: 10px;
         flex-direction: row;
         background-color: transparent;
+        border-bottom: none;
+    }
+
+    .tienda img {
+        width: 180px;
     }
 
     .redes-sociales,
@@ -922,7 +943,6 @@ footer {
         border: none;
     }
 
-
     /*?--- GALERIA ---*/
     .imagenes-galeria {
         display: grid;
@@ -984,7 +1004,7 @@ footer {
 
     .contenido-programacion-diaria {
         padding: 80px;
-        gap: 50px;
+        gap: 70px;
     }
 
     .programacion-diaria-programa a {
@@ -1015,18 +1035,29 @@ footer {
         border-bottom-left-radius: 27px;
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco la-novela.svg"] {
         border-bottom-right-radius: 32px;
+        right: 0;
+        width: 170px;
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
         width: 50%;
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-streammaster.svg"] {
         border-bottom-right-radius: 27px;
+        right: 0;
+        width: 50%;
     }
 
+    .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
+        width: 30%;
+    }
+
+    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.svg"] {
+        width: 50%;
+    }
 
     .informacion-programa {
         width: 55%;
