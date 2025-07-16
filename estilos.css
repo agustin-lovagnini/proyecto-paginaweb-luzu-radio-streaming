@@ -316,11 +316,12 @@ main {
 
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
+
 .galeria-fondo-de-pantalla {
-    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
 }
 
 .imagenes-galeria {
@@ -390,7 +391,8 @@ main {
 }
 
 .imagen-elenco-aqn,
-.imagen-elenco-ndn {
+.imagen-elenco-ndn,
+.imagen-elenco-pyf {
     width: 45%;
 }
 
@@ -402,7 +404,6 @@ main {
     width: 36%;
 }
 
-.imagen-elenco-pyf,
 .imagen-elenco-sm {
     width: 50%;
 }
@@ -430,6 +431,14 @@ main {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.programa-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .programacion-diaria-programa a {
@@ -580,16 +589,16 @@ footer {
                 transparent 100%)
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.svg"] {
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.webp"] {
         right: 3px;
         width: 33%;
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.svg"] {
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.webp"] {
         width: 60%;
     }
 
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.svg"] {
+    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.webp"] {
         right: 0px;
         width: 47%;
     }
@@ -676,6 +685,14 @@ footer {
     }
 
     /*?--- GALERIA ---*/
+
+    .galeria-fondo-de-pantalla {
+        background-image: url('multimedia/ilustraciones/fondo-main-desktop-1920x1080.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .imagenes-galeria {
         text-align: center;
     }
@@ -688,40 +705,40 @@ footer {
         right: 5%;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-antesquenadie.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-antesquenadie.webp"] {
         right: 6%;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.webp"] {
         width: 45%;
         right: 6%;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-se-fue-larga.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-se-fue-larga.webp"] {
         border-bottom-right-radius: 25px;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-algodemusica.webp"] {
         width: 30%;
         right: 7%;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco la-novela.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco la-novela.webp"] {
         width: 33%;
         border-bottom-right-radius: 25px;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-algo-va-a-picar.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-algo-va-a-picar.webp"] {
         width: 33%;
         border-bottom-right-radius: 25px;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-edicionespecial.webp"] {
         width: 45%;
         border-bottom-right-radius: 25px;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-streammaster.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-streammaster.webp"] {
         width: 45%;
         border-bottom-right-radius: 25px;
     }
@@ -1035,27 +1052,27 @@ footer {
         border-bottom-left-radius: 27px;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco la-novela.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco la-novela.webp"] {
         border-bottom-right-radius: 32px;
         right: 0;
         width: 170px;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-edicionespecial.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-edicionespecial.webp"] {
         width: 50%;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-streammaster.svg"] {
+    img.programaciondiaria-img-elenco[src*="elenco-streammaster.webp"] {
         border-bottom-right-radius: 27px;
         right: 0;
         width: 50%;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-algodemusica.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-algodemusica.webp"] {
         width: 30%;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.svg"] {
+    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.webp"] {
         width: 50%;
     }
 
