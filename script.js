@@ -49,12 +49,10 @@ window.addEventListener('scroll', () => {
     const ultimoVisible = visibles[visibles.length - 1];
 
     if (!isScrollingDown) {
-        // ⚠️ No ocultar si es el primer programa
         if (ultimoVisible !== programas[0]) {
             ultimoVisible.classList.remove('programa-visible');
         }
     } else {
-        // Volver a mostrar si bajás
         if (!ultimoVisible.classList.contains('programa-visible')) {
             ultimoVisible.classList.add('programa-visible');
         }
