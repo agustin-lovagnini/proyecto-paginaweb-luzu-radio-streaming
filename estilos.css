@@ -86,8 +86,9 @@ h1 {
 .boton-programacion-diaria a,
 .boton-flotante-vivo {
     background-color: var(--bg-color-icons);
-    color: var(--bg-color-primario);
+    color: white;
 }
+
 
 .redes-sociales .whatsapp-logo {
     background-color: #25D366;
@@ -281,37 +282,43 @@ main {
     background-color: var(--bg-color-secundario);
     padding: 5px;
     width: 100%;
-    height: auto;
-    margin: auto;
     overflow: hidden;
-    white-space: nowrap;
     border-bottom: 2px solid var(--bg-color-icons);
     border-top: 2px solid var(--bg-color-icons);
 }
 
 .mensaje-ondemand-contenido {
+    display: flex;
+    width: max-content;
+    animation: scroll-loop 110s linear infinite;
+}
+
+.scroll-text {
+    display: flex;
+}
+
+.scroll-text span {
     color: var(--bg-color-primario);
     font-family: var(--font-principal);
     font-weight: 900;
     font-size: 12px;
     letter-spacing: 1px;
-    animation: mover 35s linear infinite;
+    white-space: nowrap;
 }
 
-@keyframes mover {
+@keyframes scroll-loop {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(-50%);
     }
 }
 
 .ondemand-3 {
     margin-bottom: 20px;
 }
-
 
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
@@ -392,14 +399,14 @@ main {
 
 .imagen-elenco-aqn,
 .imagen-elenco-ndn,
-.imagen-elenco-pyf {
+.imagen-elenco-pyf,
+.imagen-elenco-sfl,
+.imagen-elenco-fm,
+.imagen-elenco-avap {
     width: 45%;
 }
 
-.imagen-elenco-fm,
-.imagen-elenco-sfl,
 .imagen-elenco-ln,
-.imagen-elenco-avap,
 .imagen-elenco-adm {
     width: 36%;
 }
@@ -428,8 +435,6 @@ main {
 }
 
 .programacion-diaria-programa {
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;
     opacity: 0;
     transform: translateY(20px);
@@ -511,7 +516,6 @@ footer {
     background-color: var(--bg-color-secundario);
     color: var(--bg-color-primario);
     border-top: 2px solid var(--bg-color-icons);
-    padding: 15px;
     text-align: center;
     z-index: 4000;
 }
@@ -556,7 +560,15 @@ footer {
 .texto-info,
 .texto-copy {
     font-family: var(--font-principal);
-    margin: 30px 0;
+}
+
+.texto-copy {
+    margin-bottom: 15px;
+
+}
+
+.texto-info {
+    border-top: 2px solid var(--bg-color-icons-footer);
 }
 
 /**---  MEDIA QUERYS  ---*/
@@ -853,13 +865,13 @@ footer {
 
     .boton-programacion-diaria a,
     .contenedor-vivo-escritorio a {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .redes-sociales .botones-redes {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
     }
 
     .contenedor-vivo-escritorio {
@@ -867,14 +879,6 @@ footer {
         justify-content: center;
         align-items: center;
         order: -1;
-    }
-
-    .contenedor-vivo-escritorio a {
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .contenedor-vivo-escritorio a:hover {
-        transform: scale(1.05);
     }
 
     .boton-programacion-diaria {
@@ -896,10 +900,44 @@ footer {
         color: #FF0033;
     }
 
+    /* Estilos base y transiciones para enlaces y botones */
+    .redes-sociales .botones-redes,
+    .contenedor-vivo-escritorio a,
+    .boton-programacion-diaria a {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    /* Hover para enlaces y botones: escala y sombra más marcada */
+    .redes-sociales .botones-redes:hover,
+    .contenedor-vivo-escritorio a:hover,
     .boton-programacion-diaria a:hover,
-    .tienda:hover,
-    .redes-sociales li a:hover {
+    .boton-flotante-vivo:hover {
+        transform: scale(1.05);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        will-change: transform, text-shadow;
+    }
+
+    /* Transición para los íconos dentro de los botones/redes, programación diaria y vivo */
+    .redes-sociales .botones-redes i,
+    .boton-programacion-diaria a i,
+    .contenedor-vivo-escritorio a i {
+        transition: transform 0.3s ease;
+    }
+
+    /* Este agranda el icono de redes sociales */
+    .redes-sociales .botones-redes:hover i,
+    .boton-programacion-diaria a:hover i,
+    .contenedor-vivo-escritorio a:hover i {
+        transform: scale(1.1);
+    }
+
+    /* Estilos y transición para la tienda */
+    .tienda {
         transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .tienda:hover {
         transform: scale(1.05);
     }
 
@@ -911,7 +949,7 @@ footer {
     }
 
     .contenido-pagina-resumido h2 {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .lado-izquierdo,
@@ -938,7 +976,7 @@ footer {
     .flecha-negra-izquierda,
     .flecha-blanca-derecha,
     .flecha-negra-derecha {
-        height:35px;
+        height: 35px;
     }
 
     /*?---  RADIO EN VIVO   ----*/
@@ -976,6 +1014,11 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 3%;
         padding: 60px 85px 0px 85px;
+        justify-items: center;
+    }
+
+    .imagenes-galeria .programa:last-child:nth-child(3n + 1) {
+        grid-column: 2;
     }
 
     .imagen-superpuesta {
@@ -997,15 +1040,15 @@ footer {
         color: var(--bg-color-primario);
         margin: 0;
         font-family: Arial;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 900;
         position: absolute;
         bottom: 3%;
-        left: 4%;
-        text-align: center;
+        left: 5%;
+        text-align: start;
         width: auto;
         height: auto;
-        text-shadow: 0px 0px 9px #000;
+        text-shadow: 0px 0px 7px #000;
     }
 
     .programa:hover .imagen-superpuesta {
@@ -1089,7 +1132,6 @@ footer {
     .informacion-programa {
         width: 55%;
         text-align: left;
-        padding: 20px;
         text-align: center;
     }
 
@@ -1099,11 +1141,11 @@ footer {
     }
 
     .descripcion-programa {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .horario-programa {
-        font-size: 25px;
+        font-size: 22px;
         margin: 20px 0 0 0;
     }
 
@@ -1112,7 +1154,8 @@ footer {
     .footer-contenedor {
         flex-direction: row;
         justify-content: space-between;
-        margin: 25px;
+        margin: 8px 0 6px 0;
+        padding: 0 70px;
     }
 
     .footer-redes-sociales {
@@ -1123,8 +1166,15 @@ footer {
         justify-content: center;
     }
 
+    .logo-footer {
+        width: 130px;
+    }
+
     .footer-redes-sociales a {
         transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
     }
 
     .footer-redes-sociales a:hover {
