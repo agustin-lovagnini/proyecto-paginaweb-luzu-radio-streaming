@@ -20,6 +20,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.redes-sociales,
+.botones-redes,
+.tienda,
+.boton-programacion-diaria,
+.contenido-resumido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /**---  SECTION HEADER  ---*/
 header {
     background-color: var(--bg-color-secundario);
@@ -42,10 +53,6 @@ header {
     align-items: center;
 }
 
-.logo a {
-    display: flex;
-}
-
 .logo img {
     width: 120px;
 }
@@ -60,20 +67,14 @@ h1 {
 
 /* ?---  Navecación principal  ---*/
 .redes-sociales {
-    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
     list-style: none;
     padding: 20px;
     margin: 0;
 }
 
-.redes-sociales .botones-redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.botones-redes {
     width: 55px;
     height: 55px;
     text-decoration: none;
@@ -89,15 +90,8 @@ h1 {
     color: white;
 }
 
-
 .redes-sociales .whatsapp-logo {
     background-color: #25D366;
-}
-
-.tienda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .tienda img {
@@ -109,9 +103,6 @@ h1 {
     font-weight: 600;
     font-family: var(--font-principal);
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .boton-programacion-diaria a {
@@ -188,6 +179,12 @@ h1 {
     box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     z-index: 3000;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.seccion-streaming-en-vivo {
+    display: none;
 }
 
 /**---  SECTION MAIN  ---*/
@@ -217,9 +214,6 @@ main {
     background-size: cover;
     width: 100%;
     height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 8px 0;
     gap: 6px;
 }
@@ -293,6 +287,10 @@ main {
     animation: scroll-loop 110s linear infinite;
 }
 
+.ondemand-2 {
+    display: none;
+}
+
 .scroll-text {
     display: flex;
 }
@@ -302,6 +300,7 @@ main {
     font-family: var(--font-principal);
     font-weight: 900;
     font-size: 12px;
+    padding-right: 5px;
     letter-spacing: 1px;
     white-space: nowrap;
 }
@@ -334,12 +333,12 @@ main {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    gap: 30px;
     align-items: center;
 }
 
 .programa {
     position: relative;
-    margin-bottom: clamp(20px, 5vw, 60px);
     display: inline-block;
     overflow: hidden;
     border: 5px solid var(--bg-color-icons);
@@ -353,7 +352,6 @@ main {
     height: 100%;
     margin: 0;
     padding: 0;
-
 }
 
 .img-programa {
@@ -463,6 +461,18 @@ main {
     display: inline-block;
     position: relative;
     overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 60%,
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 0.4) 100%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 60%,
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 0.4) 100%,
+            transparent 100%);
 }
 
 .programacion-diaria-img-programa {
@@ -474,7 +484,7 @@ main {
 .programaciondiaria-img-elenco {
     position: absolute;
     bottom: 0;
-    right: 2%;
+    right: 5%;
     width: 40%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
@@ -509,6 +519,20 @@ main {
     font-size: 18px;
     font-weight: 900;
     top: 10px;
+}
+
+img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.webp"] {
+    right: 3px;
+    width: 33%;
+}
+
+img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.webp"] {
+    width: 60%;
+}
+
+img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.webp"] {
+    right: 0px;
+    width: 47%;
 }
 
 /**---  SECTION FOOTER  ---*/
@@ -564,7 +588,6 @@ footer {
 
 .texto-copy {
     margin-bottom: 15px;
-
 }
 
 .texto-info {
@@ -572,50 +595,6 @@ footer {
 }
 
 /**---  MEDIA QUERYS  ---*/
-@media (max-width: 600px) {
-
-    .programaciondiaria-img-elenco {
-        right: 5%;
-    }
-
-    .ondemand-2 {
-        display: none;
-    }
-
-    .seccion-streaming-en-vivo {
-        display: none;
-    }
-
-    .img-contenido-programas {
-        -webkit-mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 60%,
-                rgba(0, 0, 0, 0.8) 75%,
-                rgba(0, 0, 0, 0.4) 90%,
-                transparent 100%);
-        mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 60%,
-                rgba(0, 0, 0, 0.8) 75%,
-                rgba(0, 0, 0, 0.4) 90%,
-                transparent 100%)
-    }
-
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.webp"] {
-        right: 3px;
-        width: 33%;
-    }
-
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.webp"] {
-        width: 60%;
-    }
-
-    img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.webp"] {
-        right: 0px;
-        width: 47%;
-    }
-}
-
 @media (min-width: 601px) and (max-width: 1024px) {
 
     /*?---  RADIO EN VIVO   ----*/
@@ -647,6 +626,14 @@ footer {
     }
 
     .seccion-streaming-en-vivo {
+        display: block;
+    }
+
+    .ondemand-2 {
+        display: block;
+    }
+
+    .seccion-streaming-en-vivo {
         width: 100%;
         height: auto;
         text-align: center;
@@ -665,7 +652,6 @@ footer {
         border: 5px solid var(--bg-color-icons);
     }
 
-    .boton-flotante-vivo,
     .boton-programacion-diaria a {
         font-size: 25px;
         padding: 20px;
@@ -900,7 +886,7 @@ footer {
         color: #FF0033;
     }
 
-    /* Estilos base y transiciones para enlaces y botones */
+    /* Estilos base y transiciones para enlaces y botones general con icon*/
     .redes-sociales .botones-redes,
     .contenedor-vivo-escritorio a,
     .boton-programacion-diaria a {
@@ -908,17 +894,16 @@ footer {
         transition: transform 0.3s ease, text-shadow 0.3s ease;
     }
 
-    /* Hover para enlaces y botones: escala y sombra más marcada */
+    /* Hover para enlaces y botones general con icon*/
     .redes-sociales .botones-redes:hover,
     .contenedor-vivo-escritorio a:hover,
-    .boton-programacion-diaria a:hover,
-    .boton-flotante-vivo:hover {
+    .boton-programacion-diaria a:hover {
         transform: scale(1.05);
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         will-change: transform, text-shadow;
     }
 
-    /* Transición para los íconos dentro de los botones/redes, programación diaria y vivo */
+    /* Transicion para los iconos y letras dentro de los botone*/
     .redes-sociales .botones-redes i,
     .boton-programacion-diaria a i,
     .contenedor-vivo-escritorio a i {
@@ -932,7 +917,6 @@ footer {
         transform: scale(1.1);
     }
 
-    /* Estilos y transición para la tienda */
     .tienda {
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
@@ -990,6 +974,14 @@ footer {
         text-align: center;
     }
 
+    .seccion-streaming-en-vivo {
+        display: block;
+    }
+
+    .ondemand-2 {
+        display: block;
+    }
+
     .streaming-en-vivo {
         margin: 30px 12px;
     }
@@ -1012,8 +1004,8 @@ footer {
     .imagenes-galeria {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3%;
-        padding: 60px 85px 0px 85px;
+        gap: 30px;
+        padding: 60px 85px;
         justify-items: center;
     }
 
