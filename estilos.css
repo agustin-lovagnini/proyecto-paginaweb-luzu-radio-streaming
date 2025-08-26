@@ -24,12 +24,12 @@ html {
 .botones-redes,
 .tienda,
 .boton-programacion-diaria,
-.contenido-resumido, .footer-botones-redes a {
+.contenido-resumido,
+.footer-botones-redes a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 /**---  SECTION HEADER  ---*/
 header {
@@ -183,10 +183,6 @@ h1 {
     padding: 15px;
 }
 
-.seccion-streaming-en-vivo {
-    display: none;
-}
-
 /**---  SECTION MAIN  ---*/
 main {
     display: flex;
@@ -287,10 +283,6 @@ main {
     animation: scroll-loop 110s linear infinite;
 }
 
-.ondemand-2 {
-    display: none;
-}
-
 .scroll-text {
     display: flex;
 }
@@ -319,9 +311,38 @@ main {
     margin-bottom: 20px;
 }
 
+/*?---  RADIO EN VIVO   ----*/
+
+.seccion-streaming-en-vivo {
+    background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.streaming-en-vivo {
+    margin: 30px 12px;
+}
+
+.seccion-streaming-en-vivo iframe {
+    display: inline-block;
+    width: 100%;
+    max-width: 900px;
+    height: 315px;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 5px solid var(--bg-color-icons);
+}
+
+iframe {
+    border: none;
+}
+
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
-
 .galeria-fondo-de-pantalla {
     background-size: cover;
     background-position: center;
@@ -361,10 +382,6 @@ main {
     z-index: 100;
 }
 
-.texto-hover {
-    display: none;
-}
-
 .imagen-superpuesta {
     position: absolute;
     top: 0;
@@ -375,6 +392,23 @@ main {
     border-radius: 20px;
     pointer-events: none;
     z-index: 20;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
+}
+
+.texto-iformacion-programa {
+    display: block;
+    color: var(--bg-color-primario);
+    margin: 0;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 900;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    text-align: start;
+    width: auto;
+    height: auto;
+    text-shadow: 0px 0px 7px #000;
 }
 
 .imagen-elenco-aqn,
@@ -592,208 +626,6 @@ footer {
 }
 
 /**---  MEDIA QUERYS  ---*/
-@media (min-width: 601px) and (max-width: 1024px) {
-
-    /*?---  RADIO EN VIVO   ----*/
-
-    header {
-        height: 90px;
-    }
-
-    .logo img {
-        width: 150px;
-    }
-
-    .menu-hamburguesa i {
-        font-size: 35px;
-    }
-
-    .contenido-menu {
-        height: 370px;
-    }
-
-    .redes-sociales .botones-redes {
-        width: 90px;
-        height: 90px;
-        font-size: 40px;
-    }
-
-    .tienda img {
-        width: 290px;
-    }
-
-    .seccion-streaming-en-vivo {
-        display: block;
-    }
-
-    .ondemand-2 {
-        display: block;
-    }
-
-    .seccion-streaming-en-vivo {
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
-    .streaming-en-vivo {
-        margin: 30px;
-    }
-
-    .seccion-streaming-en-vivo iframe {
-        width: 100%;
-        max-width: 625px;
-        height: 350px;
-        border-radius: 35px;
-        overflow: hidden;
-        border: 5px solid var(--bg-color-icons);
-    }
-
-    .boton-programacion-diaria a {
-        font-size: 25px;
-        padding: 20px;
-    }
-
-    /*?---  BANNER RESUMIDO  ---*/
-    .contenido-resumido {
-        height: 90px;
-    }
-
-    .contenido-pagina-resumido h2 {
-        font-size: 20px;
-    }
-
-    .marca-resumido {
-        font-size: 40px;
-    }
-
-    .r-derecha,
-    .r-izquierda {
-        height: 55px;
-    }
-
-    .flecha-blanca-izquierda,
-    .flecha-negra-izquierda,
-    .flecha-blanca-derecha,
-    .flecha-negra-derecha {
-        height: 35px;
-    }
-
-    /*?--- GALERIA ---*/
-
-    .galeria-fondo-de-pantalla {
-        background-image: url('multimedia/ilustraciones/fondo-main-desktop-1920x1080.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .imagenes-galeria {
-        text-align: center;
-    }
-
-    .programa {
-        width: 82%;
-    }
-
-    .programaciondiaria-img-elenco {
-        right: 5%;
-    }
-
-    img.programaciondiaria-img-elenco[src*="elenco-antesquenadie.webp"] {
-        right: 6%;
-    }
-
-    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.webp"] {
-        width: 45%;
-        right: 6%;
-    }
-
-    img.programaciondiaria-img-elenco[src*="elenco-se-fue-larga.webp"] {
-        border-bottom-right-radius: 25px;
-    }
-
-    .programaciondiaria-img-elenco[src*="elenco-algodemusica.webp"] {
-        width: 30%;
-        right: 7%;
-    }
-
-    img.programaciondiaria-img-elenco[src*="elenco la-novela.webp"] {
-        width: 33%;
-        border-bottom-right-radius: 25px;
-    }
-
-    img.programaciondiaria-img-elenco[src*="elenco-algo-va-a-picar.webp"] {
-        width: 33%;
-        border-bottom-right-radius: 25px;
-    }
-
-    .programaciondiaria-img-elenco[src*="elenco-edicionespecial.webp"] {
-        width: 45%;
-        border-bottom-right-radius: 25px;
-    }
-
-    .programaciondiaria-img-elenco[src*="elenco-streammaster.webp"] {
-        width: 45%;
-        border-bottom-right-radius: 25px;
-    }
-
-    /*!--- PAGINA PROGRAMACION DIARIA ---*/
-
-    .contenido-programacion-diaria {
-        padding: 65px;
-        gap: 60px;
-    }
-
-    .img-contenido-programas {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .programacion-diaria-img-programa {
-        width: 90%;
-        border-radius: 25px;
-        border: none;
-    }
-
-    .programaciondiaria-img-elenco {
-        bottom: 0;
-    }
-
-    .informacion-programa {
-        margin: 20px;
-    }
-
-    .titulo-programa {
-        font-size: 50px;
-        margin-bottom: 20px;
-    }
-
-    .descripcion-programa {
-        font-size: 28px;
-    }
-
-    .horario-programa {
-        margin: 20px 0 0 0;
-        font-size: 35px;
-    }
-
-    .logo-footer {
-        width: 280px;
-    }
-
-    .footer-botones-redes a {
-        font-size: 35px;
-    }
-
-    .footer-botones-redes a {
-        width: 70px;
-        height: 70px;
-    }
-}
 
 @media (min-width: 1025px) {
 
@@ -923,7 +755,6 @@ footer {
     }
 
     /*?---  BANNER RESUMIDO  ---*/
-
     .contenido-resumido {
         gap: 35px;
         height: 55px;
@@ -961,40 +792,9 @@ footer {
     }
 
     /*?---  RADIO EN VIVO   ----*/
-    .seccion-streaming-en-vivo {
-        background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
-    .seccion-streaming-en-vivo {
-        display: block;
-    }
-
-    .ondemand-2 {
-        display: block;
-    }
-
-    .streaming-en-vivo {
-        margin: 30px 12px;
-    }
 
     .seccion-streaming-en-vivo iframe {
-        display: inline-block;
-        width: 100%;
-        max-width: 900px;
         height: 450px;
-        border-radius: 35px;
-        overflow: hidden;
-        border: 5px solid var(--bg-color-icons);
-    }
-
-    iframe {
-        border: none;
     }
 
     /*?--- GALERIA ---*/
@@ -1010,34 +810,8 @@ footer {
         grid-column: 2;
     }
 
-    .imagen-superpuesta {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
-    }
-
-    .img-programa {
-        transition: transform 0.3s ease;
-    }
-
     .programa {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .texto-hover {
-        display: block;
-        color: var(--bg-color-primario);
-        margin: 0;
-        font-family: Arial;
-        font-size: 14px;
-        font-weight: 900;
-        position: absolute;
-        bottom: 3%;
-        left: 5%;
-        text-align: start;
-        width: auto;
-        height: auto;
-        text-shadow: 0px 0px 7px #000;
     }
 
     .programa:hover .imagen-superpuesta {
@@ -1053,6 +827,21 @@ footer {
         transform: scale(1.5);
     }
 
+    .imagen-superpuesta {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8));
+    }
+
+    .img-programa {
+        transition: transform 0.3s ease;
+    }
+
+    .texto-iformacion-programa {
+        font-size: 14px;
+        bottom: 3%;
+    }
+
     .cambios {
         display: block;
         font-size: 16px !important;
@@ -1060,7 +849,6 @@ footer {
     }
 
     /*!--- PAGINA PROGRAMACION DIARIA ---*/
-
     .contenido-programacion-diaria {
         padding: 80px;
         gap: 70px;
@@ -1139,7 +927,6 @@ footer {
     }
 
     /**---  SECTION FOOTER  ---*/
-
     .footer-contenedor {
         flex-direction: row;
         justify-content: space-between;
