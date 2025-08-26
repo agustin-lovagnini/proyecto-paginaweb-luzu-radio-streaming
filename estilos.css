@@ -24,7 +24,7 @@ html {
 .botones-redes,
 .tienda,
 .boton-programacion-diaria,
-.contenido-resumido {
+.contenido-resumido, .footer-botones-redes a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -575,9 +575,6 @@ footer {
     color: var(--bg-color-secundario);
     font-size: 25px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
 }
 
