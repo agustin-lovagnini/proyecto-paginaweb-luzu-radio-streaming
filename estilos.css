@@ -314,7 +314,7 @@ main {
 /*?---  RADIO EN VIVO   ----*/
 
 .seccion-streaming-en-vivo {
-    background-image: url(multimedia/ilustraciones/circulo-completo-small.png);
+    background-image: url(img/ilustraciones/fondo-streaming-en-vivo.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -347,7 +347,7 @@ iframe {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('multimedia/ilustraciones/fondo-main-mobile-640x960.svg');
+    background-image: url('img/ilustraciones/fondo-main-mobile.webp');
 }
 
 .imagenes-galeria {
@@ -411,16 +411,16 @@ iframe {
     text-shadow: 0px 0px 7px #000;
 }
 
-.imagen-elenco-aqn,
-.imagen-elenco-ndn,
-.imagen-elenco-pyf,
-.imagen-elenco-adm,
-.imagen-elenco-edie,
+.imagen-elenco-antes-que-nadie,
+.imagen-elenco-nadie-dice-nada,
+.imagen-elenco-patria-y-familia,
+.imagen-elenco-algo-de-musica,
+.imagen-elenco-edicion-especial,
 .imagen-elenco-fm,
-.imagen-elenco-sfl,
-.imagen-elenco-ln,
-.imagen-elenco-avap,
-.imagen-elenco-sm {
+.imagen-elenco-se-fue-larga,
+.imagen-elenco-la-novela,
+.imagen-elenco-algo-va-a-picar,
+.imagen-elenco-stream-master {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -429,31 +429,31 @@ iframe {
     z-index: 300;
 }
 
-.imagen-elenco-aqn,
-.imagen-elenco-ndn,
-.imagen-elenco-pyf,
-.imagen-elenco-sfl,
+.imagen-elenco-antes-que-nadie,
+.imagen-elenco-nadie-dice-nada,
+.imagen-elenco-patria-y-familia,
+.imagen-elenco-se-fue-larga,
 .imagen-elenco-fm,
-.imagen-elenco-avap {
-    width: 45%;
+.imagen-elenco-algo-va-a-picar {
+    width: 48%;
 }
 
-.imagen-elenco-ln,
-.imagen-elenco-adm {
+.imagen-elenco-la-novela,
+.imagen-elenco-algo-de-musica {
     width: 36%;
 }
 
-.imagen-elenco-sm {
+.imagen-elenco-stream-master {
     width: 50%;
 }
 
-.imagen-elenco-edie {
+.imagen-elenco-edicion-especial {
     width: 48%;
     right: 2%;
 }
 
-.imagen-elenco-ln,
-.imagen-elenco-edie {
+.imagen-elenco-la-novela,
+.imagen-elenco-edicion-especial {
     -webkit-mask-image: linear-gradient(to left, black 98%, transparent);
     mask-image: linear-gradient(to left, black 98%, transparent);
 }
@@ -524,6 +524,20 @@ iframe {
     filter: drop-shadow(3px 1px 0 #000);
 }
 
+.programa-la-novela{
+    right: 3px;
+    width: 33%;
+}
+
+.programa-edicionespecial {
+    width: 60%;
+}
+
+.programa-stream-master {
+    right: 0px;
+    width: 47%;
+}
+
 .informacion-programa {
     padding: 10px 20px 20px 20px;
     display: flex;
@@ -555,19 +569,7 @@ iframe {
     top: 10px;
 }
 
-img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco la-novela.webp"] {
-    right: 3px;
-    width: 33%;
-}
 
-img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-edicionespecial.webp"] {
-    width: 60%;
-}
-
-img.programaciondiaria-img-elenco[src="multimedia/elenco-programas/elenco-streammaster.webp"] {
-    right: 0px;
-    width: 47%;
-}
 
 /**---  SECTION FOOTER  ---*/
 footer {
@@ -806,6 +808,10 @@ footer {
         justify-items: center;
     }
 
+    .galeria-fondo-de-pantalla {
+    background-image: url('img/ilustraciones/fondo-main-desktop.webp');
+}
+
     .imagenes-galeria .programa:last-child:nth-child(3n + 1) {
         grid-column: 2;
     }
@@ -882,27 +888,27 @@ footer {
         border-bottom-left-radius: 27px;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco la-novela.webp"] {
+    .programa-la-novela{
         border-bottom-right-radius: 32px;
         right: 0;
         width: 170px;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-edicionespecial.webp"] {
+    .programa-edicionespecial {
         width: 50%;
     }
 
-    img.programaciondiaria-img-elenco[src*="elenco-streammaster.webp"] {
+    .programa-stream-master{
         border-bottom-right-radius: 27px;
         right: 0;
-        width: 50%;
+        width: 50%; 
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-algodemusica.webp"] {
+    .programa-algo-de-musica {
         width: 30%;
     }
 
-    .programaciondiaria-img-elenco[src*="elenco-patriayfamilia.webp"] {
+    .programa-patria-y-familia {
         width: 50%;
     }
 

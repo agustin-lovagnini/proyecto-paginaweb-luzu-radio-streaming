@@ -55,9 +55,5 @@ Esta es una página no oficial inspirada en LuzuTV, creada con el objetivo de mo
 - Documentación Font Awesome: [https://fontawesome.com/v4.7.0/](https://fontawesome.com/v4.7.0/)
 - Google Fonts: [https://fonts.google.com/](https://fonts.google.com/)
 
-### Estado original
-
-![Web original - desktop](multimedia/img-inicial/screenshot-1.png)  
-![Web original - móvil](multimedia/img-inicial/screenshot-2.png)
 
 
