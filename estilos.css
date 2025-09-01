@@ -314,7 +314,7 @@ main {
 /*?---  RADIO EN VIVO   ----*/
 
 .seccion-streaming-en-vivo {
-    background-image: url(img/ilustraciones/fondo-streaming-en-vivo.webp);
+    background-image: url(img/ilustraciones/fondo-streaming-en-vivo-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -343,11 +343,12 @@ iframe {
 
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
-.galeria-fondo-de-pantalla {
+.galeria-fondo-de-pantalla,
+.galeria-fondo-de-pantalla-programacion-diaria {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('img/ilustraciones/fondo-main-mobile.webp');
+    background-image: url('img/ilustraciones/fondo-main-mobile-y-tablet.webp');
 }
 
 .imagenes-galeria {
@@ -518,25 +519,13 @@ iframe {
 .programaciondiaria-img-elenco {
     position: absolute;
     bottom: 0;
-    right: 5%;
+    right: 3px;
     width: 40%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
 }
 
-.programa-la-novela{
-    right: 3px;
-    width: 33%;
-}
 
-.programa-edicionespecial {
-    width: 60%;
-}
-
-.programa-stream-master {
-    right: 0px;
-    width: 47%;
-}
 
 .informacion-programa {
     padding: 10px 20px 20px 20px;
@@ -590,7 +579,7 @@ footer {
 }
 
 .logo-footer {
-    width: 180px;
+    width: 110px;
     height: auto;
 }
 
@@ -615,12 +604,14 @@ footer {
 }
 
 .texto-info,
-.texto-copy {
+.texto-copyright {
     font-family: var(--font-principal);
 }
 
-.texto-copy {
+.texto-copyright {
     margin-bottom: 15px;
+    font-size: 12px;
+    color: var(--bg-color-icons-footer);
 }
 
 .texto-info {
@@ -795,6 +786,10 @@ footer {
 
     /*?---  RADIO EN VIVO   ----*/
 
+    .seccion-streaming-en-vivo {
+        background-image: url(img/ilustraciones/fondo-streaming-en-vivo-desktop.webp);
+    }
+
     .seccion-streaming-en-vivo iframe {
         height: 450px;
     }
@@ -809,8 +804,8 @@ footer {
     }
 
     .galeria-fondo-de-pantalla {
-    background-image: url('img/ilustraciones/fondo-main-desktop.webp');
-}
+        background-image: url('img/ilustraciones/fondo-main-desktop.webp');
+    }
 
     .imagenes-galeria .programa:last-child:nth-child(3n + 1) {
         grid-column: 2;
@@ -888,29 +883,7 @@ footer {
         border-bottom-left-radius: 27px;
     }
 
-    .programa-la-novela{
-        border-bottom-right-radius: 32px;
-        right: 0;
-        width: 170px;
-    }
 
-    .programa-edicionespecial {
-        width: 50%;
-    }
-
-    .programa-stream-master{
-        border-bottom-right-radius: 27px;
-        right: 0;
-        width: 50%; 
-    }
-
-    .programa-algo-de-musica {
-        width: 30%;
-    }
-
-    .programa-patria-y-familia {
-        width: 50%;
-    }
 
     .informacion-programa {
         width: 55%;
