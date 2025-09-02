@@ -490,6 +490,7 @@ iframe {
 .programacion-diaria-programa a {
     text-decoration: none;
     color: inherit;
+    justify-items: center;
     display: block;
     cursor: pointer;
     background-color: var(--bg-color-secundario);
@@ -889,12 +890,24 @@ footer {
     .contenido-programacion-diaria {
         padding: 80px;
         gap: 70px;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .programacion-diaria-programa a {
         display: flex;
         flex-direction: row;
         align-items: center;
+        background-color: none;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .programacion-diaria-programa a:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0px 20px rgba(155, 89, 182, 0.9),
+            0 0 10px rgba(155, 89, 182, 1.4),
+            0 0 30px rgba(155, 89, 182, 1.2);
     }
 
     .programacion-diaria-programa:nth-child(even) a {
@@ -902,25 +915,25 @@ footer {
     }
 
     .img-contenido-programas {
-        width: 45%;
+        width: 55%;
     }
 
     .programacion-diaria-programa:nth-child(even) .programacion-diaria-img-programa {
-        mask-image: linear-gradient(to left, black 70%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to left, black 70%, transparent 100%);
+        mask-image: linear-gradient(to left, black 70%, transparent 90%);
+        -webkit-mask-image: linear-gradient(to left, black 70%, transparent 90%);
         border-top-right-radius: 27px;
         border-bottom-right-radius: 27px;
     }
 
     .programacion-diaria-programa:nth-child(odd) .programacion-diaria-img-programa {
-        mask-image: linear-gradient(to right, black 70%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+        mask-image: linear-gradient(to right, black 70%, transparent 90%);
+        -webkit-mask-image: linear-gradient(to right, black 70%, transparent 90%);
         border-top-left-radius: 27px;
         border-bottom-left-radius: 27px;
     }
 
     .informacion-programa {
-        width: 55%;
+        width: 45%;
         text-align: left;
         text-align: center;
     }
