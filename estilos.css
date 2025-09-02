@@ -313,7 +313,8 @@ main {
 
 /*?---  RADIO EN VIVO   ----*/
 
-.seccion-streaming-en-vivo {
+.seccion-streaming-en-vivo,
+.seccion-grilla-programas {
     background-image: url(img/ilustraciones/fondo-streaming-en-vivo-mobile.webp);
     background-size: cover;
     background-position: center;
@@ -323,18 +324,24 @@ main {
     text-align: center;
 }
 
-.streaming-en-vivo {
+.streaming-en-vivo,
+.grilla-programas {
     margin: 30px 12px;
+}
+
+.seccion-streaming-en-vivo iframe,
+.grilla-programas img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 35px;
+    border: 5px solid var(--bg-color-icons);
 }
 
 .seccion-streaming-en-vivo iframe {
     display: inline-block;
-    width: 100%;
-    max-width: 900px;
     height: 315px;
-    border-radius: 35px;
     overflow: hidden;
-    border: 5px solid var(--bg-color-icons);
 }
 
 iframe {
@@ -454,9 +461,10 @@ iframe {
 }
 
 .imagen-elenco-la-novela,
-.imagen-elenco-edicion-especial {
+.imagen-elenco-edicion-especial,
+.programacion-diaria_elenco-la-novela {
     -webkit-mask-image: linear-gradient(to left, black 98%, transparent);
-    mask-image: linear-gradient(to left, black 98%, transparent);
+    mask-image: linear-gradient(to left, black 94%, transparent);
 }
 
 /*!--- PAGINA PROGRAMACION DIARIA ---*/
@@ -516,15 +524,42 @@ iframe {
     display: block;
 }
 
-.programaciondiaria-img-elenco {
+.programacion-diaria-img-contenedor-elencos {
     position: absolute;
     bottom: 0;
-    right: 3px;
+    right: 0;
     width: 40%;
     height: auto;
     filter: drop-shadow(3px 1px 0 #000);
 }
 
+.programacion-diaria_elenco-algo-de-musica {
+    right: -10px;
+    width: 35%;
+}
+
+.programacion-diaria_elenco-fm,
+.programacion-diaria_elenco-nadie-dice-nada,
+.programacion-diaria_elenco-se-fue-larga,
+.programacion-diaria_elenco-patria-y-familia {
+    right: -7px;
+    width: 45%;
+}
+
+.programacion-diaria_elenco-antes-que-nadie,
+.programacion-diaria_elenco-algo-va-a-picar {
+    right: -15px;
+    width: 50%;
+}
+
+.programacion-diaria_elenco-edicion-especial,
+.programacion-diaria_elenco-stream-master {
+    width: 60%;
+}
+
+.programacion-diaria_elenco-la-novela {
+    width: 35%
+}
 
 
 .informacion-programa {
@@ -786,7 +821,8 @@ footer {
 
     /*?---  RADIO EN VIVO   ----*/
 
-    .seccion-streaming-en-vivo {
+    .seccion-streaming-en-vivo,
+    .seccion-grilla-programas {
         background-image: url(img/ilustraciones/fondo-streaming-en-vivo-desktop.webp);
     }
 
@@ -882,8 +918,6 @@ footer {
         border-top-left-radius: 27px;
         border-bottom-left-radius: 27px;
     }
-
-
 
     .informacion-programa {
         width: 55%;
