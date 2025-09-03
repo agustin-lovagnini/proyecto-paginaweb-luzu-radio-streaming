@@ -268,47 +268,40 @@ main {
 }
 
 /*? --- mensaje-ondemand ---*/
-.mensaje-ondemand {
-    background-color: var(--bg-color-secundario);
-    padding: 5px;
+.marquesina-mensaje-ondemand {
+    display: flex;
+    align-items: center;
+    padding-block: 8px;
     width: 100%;
     overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: var(--bg-color-secundario);
     border-bottom: 2px solid var(--bg-color-icons);
     border-top: 2px solid var(--bg-color-icons);
 }
 
 .mensaje-ondemand-contenido {
     display: flex;
+    align-items: center;
     width: max-content;
-    animation: scroll-loop 110s linear infinite;
+    will-change: transform;
 }
 
-.scroll-text {
-    display: flex;
-}
-
-.scroll-text span {
+.mensaje-ondemand-contenido span {
+    display: inline-block;
+    line-height: 0.2;
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
     color: var(--bg-color-primario);
     font-family: var(--font-principal);
     font-weight: 900;
-    font-size: 12px;
-    padding-right: 5px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-@keyframes scroll-loop {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    padding-left: 5px;
 }
 
 .ondemand-3 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /*?---  RADIO EN VIVO   ----*/
@@ -361,8 +354,8 @@ iframe {
 .imagenes-galeria {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 30px;
+    padding: 40px 20px 60px 20px;
+    gap: 45px;
     align-items: center;
 }
 
@@ -621,7 +614,7 @@ footer {
 
 .footer-redes-sociales {
     list-style: none;
-    margin: 25px 0;
+    margin: 5px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -652,6 +645,7 @@ footer {
 
 .texto-info {
     border-top: 2px solid var(--bg-color-icons-footer);
+    padding: 5px;
 }
 
 /**---  MEDIA QUERYS  ---*/
