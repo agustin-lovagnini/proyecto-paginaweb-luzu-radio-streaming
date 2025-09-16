@@ -1,3 +1,25 @@
+const contenedores = document.querySelectorAll(".mensaje-ondemand-contenido");
+
+contenedores.forEach(contenedor => {
+    contenedor.innerHTML += contenedor.innerHTML;
+
+    let pos = 0;
+    const velocidad = 0.2;
+
+    function moverTexto() {
+        pos -= velocidad;
+        if (Math.abs(pos) >= contenedor.scrollWidth / 2) {
+            pos = 0;
+        }
+        contenedor.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(moverTexto);
+    }
+
+    moverTexto();
+});
+
+
+
 
 /*Realice la marquesina de ondemand*/
 const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
@@ -41,23 +63,8 @@ function getVisibleProgramas() {
 }
 
 
-const contenedores = document.querySelectorAll(".mensaje-ondemand-contenido");
 
-contenedores.forEach(contenedor => {
-    contenedor.innerHTML += contenedor.innerHTML;
 
-    let pos = 0;
-    const velocidad = 0.4;
 
-    function moverTexto() {
-        pos -= velocidad;
-        if (Math.abs(pos) >= contenedor.scrollWidth / 2) {
-            pos = 0;
-        }
-        contenedor.style.transform = `translateX(${pos}px)`;
-        requestAnimationFrame(moverTexto);
-    }
 
-    moverTexto();
-});
 

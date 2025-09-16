@@ -270,6 +270,7 @@ main {
 /*? --- mensaje-ondemand ---*/
 .marquesina-mensaje-ondemand {
     display: flex;
+    gap: 20px; 
     align-items: center;
     padding-block: 8px;
     width: 100%;
@@ -277,8 +278,7 @@ main {
     white-space: nowrap;
     box-sizing: border-box;
     background-color: var(--bg-color-secundario);
-    border-bottom: 2px solid var(--bg-color-icons);
-    border-top: 2px solid var(--bg-color-icons);
+    border-block: 2px solid var(--bg-color-icons);
 }
 
 .mensaje-ondemand-contenido {
@@ -290,12 +290,12 @@ main {
 
 .mensaje-ondemand-contenido span {
     display: inline-block;
-    line-height: 0.2;
+    line-height: 0.8;
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: var(--bg-color-primario);
-    font-family: var(--font-principal);
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     padding-left: 5px;
 }
