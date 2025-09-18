@@ -1,3 +1,24 @@
+
+// menus hamburguesa
+const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
+const menuItems = document.querySelectorAll('.contenido-menu');
+
+buttonHamburguesa.addEventListener('click', () => {
+    menuItems.forEach(item => {
+        item.classList.toggle('active');
+    });
+    buttonHamburguesa.classList.toggle('active');
+    const icon = buttonHamburguesa.querySelector('i');
+    if (buttonHamburguesa.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// maruquee efecto
 const contenedores = document.querySelectorAll(".mensaje-ondemand-contenido");
 
 contenedores.forEach(contenedor => {
@@ -18,28 +39,7 @@ contenedores.forEach(contenedor => {
     moverTexto();
 });
 
-
-
-
-/*Realice la marquesina de ondemand*/
-const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
-const menuItems = document.querySelectorAll('.contenido-menu');
-
-buttonHamburguesa.addEventListener('click', () => {
-    menuItems.forEach(item => {
-        item.classList.toggle('active');
-    });
-    buttonHamburguesa.classList.toggle('active');
-    const icon = buttonHamburguesa.querySelector('i');
-    if (buttonHamburguesa.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
-
+// animacion programacion diaria
 const programas = document.querySelectorAll('.programacion-diaria-programa');
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 

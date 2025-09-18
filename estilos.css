@@ -295,9 +295,9 @@ main {
 
 .mensaje-ondemand-contenido span {
   display: inline-block;
-  line-height: 0.8;
+  line-height: 0.6;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: var(--bg-color-primario);
   font-family: Arial, Helvetica, sans-serif;
@@ -708,12 +708,12 @@ footer {
 
   .boton-programacion-diaria a,
   .contenedor-vivo-escritorio a {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .redes-sociales .botones-redes {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     font-size: 21px;
   }
 
@@ -771,7 +771,7 @@ footer {
   .redes-sociales .botones-redes:hover i,
   .boton-programacion-diaria a:hover i,
   .contenedor-vivo-escritorio a:hover i {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .tienda {
@@ -835,7 +835,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(15px, 2vw, 40px);
-    padding: clamp(20px, 5vw, 80px) clamp(15px, 6vw, 145px);
+    padding: clamp(20px, 2.5vw, 80px) clamp(15px, 6vw, 145px);
     justify-items: center;
   }
 
@@ -883,17 +883,17 @@ footer {
 
   .cambios {
     display: block;
-    font-size: clamp(18px, 2vw, 26px);
+    font-size: 14px;
     margin-bottom: 6px;
   }
 
   /*!--- PAGINA PROGRAMACION DIARIA ---*/
   .contenido-programacion-diaria {
-    padding: 80px;
+    padding: clamp(20px, 2.5vw, 80px) clamp(15px, 6vw, 145px);
     gap: 70px;
     max-width: 1200px;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
   }
 
   .programacion-diaria-programa a {
@@ -933,10 +933,23 @@ footer {
   }
 
   .informacion-programa {
+    /* position: relative; */
     width: 45%;
+    padding: 0;
     text-align: left;
     text-align: center;
+    padding: 0 30px;
   }
+
+  /* .programacion-diaria-programa:nth-child(even) .informacion-programa {
+  position: relative;
+  left: 2.5%;
+}
+
+.programacion-diaria-programa:nth-child(odd) .informacion-programa {
+  position: relative;
+  left: -2.5%;
+} */
 
   .titulo-programa {
     font-size: 30px;
