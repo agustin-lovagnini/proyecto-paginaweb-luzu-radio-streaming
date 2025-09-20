@@ -25,15 +25,24 @@ html {
 .tienda,
 .boton-programacion-diaria,
 .contenido-resumido,
-.footer-botones-redes a {
+.footer-botones-redes a,
+.footer-contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+header,
+footer,
+.contenido-menu,
+.programacion-diaria-programa a,
+.marquesina-mensaje-ondemand,
+.contenido-pagina-resumido h2 {
+  background-color: var(--bg-color-secundario);
+}
+
 /**---  SECTION HEADER  ---*/
 header {
-  background-color: var(--bg-color-secundario);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -151,7 +160,6 @@ header {
   left: 50%;
   transform: translateX(-50%) scaleY(0);
   transform-origin: top center;
-  background-color: var(--bg-color-secundario);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-bottom: 2px solid var(--bg-color-icons-footer);
@@ -202,7 +210,6 @@ main {
 /*?---  BANNER RESUMIDO  ---*/
 .contenido-pagina-resumido h2 {
   font-family: var(--font-principal);
-  background-color: var(--bg-color-secundario);
   color: var(--bg-color-primario);
   text-align: center;
   font-size: clamp(13px, 2.2vw, 16px);
@@ -278,11 +285,11 @@ main {
   gap: 20px;
   align-items: center;
   padding-block: 8px;
+  user-select: none;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
-  background-color: var(--bg-color-secundario);
   border-block: 2px solid var(--bg-color-icons);
 }
 
@@ -495,7 +502,6 @@ iframe {
   justify-items: center;
   display: block;
   cursor: pointer;
-  background-color: var(--bg-color-secundario);
   border: 3px solid var(--bg-color-icons);
   border-radius: 30px;
   overflow: hidden;
@@ -522,7 +528,7 @@ iframe {
 }
 
 .programacion-diaria-img-programa {
-  width: 105%;
+  width: 110%;
   height: auto;
   display: block;
 }
@@ -597,7 +603,6 @@ iframe {
 
 /**---  SECTION FOOTER  ---*/
 footer {
-  background-color: var(--bg-color-secundario);
   color: var(--bg-color-primario);
   border-top: 2px solid var(--bg-color-icons);
   text-align: center;
@@ -605,10 +610,7 @@ footer {
 }
 
 .footer-contenedor {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 20px auto;
   gap: 15px;
 }
@@ -933,36 +935,38 @@ footer {
   }
 
   .informacion-programa {
-    /* position: relative; */
+    position: relative; 
     width: 45%;
-    padding: 0;
-    text-align: left;
+    padding: 0 20px;
     text-align: center;
     padding: 0 30px;
+    justify-content: center;
   }
 
-  /* .programacion-diaria-programa:nth-child(even) .informacion-programa {
+  .programacion-diaria-programa:nth-child(even) .informacion-programa {
   position: relative;
   left: 2.5%;
 }
 
 .programacion-diaria-programa:nth-child(odd) .informacion-programa {
   position: relative;
-  left: -2.5%;
-} */
+  left: -0.5%;
+} 
 
   .titulo-programa {
     font-size: 30px;
-    margin-bottom: 20px;
+    line-height: 1.2;
   }
 
   .descripcion-programa {
     font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
   }
 
   .horario-programa {
     font-size: 22px;
-    margin: 20px 0 0 0;
+    margin-top: auto;
   }
 
   /**---  SECTION FOOTER  ---*/
