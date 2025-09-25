@@ -55,5 +55,14 @@ Esta es una página no oficial inspirada en LuzuTV, creada con el objetivo de mo
 - Documentación Font Awesome: [https://fontawesome.com/v4.7.0/](https://fontawesome.com/v4.7.0/)
 - Google Fonts: [https://fonts.google.com/](https://fonts.google.com/)
 
+## Capturas de pantalla del proyecto
+### Página de inicio
+![Presentación Inicio](img\readme\presentacion-inicio.png)
+![Programación Diaria Inicio](img\readme\presentacion-inicio.png)
 
+### Inicio
+![Galería](img\readme\galeria.png)
+
+### Programación diaria
+![Programación Diaria](img\readme\programacion-diaria.png)
 
