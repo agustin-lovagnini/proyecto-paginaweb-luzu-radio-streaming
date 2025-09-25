@@ -30,12 +30,12 @@ Esta es una página no oficial inspirada en LuzuTV, creada con el objetivo de mo
 ### Etapa 3: Implementación de funcionalidades
 - [x] Añadir interactividad con JavaScript (menú hamburguesa, botones dinámicos).
 - [x] Mejorar accesibilidad (atributos aria-label, roles).
-- [ ] Optimizar SEO con meta tags y Open Graph.
+- [x] Optimizar SEO con meta tags y Open Graph.
 
 ### Etapa 4: Pruebas y ajustes
 - [x] Verificar compatibilidad entre navegadores modernos.
 - [x] Realizar pruebas de usabilidad y accesibilidad.
-- [ ] Optimizar tiempos de carga y rendimiento.
+- [x] Optimizar tiempos de carga y rendimiento.
 
 ## Resultados esperados
 - Página web moderna, atractiva y totalmente responsiva.
@@ -55,14 +55,53 @@ Esta es una página no oficial inspirada en LuzuTV, creada con el objetivo de mo
 - Documentación Font Awesome: [https://fontawesome.com/v4.7.0/](https://fontawesome.com/v4.7.0/)
 - Google Fonts: [https://fonts.google.com/](https://fonts.google.com/)
 
-## Capturas de pantalla del proyecto
+
+
+
+
+
+
+
+
+## Capturas de pantalla del proyecto - vista Desktop
 ### Página de inicio
-![Presentación Inicio](img\readme\presentacion-inicio.png)
-![Programación Diaria Inicio](img\readme\presentacion-inicio.png)
+![Presentación inicio](img/readme/vista-descktop/presentacion-index.png)
 
-### Inicio
-![Galería](img\readme\galeria.png)
+### Página de inicio - Programación diaria
+![Programación diaria inicio](img/readme/vista-descktop/presentacion-programacion-diaria.png)
 
-### Programación diaria
-![Programación Diaria](img\readme\programacion-diaria.png)
+### Página de inicio - Contenido (Galería)
+![Galería](img/readme/vista-descktop/contenido-galeria-index.png)
 
+### Programación diaria - Contenido (Grilla de programas)
+![Programación diaria](img/readme/vista-descktop/contenido-grilla-programacion-diaria.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Capturas de pantalla del proyecto - vista Mobile
+### Página de inicio
+![Presentación inicio](img/readme/vista-mobile/presentacion-index-mobile.png)
+
+### Página de inicio - Programación diaria
+![Programación diaria inicio](img/readme/vista-mobile/presentacion-programacion-diaria-mobile.png)
+
+### Menú hamburguesa
+![Menú hamburguesa](img/readme/vista-mobile/menu-hamburguesa-mobile.png)
+
+### Página de inicio - Contenido (Galería)
+![Galería](img/readme/vista-mobile/contenido-galeria-index-mobile.png)
+
+### Programación diaria - Contenido (Grilla de programas)
+![Programación diaria](img/readme/vista-mobile/contenido-grilla-programacion-diaria-mobile.png)

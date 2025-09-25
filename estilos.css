@@ -223,7 +223,7 @@ main {
 
 /*?---  BANNER RESUMIDO  ---*/
 .contenido-pagina-resumido h2 {
-  font-size: clamp(13px, 2.2vw, 16px);
+  font-size: clamp(11px, 2.2vw, 16px);
   padding: 6px 0;
   letter-spacing: 1px;
 }
