@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-a {
+a, .menu-hamburguesa {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
