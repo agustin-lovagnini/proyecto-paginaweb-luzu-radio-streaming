@@ -43,7 +43,9 @@ contenedores.forEach(contenedor => {
 const programas = document.querySelectorAll('.programacion-diaria-programa');
 let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-programas[0].classList.add('programa-visible');
+if (programas.length > 0) { 
+    programas[0].classList.add('programa-visible');
+}
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

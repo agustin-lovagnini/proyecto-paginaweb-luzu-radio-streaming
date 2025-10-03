@@ -3,7 +3,7 @@
   --bg-color-primario: #f1f1f1;
   --bg-color-secundario: #1c1c1c;
   --bg-color-icons: #ff8a80;
-  --bg-color-icons-footer: #797d7f;
+  --bg-color-icons-footer: #9e9e9e;
   --font-principal: "Roboto", sans-serif;
   --borde-icons: 5px solid var(--bg-color-icons);
   --sombra-fuerte: 3px 5px 12px rgba(0, 0, 0, 0.9);
@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-a {
+a, .menu-hamburguesa {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -122,6 +122,7 @@ header {
 
 .logo img {
   width: 120px;
+  height: 25px;
 }
 
 .contenedor-vivo-escritorio {
@@ -149,6 +150,7 @@ header {
 
 .tienda img {
   width: 200px;
+  height: 55px;
 }
 
 .boton-programacion-diaria {
@@ -206,14 +208,20 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border: 1px solid var(--bg-color-primario);
-  padding: clamp(8px, 2vw, 12px) clamp(6px, 2vw, 10px);
+  background-color: #e10000;
+  color: #ffffff;
+  border: 3px solid var(--bg-color-primario);
   border-radius: 50px;
   box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
   z-index: 3000;
   font-size: 15px;
   padding: 15px;
+  gap: 5px;
+  width: 85px; 
+  height: 50px; 
+  will-change: transform;
 }
+
 
 /**---  SECTION MAIN  ---*/
 main {
@@ -259,12 +267,12 @@ main {
 
 .tamaño-r {
   height: 30px;
-  width: auto;
+  width: 30px;
 }
 
 .tamaño-flechas {
   height: 20px;
-  width: auto;
+  width: 55px;
 }
 
 .voltear {
@@ -282,6 +290,7 @@ main {
   white-space: nowrap;
   box-sizing: border-box;
   border-block: 2px solid var(--bg-color-icons);
+  height: 30px;
 }
 
 .mensaje-ondemand-contenido {
@@ -323,8 +332,12 @@ main {
 }
 
 .seccion-streaming-en-vivo iframe {
-  height: 315px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto; 
+  background-color: #000;
 }
+
 
 iframe {
   border: none;
@@ -334,9 +347,9 @@ iframe {
 /*?--- GALERIA ---*/
 .fondo-main {
   background-size: cover;
-  background-position: center;
+  background-position: cesnter;
   background-repeat: no-repeat;
-  background-image: url("img/ilustraciones/fondo-main-mobile-y-tablet.webp");
+  background-image: url("img/ilustraciones/fondo-main-mobile-tablet.webp");
 }
 
 .imagenes-galeria {
@@ -349,6 +362,7 @@ iframe {
   border: 5px solid var(--bg-color-icons);
   border-radius: 30px;
   box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.9);
+  min-height: 100px;
 }
 
 .programa a {
@@ -359,6 +373,9 @@ iframe {
 
 .img-programa {
   z-index: 100;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 .imagen-superpuesta {
@@ -533,6 +550,7 @@ footer {
 
 .logo-footer {
   width: 110px;
+  height: 25px;
 }
 
 .footer-redes-sociales {
@@ -556,7 +574,7 @@ footer {
 .texto-copyright {
   margin-bottom: 15px;
   font-size: 12px;
-  color: var(--bg-color-icons-footer);
+  color: #b0b0b0;
 }
 
 .texto-info {
@@ -574,11 +592,16 @@ footer {
 
   .logo img {
     margin-left: 20px;
+    height: 25px;
   }
 
   .logo img,
   .tienda img {
     width: 150px;
+  }
+
+  .tienda img {
+    height: 45px;
   }
 
   .contenido-menu {
@@ -698,11 +721,12 @@ footer {
 
   .tamaño-r {
     height: 60px;
-    width: auto;
+    width: 60px;
   }
 
   .tamaño-flechas {
     height: 35px;
+    width: 110px;
   }
 
   /*?---  RADIO EN VIVO   ----*/
@@ -715,6 +739,11 @@ footer {
   }
 
   /*?--- GALERIA ---*/
+  .fondo-main {
+    background-size: auto;
+    background-image: url("img/ilustraciones/fondo-main-desktop.webp");
+  }
+
   .imagenes-galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
