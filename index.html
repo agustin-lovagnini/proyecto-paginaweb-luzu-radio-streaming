@@ -46,13 +46,16 @@
     <meta name="twitter:image"
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
     <meta name="twitter:site" content="@LuzuComunidad">
+
+    <!-- Preload de imagenes importantes -->
+    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high">
 </head>
 
 <body>
     <header class="flex bg-color-secundario align-items width-full">
         <h1 class="logo flex align-items">
             <a href="index.html" class="align-items">
-                <img src="img/logos/logo-header.webp" alt="Luzu TV" class="block" fetchpriority="high">
+                <img src="img/logos/logo-header.webp" alt="Luzu TV" class="block object-fit-cover" fetchpriority="high">
             </a>
         </h1>
 
@@ -125,7 +128,7 @@
                 <li>
                     <a href="https://luzutv.shop/" class="tienda justify-content flex align-items"
                         target="_blank">
-                        <img src="img/logos/diseño-tienda.webp" alt="Carro de compras">
+                        <img src="img/logos/diseño-tienda.webp" alt="Carro de compras" loading="lazy">
                     </a>
                 </li>
                 <li class="boton-programacion-diaria justify-content flex align-items">
@@ -220,7 +223,7 @@
                 <!-- fm -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/fmluzu_/" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/fm.webp" alt="Fm" fetchpriority="high">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -234,7 +237,7 @@
                 <!-- antes que nadie -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/antesquenadie__/?hl=es" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/antes-que-nadie.webp" alt="Antes que nadie">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -248,7 +251,7 @@
                 <!-- nadie dice nada -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/nadiedicenada/?hl=es" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -262,7 +265,7 @@
                 <!-- patria y familia -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/patriayfamilia_/" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -276,7 +279,7 @@
                 <!-- se fue larga -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/sefuelarga/?hl=es" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/se-fue-larga.webp" alt="Se fue larga" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -291,7 +294,7 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/lanovela__?igsh=MXBoMTEwZ2xjNTA4MQ%3D%3D" target="_blank"
                         class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/la-novela.webp" alt="la novela" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -306,7 +309,7 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/algovaapicar?igsh=MWx0ZmxwNDgxaGljMQ%3D%3D" target="_blank"
                         class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -320,7 +323,7 @@
                 <!-- algo de musica -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/algodemusica__/?hl=es" target="_blank" class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de musica" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -336,7 +339,7 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/edicionespecial__/?hl=es" target="_blank"
                         class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/edicion-especial.webp" alt="Edición especial" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
@@ -352,7 +355,7 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/xtreammasterluzutv/?hl=es" target="_blank"
                         class="block width-full">
-                        <img class="img-programa block"
+                        <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/stream-master.webp" alt="Stream master" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">ON
