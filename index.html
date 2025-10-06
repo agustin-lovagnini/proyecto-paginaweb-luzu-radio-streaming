@@ -4,42 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Web LuzuTV</title>
+    <title>LuzuTV</title>
 
-    <!-- Favicon -->
+    <!-- ✅ Favicon -->
     <link rel="icon" href="img/logos/favicon.png">
 
-    <!-- Fuentes de Google -->
+    <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Cargar solo las fuentes necesarias optimizadas -->
+    <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-    <!-- Font Awesome -->
+    <!-- ✅ Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Hoja de estilos propia -->
+    <!-- ✅ Hoja de estilos y script -->
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
 
-    <!-- Meta SEO -->
+    <!-- ✅ Meta SEO -->
     <meta name="description" content="Sitio web no oficial inspirado en LuzuTV. Diseño y contenido hecho por Agustín.">
     <meta name="keywords"
         content="LuzuTV, fan page, streaming, Nico Occhiato, programas, entretenimiento, Argentina, YouTube, redes, radio, noticias, nadie dice nada">
     <meta name="author" content="Agustín Lovagnini">
 
-    <!-- OPEN GRAPH (Facebook, WhatsApp, etc.) -->
+    <!-- ✅ Open Graph (Facebook, WhatsApp, etc.) -->
     <meta property="og:title" content="LuzuTV Fan Page">
     <meta property="og:description"
-        content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín estudiante de programacion.">
+        content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín, estudiante de programación.">
     <meta property="og:image"
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
     <meta property="og:url" content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/">
     <meta property="og:type" content="website">
 
-    <!-- TWITTER CARD -->
+    <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LuzuTV Fan Page">
     <meta name="twitter:description" content="Una página creada por fans para disfrutar de todo lo que amás de LuzuTV.">
@@ -47,9 +51,12 @@
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
     <meta name="twitter:site" content="@LuzuComunidad">
 
-    <!-- Preload de imagenes importantes -->
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high">
+    <!-- ✅ Preload de imágenes importantes -->
+    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high"
+        type="image/webp">
+    <link rel="preload" as="image" href="img/ilustraciones/fondo-streaming-en-vivo-mobile.webp" fetchpriority="high">
 </head>
+
 
 <body>
     <header class="flex bg-color-secundario align-items width-full">
@@ -126,8 +133,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://luzutv.shop/" class="tienda justify-content flex align-items"
-                        target="_blank">
+                    <a href="https://luzutv.shop/" class="tienda justify-content flex align-items" target="_blank">
                         <img src="img/logos/diseño-tienda.webp" alt="Carro de compras" loading="lazy">
                     </a>
                 </li>
@@ -223,8 +229,8 @@
                 <!-- fm -->
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/fmluzu_/" target="_blank" class="block width-full">
-                        <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/fm.webp" alt="Fm" fetchpriority="high">
+                        <img class="img-programa block object-fit-cover" src="img/presentaciones-programas/fm.webp"
+                            alt="Fm" fetchpriority="high">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>07HS a 08HS</p>
@@ -252,12 +258,14 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/nadiedicenada/?hl=es" target="_blank" class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada" loading="lazy">
+                            src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>10HS a 12:30HS</p>
                             <img class="imagen-elenco width-48 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -266,12 +274,14 @@
                 <div class="programa overflow-hidden block">
                     <a href="https://www.instagram.com/patriayfamilia_/" target="_blank" class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia" loading="lazy">
+                            src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>12:30HS a 14:30HS</p>
                             <img class="imagen-elenco width-48 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -285,7 +295,8 @@
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>14:30HS a 16:30HS</p>
                             <img class="imagen-elenco width-48 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -300,7 +311,8 @@
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lun - Mier - Vier<br>16:30HS a 18:30HS</p>
                             <img class="imagen-elenco width-36 height-auto position-absolute imagen-elenco-mask"
-                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -310,12 +322,14 @@
                     <a href="https://www.instagram.com/algovaapicar?igsh=MWx0ZmxwNDgxaGljMQ%3D%3D" target="_blank"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar" loading="lazy">
+                            src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Martes - Jueves <br>16:30HS a 18:30HS</p>
                             <img class="imagen-elenco width-48 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -330,7 +344,8 @@
                                 <span class="cambios">ON DEMAND</span>
                             </p>
                             <img class="imagen-elenco width-36 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -340,13 +355,15 @@
                     <a href="https://www.instagram.com/edicionespecial__/?hl=es" target="_blank"
                         class="block width-full">
                         <img class="img-programa block object-fit-cover"
-                            src="img/presentaciones-programas/edicion-especial.webp" alt="Edición especial" loading="lazy">
+                            src="img/presentaciones-programas/edicion-especial.webp" alt="Edición especial"
+                            loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 <span class="cambios">PROXIMAMENTE</span>
                             </p>
                             <img class="imagen-elenco width-50 height-auto position-absolute imagen-elenco-mask"
-                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -361,7 +378,8 @@
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">ON
                                 DEMAND</p>
                             <img class="imagen-elenco width-50 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -385,7 +403,8 @@
         <div class="footer-contenedor flex justify-content align-items flex-direction-column">
             <div class="contenedor-logo-footer">
                 <a href="index.html">
-                    <img src="img/logos/logo-footer.webp" alt="logo LuzuTV" class="logo-footer height-auto" loading="lazy">
+                    <img src="img/logos/logo-footer.webp" alt="logo LuzuTV" class="logo-footer height-auto"
+                        loading="lazy">
                 </a>
             </div>
             <div class="contenedor-redes-sociales-footer">

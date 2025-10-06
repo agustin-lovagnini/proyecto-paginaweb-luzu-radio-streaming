@@ -4,42 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Web LuzuTV</title>
+    <title>Programacion | luzuTV</title>
 
-    <!-- Favicon -->
+    <!-- ✅ Favicon -->
     <link rel="icon" href="img/logos/favicon.png">
 
-<!-- Fuentes de Google -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Cargar solo las fuentes necesarias optimizadas -->
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
-    rel="stylesheet">
+    <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ✅ Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Hoja de estilos propia -->
+    <!-- ✅ Hoja de estilos y script -->
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
 
-    <!-- Meta SEO -->
+    <!-- ✅ Meta SEO -->
     <meta name="description" content="Sitio web no oficial inspirado en LuzuTV. Diseño y contenido hecho por Agustín.">
     <meta name="keywords"
         content="LuzuTV, fan page, streaming, Nico Occhiato, programas, entretenimiento, Argentina, YouTube, redes, radio, noticias, nadie dice nada">
     <meta name="author" content="Agustín Lovagnini">
 
-    <!-- OPEN GRAPH (Facebook, WhatsApp, etc.) -->
+    <!-- ✅ Open Graph (Facebook, WhatsApp, etc.) -->
     <meta property="og:title" content="LuzuTV Fan Page">
     <meta property="og:description"
-        content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín estudiante de programacion.">
+        content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín, estudiante de programación.">
     <meta property="og:image"
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
     <meta property="og:url" content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/">
     <meta property="og:type" content="website">
 
-    <!-- TWITTER CARD -->
+    <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LuzuTV Fan Page">
     <meta name="twitter:description" content="Una página creada por fans para disfrutar de todo lo que amás de LuzuTV.">
@@ -47,9 +51,13 @@
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
     <meta name="twitter:site" content="@LuzuComunidad">
 
-    <!-- Preload de imagenes importantes -->
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high">
+    <!-- ✅ Preload de imágenes importantes -->
+    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high"
+        type="image/webp">
+    <link rel="preload" as="image" href="img/ilustraciones/fondo-streaming-en-vivo-mobile.webp" fetchpriority="high">
 </head>
+
+
 
 <body>
     <header class="flex bg-color-secundario align-items width-full">
@@ -126,8 +134,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://luzutv.shop/" class="tienda justify-content flex align-items"
-                        target="_blank">
+                    <a href="https://luzutv.shop/" class="tienda justify-content flex align-items" target="_blank">
                         <img src="img/logos/diseño-tienda.webp" alt="Carro de compras" loading="lazy">
                     </a>
                 </li>
@@ -245,9 +252,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/antes-que-nadie.webp" alt="Antes que nadie" loading="lazy">
+                                src="img/presentaciones-programas/antes-que-nadie.webp" alt="Antes que nadie"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-15 width-50"
-                                src="img/elenco-programas/elenco-antes-que-nadie.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-antes-que-nadie.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -267,9 +276,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada" loading="lazy">
+                                src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
-                                src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -289,9 +300,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia" loading="lazy">
+                                src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
-                                src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -313,7 +326,8 @@
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/se-fue-larga.webp" alt="Se Fue Larga" loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
-                                src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -335,7 +349,8 @@
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/la-novela.webp" alt="La Novela" loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos position-absolute imagen-elenco-mask width-35"
-                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -355,9 +370,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar" loading="lazy">
+                                src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-15 width-50"
-                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -376,9 +393,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de Musica" loading="lazy">
+                                src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de Musica"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-10 width-35"
-                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -397,9 +416,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/edicion-especial.webp" alt="Edicion Especial" loading="lazy">
+                                src="img/presentaciones-programas/edicion-especial.webp" alt="Edicion Especial"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-60"
-                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -419,9 +440,11 @@
 
                         <div class="img-contenido-programas overflow-hidden inline-block">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/stream-master.webp" alt="Stream Master" loading="lazy">
+                                src="img/presentaciones-programas/stream-master.webp" alt="Stream Master"
+                                loading="lazy">
                             <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-60"
-                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa"
+                                loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -457,7 +480,8 @@
         <div class="footer-contenedor justify-content flex align-items flex-direction-column">
             <div class="contenedor-logo-footer">
                 <a href="index.html">
-                    <img src="img/logos/logo-footer.webp" alt="logo LuzuTV" class="logo-footer height-auto" loading="lazy">
+                    <img src="img/logos/logo-footer.webp" alt="logo LuzuTV" class="logo-footer height-auto"
+                        loading="lazy">
                 </a>
             </div>
             <div class="contenedor-redes-sociales-footer">
