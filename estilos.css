@@ -595,7 +595,7 @@ footer {
 
   .logo img {
     margin-left: 20px;
-    height: 25px;
+    height: auto;
   }
 
   .logo img,
@@ -679,7 +679,7 @@ footer {
   }
 
   .btn-con-icono {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
 
   .btn-con-icono:hover {
