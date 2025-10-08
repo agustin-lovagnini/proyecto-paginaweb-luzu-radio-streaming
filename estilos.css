@@ -317,7 +317,7 @@ main {
 
 /*?---  RADIO EN VIVO   ----*/
 .fondo-seccion {
-  background-image: url(img/ilustraciones/fondo-streaming-en-vivo-mobile.webp);
+  background-image: url("img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp" );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -351,9 +351,9 @@ iframe {
 /*?--- GALERIA ---*/
 .fondo-main {
   background-size: cover;
-  background-position: cesnter;
+  background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/ilustraciones/fondo-main-mobile-tablet.webp");
+  background-image: url("img/fondos/fondos-main/fondo-main-mobile-tablet.webp");
 }
 
 .imagenes-galeria {
@@ -734,7 +734,7 @@ footer {
 
   /*?---  RADIO EN VIVO   ----*/
   .fondo-seccion {
-    background-image: url(img/ilustraciones/fondo-streaming-en-vivo-desktop.webp);
+    background-image: url("img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-desktop.webp");
   }
 
   .seccion-streaming-en-vivo iframe {
@@ -743,8 +743,7 @@ footer {
 
   /*?--- GALERIA ---*/
   .fondo-main {
-    background-size: auto;
-    background-image: url("img/ilustraciones/fondo-main-desktop.webp");
+    background-image: url("img/fondos/fondos-main/fondo-main-desktop.webp");
   }
 
   .imagenes-galeria {
@@ -812,7 +811,6 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
@@ -908,5 +906,11 @@ footer {
 
   .logo-footer {
     width: 130px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .fondo-main {
+    background-image: url("img/fondos/fondos-main/fondo-main-desktop-2560×1440.webp");
   }
 }
