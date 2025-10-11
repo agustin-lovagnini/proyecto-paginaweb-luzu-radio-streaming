@@ -16,7 +16,8 @@
   padding: 0;
 }
 
-a, .menu-hamburguesa {
+a,
+.menu-hamburguesa {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -82,10 +83,6 @@ html {
   overflow: hidden;
 }
 
-.texto-negrita {
-  font-weight: 900;
-}
-
 .color-primario {
   color: var(--bg-color-primario);
 }
@@ -99,11 +96,15 @@ html {
 }
 
 .no-seleccionar {
-    user-select: none;
+  user-select: none;
 }
 
 .object-fit-cover {
   object-fit: cover;
+}
+
+.background-cover {
+  background: center/cover no-repeat;
 }
 
 /**---  SECTION HEADER  ---*/
@@ -126,7 +127,7 @@ header {
 
 .logo img {
   width: 120px;
-  height: 25px;
+  height: 23px;
 }
 
 .contenedor-vivo-escritorio {
@@ -167,6 +168,7 @@ header {
   padding: 15px;
   margin: 10px;
 }
+
 
 /*? ---  Despliegue del menú hamburguesa --- */
 .redes-sociales,
@@ -221,8 +223,8 @@ header {
   font-size: 15px;
   padding: 15px;
   gap: 5px;
-  width: 85px; 
-  height: 50px; 
+  width: 85px;
+  height: 50px;
   will-change: transform;
 }
 
@@ -242,9 +244,6 @@ main {
 
 .contenido-resumido {
   background-color: #c6ff00;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 70px;
   padding: 8px 0;
 }
@@ -305,10 +304,9 @@ main {
 .mensaje-ondemand-contenido span {
   line-height: 0.6;
   margin: 0;
-  font-size: 12px;
   letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif;
   padding-left: 5px;
+  font: 900 0.8rem Arial, Helvetica, sans-serif;
 }
 
 .ondemand-3 {
@@ -317,10 +315,7 @@ main {
 
 /*?---  RADIO EN VIVO   ----*/
 .fondo-seccion {
-  background-image: url("img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp" );
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp");
 }
 
 .streaming-en-vivo,
@@ -338,7 +333,7 @@ main {
 .seccion-streaming-en-vivo iframe {
   width: 100%;
   aspect-ratio: 16/9;
-  height: auto; 
+  height: auto;
   background-color: #000;
 }
 
@@ -349,15 +344,16 @@ iframe {
 
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
-.fondo-main {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("img/fondos/fondos-main/fondo-main-mobile-tablet.webp");
+.fondo-main-index {
+  background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp");
+}
+
+.fondo-main-programacion-diaria {
+  background-image: url("img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-mobile-tablet.webp");
 }
 
 .imagenes-galeria {
-  padding: 40px 20px 60px 20px;
+  padding: 40px 20px 60px;
   gap: 45px;
 }
 
@@ -379,6 +375,9 @@ iframe {
   z-index: 100;
   width: 100%;
   height: auto;
+  aspect-ratio: 1/0.5;
+  object-fit: cover;
+  display: block;
 }
 
 .imagen-superpuesta {
@@ -398,8 +397,7 @@ iframe {
 
 .texto-iformacion-programa {
   margin: 0;
-  font-family: Arial;
-  font-size: 18px;
+  font: 600 18px Arial;
   bottom: 5%;
   left: 5%;
   text-align: start;
@@ -408,9 +406,10 @@ iframe {
   text-shadow: 0px 0px 7px #000;
 }
 
-.imagen-elenco {
+.imagen-elenco,
+.programacion-diaria-img-contenedor-elencos {
   bottom: 0;
-  right: 0;
+  right: var(--custom-right, 0);
   filter: drop-shadow(3px 1px 0 #000);
   z-index: 300;
 }
@@ -421,44 +420,13 @@ iframe {
 }
 
 /*!--- MEDIDAS GENERALES IMG Y ELENCO ---*/
-.width-35 {
-  width: 35%;
+
+.width-custom {
+  width: var(--custom-width);
 }
 
-.width-36 {
-  width: 36%
-}
-
-.width-40 {
-  width: 40%;
-}
-
-.width-45 {
-  width: 45%;
-}
-
-.width-48 {
-  width: 48%;
-}
-
-.width-50 {
-  width: 50%
-}
-
-.width-60 {
-  width: 60%;
-}
-
-.right-minus-10 {
-  right: -10px;
-}
-
-.right-minus-7 {
-  right: -7px;
-}
-
-.right-minus-15 {
-  right: -15px;
+.right-costum {
+  right: var(--custom-right);
 }
 
 /*!--- PAGINA PROGRAMACION DIARIA ---*/
@@ -507,13 +475,7 @@ iframe {
 
 .programacion-diaria-img-programa {
   width: 110%;
-}
-
-.programacion-diaria-img-contenedor-elencos {
-  bottom: 0;
-  right: 0;
-  width: 40%;
-  filter: drop-shadow(3px 1px 0 #000);
+  height: auto;
 }
 
 .informacion-programa {
@@ -530,7 +492,7 @@ iframe {
 }
 
 .descripcion-programa {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -593,14 +555,14 @@ footer {
     height: 4rem;
   }
 
-  .logo img {
-    margin-left: 20px;
-    height: auto;
-  }
-
   .logo img,
   .tienda img {
     width: 150px;
+    height: 29px;
+  }
+
+  .logo img {
+    margin-left: 20px;
   }
 
   .tienda img {
@@ -674,29 +636,26 @@ footer {
   }
 
   .btn-con-icono,
-  .btn-con-icono i {
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  .btn-con-icono i,
+  .tienda {
+    transition: all 0.3s ease;
   }
 
   .btn-con-icono {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
 
-  .btn-con-icono:hover {
+  .btn-con-icono:hover,
+  .tienda:hover {
     transform: scale(1.05);
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     will-change: transform, text-shadow;
   }
 
+  .btn-con-icono:hover {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+
   .btn-con-icono:hover i {
-    transform: scale(1.05);
-  }
-
-  .tienda {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .tienda:hover {
     transform: scale(1.05);
   }
 
@@ -742,8 +701,12 @@ footer {
   }
 
   /*?--- GALERIA ---*/
-  .fondo-main {
-    background-image: url("img/fondos/fondos-main/fondo-main-desktop.webp");
+  .fondo-main-index {
+    background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop.webp");
+  }
+
+  .fondo-main-programacion-diaria {
+    background-image: url("img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-desktop.webp");
   }
 
   .imagenes-galeria {
@@ -828,6 +791,14 @@ footer {
     width: 55%;
   }
 
+  .programacion-diaria-programa:nth-child(odd) .img-contenido-programas {
+    justify-content: flex-end;
+  }
+
+  .programacion-diaria-programa:nth-child(even) .img-contenido-programas {
+    justify-content: flex-start;
+  }
+
   .programacion-diaria-programa:nth-child(even) .programacion-diaria-img-programa {
     mask-image: linear-gradient(to left, black 70%, transparent 90%);
     -webkit-mask-image: linear-gradient(to left, black 70%, transparent 90%);
@@ -866,7 +837,6 @@ footer {
   }
 
   .descripcion-programa {
-    font-size: 18px;
     margin-bottom: 10px;
     line-height: 1.4;
   }
@@ -880,7 +850,7 @@ footer {
   .footer-contenedor {
     flex-direction: row;
     justify-content: space-between;
-    margin: 8px 0 6px 0;
+    margin: 8px 0 6px;
     padding: 0 70px;
   }
 
@@ -896,7 +866,7 @@ footer {
     width: 40px;
     height: 40px;
     font-size: 19px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .footer-redes-sociales a:hover {
@@ -910,7 +880,7 @@ footer {
 }
 
 @media (min-width: 1920px) {
-  .fondo-main {
-    background-image: url("img/fondos/fondos-main/fondo-main-desktop-2560×1440.webp");
+  .fondo-main-index {
+    background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop-2560×1440.webp");
   }
 }

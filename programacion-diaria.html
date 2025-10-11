@@ -12,6 +12,10 @@
     <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        as="style">
 
     <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
@@ -22,8 +26,12 @@
     </noscript>
 
     <!-- ✅ Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
     <!-- ✅ Hoja de estilos y script -->
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
@@ -39,7 +47,7 @@
     <meta property="og:description"
         content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín, estudiante de programación.">
     <meta property="og:image"
-        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
+        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/logo-header.webp">
     <meta property="og:url" content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/">
     <meta property="og:type" content="website">
 
@@ -48,13 +56,15 @@
     <meta name="twitter:title" content="LuzuTV Fan Page">
     <meta name="twitter:description" content="Una página creada por fans para disfrutar de todo lo que amás de LuzuTV.">
     <meta name="twitter:image"
-        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
+        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/logo-header.webp">
     <meta name="twitter:site" content="@LuzuComunidad">
 
     <!-- ✅ Preload de imágenes importantes -->
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high"
-        type="image/webp">
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-streaming-en-vivo-mobile.webp" fetchpriority="high">
+    <link rel="preload" as="image"
+        href="img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-mobile-tablet.webp"
+        fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
+        fetchpriority="high">
 </head>
 
 
@@ -147,19 +157,19 @@
             </ul>
         </nav>
         <a href="https://www.youtube.com/watch?v=7hXe5dUGipk" target="_blank"
-            class="boton-flotante-vivo text-decoration-none texto-negrita flex align-items justify-content">
+            class="boton-flotante-vivo text-decoration-none flex align-items justify-content">
             <span class="fa fa-circle"></span>
             <span>VIVO</span>
         </a>
     </header>
 
 
-    <main class="flex flex-direction-column ">
+    <main class="flex flex-direction-column">
         <div class="contenido-pagina-resumido">
             <h2 class="bg-color-secundario text-align height-auto width-full color-primario">TODAS LAS NOTICIAS
                 RESUMIDAS EN UN SOLO LUGAR</h2>
 
-            <div class="contenido-resumido justify-content flex align-items width-full">
+            <div class="contenido-resumido justify-content flex align-items width-full background-cover">
 
                 <!-- lado-izquierdo  -->
                 <div class="flex align-items espacio-lados">
@@ -173,7 +183,7 @@
                         alt="decoracion izquierda">
                 </div>
 
-                <h3 class="marca-resumido texto-negrita">
+                <h3 class="marca-resumido">
                     <a href="https://www.resumido.info/" target="_blank"
                         class="text-decoration-none color-primario inline-block">RESUMIDO</a>
                 </h3>
@@ -193,7 +203,7 @@
 
         <div
             class="marquesina-mensaje-ondemand bg-color-secundario ondemand-1 align-items width-full overflow-hidden no-seleccionar flex">
-            <div class="mensaje-ondemand-contenido align-items flex texto-negrita color-primario">
+            <div class="mensaje-ondemand-contenido align-items flex color-primario">
                 <span class="inline-block"> • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON
                     DEMAND • EN VIVO • ON
                     DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN
@@ -203,7 +213,7 @@
         </div>
 
         <!-- seccion-grilla-programas -->
-        <section class="text-align height-auto width-full fondo-seccion">
+        <section class="text-align height-auto width-full fondo-seccion background-cover">
             <div class="grilla-programas">
                 <img class="height-auto width-full" src="img/elenco-programas/diseño-de-programacion-diaria.webp"
                     alt="imagen grilla de programas" fetchpriority="high" loading="eager">
@@ -212,7 +222,7 @@
 
         <div
             class="marquesina-mensaje-ondemand bg-color-secundario ondemand-2 align-items width-full overflow-hidden no-seleccionar flex">
-            <div class="mensaje-ondemand-contenido align-items flex texto-negrita color-primario">
+            <div class="mensaje-ondemand-contenido align-items flex color-primario">
                 <span class="inline-block"> • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON
                     DEMAND • EN VIVO • ON
                     DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN
@@ -222,17 +232,18 @@
         </div>
 
         <!-- Galeria programacion diaria -->
-        <div class="fondo-main">
+        <div class="fondo-main-programacion-diaria background-cover">
             <div class="contenido-programacion-diaria flex flex-direction-column">
                 <!-- Programa: fm -->
                 <div class="programacion-diaria-programa">
                     <a href="https://www.instagram.com/fmluzu_/" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/fm.webp" alt="fm" fetchpriority="high">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 45%; --custom-right: -10px;"
                                 src="img/elenco-programas/elenco-fm.webp" alt="Elenco del programa">
                         </div>
 
@@ -240,7 +251,7 @@
                             <h2 class="titulo-programa color-primario">FM</h2>
                             <p class="descripcion-programa">Un programa matutino conducido por Cris Vanadía que combina
                                 música, humor e interacción con la audiencia para empezar el día con buena energía.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 7:00 - 8:00</p>
+                            <p class="horario-programa">Lunes a Viernes 7:00 - 8:00</p>
                         </div>
                     </a>
                 </div>
@@ -250,13 +261,13 @@
                     <a href="https://www.instagram.com/antesquenadie__/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/antes-que-nadie.webp" alt="Antes que nadie"
                                 loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-15 width-50"
-                                src="img/elenco-programas/elenco-antes-que-nadie.webp" alt="Elenco del programa"
-                                loading="lazy">
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom"
+                                style="--custom-width: 50%;" src="img/elenco-programas/elenco-antes-que-nadie.webp"
+                                alt="Elenco del programa" loading="lazy">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -264,7 +275,7 @@
                             <p class="descripcion-programa">Un programa de actualidad, entrevistas y humor conducido por
                                 Diego Leuco, Mica Vázquez, Johanna Francella y Martín “El Trinche” Dardik, con una
                                 mirada fresca y entretenida sobre lo que pasa en el mundo y en redes.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 8:00 - 10:00</p>
+                            <p class="horario-programa">Lunes a Viernes 8:00 - 10:00</p>
                         </div>
                     </a>
                 </div>
@@ -274,11 +285,12 @@
                     <a href="https://www.instagram.com/nadiedicenada/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada"
                                 loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom"
+                                style="--custom-width: 45%;        "
                                 src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -288,7 +300,7 @@
                             <p class="descripcion-programa">Un programa espontáneo y divertido conducido por Nico
                                 Occhiato, Flor Jazmín Peña, Momi Giardina, Nacho Elizalde, Santi Talledo y Martín
                                 Garabal, donde se mezclan humor, reflexiones y juegos con mucha frescura.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 10:00 - 12:30</p>
+                            <p class="horario-programa">Lunes a Viernes 10:00 - 12:30</p>
                         </div>
                     </a>
                 </div>
@@ -298,11 +310,12 @@
                     <a href="https://www.instagram.com/patriayfamilia_/" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia"
                                 loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 45%; --custom-right: -5px;"
                                 src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -312,7 +325,7 @@
                             <p class="descripcion-programa">Un programa fresco y copado con Fede Popgold, Anita
                                 Espósito, Lucas Spadafora, Cami Mayan, Juli Castro y Dani Celis, donde charlan sobre
                                 temas de hoy con buena onda, risas y mucha complicidad.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 12:30 - 14:30</p>
+                            <p class="horario-programa">Lunes a Viernes 12:30 - 14:30</p>
                         </div>
                     </a>
                 </div>
@@ -322,10 +335,11 @@
                     <a href="https://www.instagram.com/sefuelarga/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/se-fue-larga.webp" alt="Se Fue Larga" loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-7 width-45"
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 45%; --custom-right: -5px;"
                                 src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -335,7 +349,7 @@
                             <p class="descripcion-programa">Un programa divertido y sin filtro con Ferbo, Belén Negri,
                                 Domi Faena, Sofía Calvo y Lucas Lezin, donde se mezcla humor, confesiones y desahogo con
                                 mucha energía y buena onda.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 14:30 - 16:30</p>
+                            <p class="horario-programa">Lunes a Viernes 14:30 - 16:30</p>
                         </div>
                     </a>
                 </div>
@@ -345,11 +359,12 @@
                     <a href="https://www.instagram.com/lanovela__?igsh=MXBoMTEwZ2xjNTA4MQ%3D%3D" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/la-novela.webp" alt="La Novela" loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos position-absolute imagen-elenco-mask width-35"
-                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa">
+                                src="img/presentaciones-programas/la-novela.webp" alt="La Novela">
+                            <img class="programacion-diaria-img-contenedor-elencos position-absolute imagen-elenco-mask width-custom"
+                                style="--custom-width: 40%;" src="img/elenco-programas/elenco-la-novela.webp"
+                                alt="Elenco del programa">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -357,7 +372,7 @@
                             <p class="descripcion-programa">Un programa lleno de drama, humor y emociones, con Carina
                                 Zampini, Diego Castro, Gabriel Schultz y Agus Battioni, donde cada episodio se vive como
                                 una verdadera novela.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 16:30 - 18:30</p>
+                            <p class="horario-programa">Lunes a Viernes 16:30 - 18:30</p>
                         </div>
                     </a>
                 </div>
@@ -367,20 +382,19 @@
                     <a href="https://www.instagram.com/algovaapicar?igsh=MWx0ZmxwNDgxaGljMQ%3D%3D" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar"
-                                loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-15 width-50"
-                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa"
-                                loading="lazy">
+                                src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar">
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 50%; --custom-right: -10px;"
+                                src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
                             <h2 class="titulo-programa color-primario">Algo Va a Picar</h2>
                             <p class="descripcion-programa">Un programa descontracturado y picante con Lu Villar, Vicky
                                 Garabal y Marcos Giles, donde se charla de todo con humor, anécdotas y buena vibra.</p>
-                            <p class="horario-programa texto-negrita">Lunes a Viernes 16:30 - 18:30</p>
+                            <p class="horario-programa">Lunes a Viernes 16:30 - 18:30</p>
                         </div>
                     </a>
                 </div>
@@ -390,19 +404,19 @@
                     <a href="https://www.instagram.com/algodemusica__/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
-                                src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de Musica"
-                                loading="lazy">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute right-minus-10 width-35"
-                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa" loading="lazy">
+                                src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de Musica">
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 35%; --custom-right: -10px;"
+                                src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
                             <h2 class="titulo-programa color-primario">Algo de Musica</h2>
                             <p class="descripcion-programa">Un programa con mucha música y corazón, donde Karina La
                                 Princesita se abre como nunca entre charlas, canciones y momentos únicos.</p>
-                            <p class="horario-programa texto-negrita">ON DDEMAND</p>
+                            <p class="horario-programa">ON DDEMAND</p>
                         </div>
                     </a>
                 </div>
@@ -412,11 +426,12 @@
                     <a href="https://www.instagram.com/edicionespecial__/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/edicion-especial.webp" alt="Edicion Especial">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-60"
-                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa">
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom"
+                                style="--custom-width: 60%;" src="img/elenco-programas/elenco-edicion-especial.webp"
+                                alt="Elenco del programa">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -424,7 +439,7 @@
                             <p class="descripcion-programa">Una edición especial con Martín Garabal, Alexis Moyano,
                                 Juliana Gattas y Vicky Garabal, donde el humor, el delirio y la creatividad se mezclan
                                 en una combinación explosiva.</p>
-                            <p class="horario-programa texto-negrita">PROXIMAMENTE</p>
+                            <p class="horario-programa">PROXIMAMENTE</p>
                         </div>
                     </a>
                 </div>
@@ -434,11 +449,12 @@
                     <a href="https://www.instagram.com/xtreammasterluzutv/?hl=es" target="_blank"
                         class="bg-color-secundario block text-decoration-none overflow-hidden">
 
-                        <div class="img-contenido-programas overflow-hidden inline-block">
+                        <div class="img-contenido-programas flex justify-content align-item overflow-hidden">
                             <img class="programacion-diaria-img-programa block height-auto"
                                 src="img/presentaciones-programas/stream-master.webp" alt="Stream Master">
-                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-60"
-                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa">
+                            <img class="programacion-diaria-img-contenedor-elencos height-auto position-absolute width-custom"
+                                style="--custom-width: 60%;" src="img/elenco-programas/elenco-stream-master.webp"
+                                alt="Elenco del programa">
                         </div>
 
                         <div class="informacion-programa flex text-align flex-direction-column color-primario">
@@ -447,14 +463,14 @@
                                 Straneo, Nazareno Mottola, Javi Fernández, Walterio y Gustavo Pavan, en un show
                                 desopilante que no da respiro.
                             </p>
-                            <p class="horario-programa texto-negrita">ON DEMAND</p>
+                            <p class="horario-programa">ON DEMAND</p>
                         </div>
                     </a>
                 </div>
             </div>
             <div
                 class="marquesina-mensaje-ondemand bg-color-secundario ondemand-3 align-items width-full overflow-hidden no-seleccionar flex">
-                <div class="mensaje-ondemand-contenido align-items flex texto-negrita color-primario">
+                <div class="mensaje-ondemand-contenido align-items flex color-primario">
                     <span class="inline-block"> • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON
                         DEMAND • EN VIVO • ON
                         DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND •

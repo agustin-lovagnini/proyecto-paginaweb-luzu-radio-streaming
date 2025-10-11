@@ -12,6 +12,10 @@
     <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        as="style">
 
     <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
@@ -22,8 +26,12 @@
     </noscript>
 
     <!-- ✅ Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
     <!-- ✅ Hoja de estilos y script -->
     <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
@@ -39,7 +47,7 @@
     <meta property="og:description"
         content="Explorá lo mejor de LuzuTV. Fan page hecha por Agustín, estudiante de programación.">
     <meta property="og:image"
-        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
+        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/logo-header.webp">
     <meta property="og:url" content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/">
     <meta property="og:type" content="website">
 
@@ -48,18 +56,19 @@
     <meta name="twitter:title" content="LuzuTV Fan Page">
     <meta name="twitter:description" content="Una página creada por fans para disfrutar de todo lo que amás de LuzuTV.">
     <meta name="twitter:image"
-        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/Luzu_Tv-redes.png">
+        content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/logo-header.webp">
     <meta name="twitter:site" content="@LuzuComunidad">
 
     <!-- ✅ Preload de imágenes importantes -->
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-main-mobile-tablet.webp" fetchpriority="high"
-        type="image/webp">
-    <link rel="preload" as="image" href="img/ilustraciones/fondo-streaming-en-vivo-mobile.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp"
+        fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
+        fetchpriority="high">
 </head>
 
 
 <body>
-    <header class="flex bg-color-secundario align-items width-full">
+    <header class="flex bg-color-secundario width-full">
         <h1 class="logo flex align-items">
             <a href="index.html" class="align-items">
                 <img src="img/logos/logo-header.webp" alt="Luzu TV" class="block object-fit-cover" fetchpriority="high">
@@ -127,7 +136,7 @@
 
                 <li class="contenedor-vivo-escritorio">
                     <a href="https://www.youtube.com/channel/UCTHaNTsP7hsVgBxARZTuajw/live" target="_blank"
-                        class="estilo-botones block text-decoration-none boton-estandar btn-con-icono">
+                        class="estilo-botones flex text-decoration-none boton-estandar btn-con-icono justify-content align-items ">
                         <span class="fa fa-circle"></span>
                         <span class="boton-vivo-escritorio">VIVO</span>
                     </a>
@@ -145,7 +154,7 @@
             </ul>
         </nav>
         <a href="https://www.youtube.com/watch?v=7hXe5dUGipk" target="_blank"
-            class="boton-flotante-vivo text-decoration-none texto-negrita flex align-items justify-content">
+            class="boton-flotante-vivo text-decoration-none flex align-items justify-content">
             <span class="fa fa-circle"></span>
             <span>VIVO</span>
         </a>
@@ -157,7 +166,7 @@
             <h2 class="bg-color-secundario text-align height-auto width-full color-primario">TODAS LAS NOTICIAS
                 RESUMIDAS EN UN SOLO LUGAR</h2>
 
-            <div class="contenido-resumido justify-content flex align-items width-full">
+            <div class="contenido-resumido justify-content flex align-items width-full background-cover">
 
                 <!-- lado-izquierdo  -->
                 <div class="flex align-items espacio-lados">
@@ -200,7 +209,7 @@
             </div>
         </div>
 
-        <section class="seccion-streaming-en-vivo text-align height-auto width-full fondo-seccion">
+        <section class="seccion-streaming-en-vivo text-align height-auto width-full fondo-seccion background-cover">
             <div class="streaming-en-vivo">
                 <iframe class="height-auto width-full overflow-hidden" width="560" height="315"
                     src="https://www.youtube.com/embed/live_stream?channel=UCTHaNTsP7hsVgBxARZTuajw"
@@ -222,7 +231,7 @@
         </div>
 
         <!-- Galeria pagina de inicio -->
-        <div class="fondo-main">
+        <div class="fondo-main-index background-cover">
             <div class="imagenes-galeria flex align-items flex-direction-column">
 
                 <!-- fm -->
@@ -233,7 +242,8 @@
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>07HS a 08HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-costum"
+                                style="--custom-width: 48%; --custom-right: -15px;"
                                 src="img/elenco-programas/elenco-fm.webp" alt="Elenco del programa">
                         </div>
                     </a>
@@ -247,8 +257,9 @@
                         <div class="imagen-superpuesta width-full position-absolute">
                             <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
                                 Lunes a Viernes:<br>08HS a 10HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-antes-que-nadie.webp" alt="Elenco del programa">
+                            <img class="imagen-elenco height-auto position-absolute width-custom"
+                                style="--custom-width: 48%;" src="img/elenco-programas/elenco-antes-que-nadie.webp"
+                                alt="Elenco del programa">
                         </div>
                     </a>
                 </div>
@@ -260,9 +271,10 @@
                             src="img/presentaciones-programas/nadie-dice-nada.webp" alt="Nadie dice nada"
                             loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 Lunes a Viernes:<br>10HS a 12:30HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 45%; --custom-right: -7px;"
                                 src="img/elenco-programas/elenco-nadie-dice-nada.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -276,9 +288,10 @@
                             src="img/presentaciones-programas/patria-y-familia.webp" alt="Patria y familia"
                             loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 Lunes a Viernes:<br>12:30HS a 14:30HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 45%; --custom-right: -5px;"
                                 src="img/elenco-programas/elenco-patria-y-familia.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -291,9 +304,10 @@
                         <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/se-fue-larga.webp" alt="Se fue larga" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 Lunes a Viernes:<br>14:30HS a 16:30HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 45%; --custom-right: -10px;"
                                 src="img/elenco-programas/elenco-se-fue-larga.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -307,11 +321,11 @@
                         <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/la-novela.webp" alt="la novela" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 Lun - Mier - Vier<br>16:30HS a 18:30HS</p>
-                            <img class="imagen-elenco width-36 height-auto position-absolute imagen-elenco-mask"
-                                src="img/elenco-programas/elenco-la-novela.webp" alt="Elenco del programa"
-                                loading="lazy">
+                            <img class="imagen-elenco height-auto position-absolute imagen-elenco-mask width-custom"
+                                style="--custom-width: 40%;" src="img/elenco-programas/elenco-la-novela.webp"
+                                alt="Elenco del programa">
                         </div>
                     </a>
                 </div>
@@ -324,9 +338,10 @@
                             src="img/presentaciones-programas/algo-va-a-picar.webp" alt="Algo va a picar"
                             loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 Martes - Jueves <br>16:30HS a 18:30HS</p>
-                            <img class="imagen-elenco width-48 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 50%; --custom-right: -15px;"
                                 src="img/elenco-programas/elenco-algo-va-a-picar.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -339,10 +354,11 @@
                         <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/algo-de-musica.webp" alt="Algo de musica" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 <span class="cambios">ON DEMAND</span>
                             </p>
-                            <img class="imagen-elenco width-36 height-auto position-absolute"
+                            <img class="imagen-elenco height-auto position-absolute width-custom right-custom"
+                                style="--custom-width: 35%; --custom-right: -15px;"
                                 src="img/elenco-programas/elenco-algo-de-musica.webp" alt="Elenco del programa"
                                 loading="lazy">
                         </div>
@@ -357,12 +373,12 @@
                             src="img/presentaciones-programas/edicion-especial.webp" alt="Edición especial"
                             loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">
+                            <p class="texto-iformacion-programa block color-primario position-absolute">
                                 <span class="cambios">PROXIMAMENTE</span>
                             </p>
-                            <img class="imagen-elenco width-50 height-auto position-absolute imagen-elenco-mask"
-                                src="img/elenco-programas/elenco-edicion-especial.webp" alt="Elenco del programa"
-                                loading="lazy">
+                            <img class="imagen-elenco height-auto position-absolute imagen-elenco-mask width-custom"
+                                style="--custom-width: 50%;" src="img/elenco-programas/elenco-edicion-especial.webp"
+                                alt="Elenco del programa">
                         </div>
                     </a>
                 </div>
@@ -374,11 +390,11 @@
                         <img class="img-programa block object-fit-cover"
                             src="img/presentaciones-programas/stream-master.webp" alt="Stream master" loading="lazy">
                         <div class="imagen-superpuesta width-full position-absolute">
-                            <p class="texto-iformacion-programa block texto-negrita color-primario position-absolute">ON
+                            <p class="texto-iformacion-programa block color-primario position-absolute">ON
                                 DEMAND</p>
-                            <img class="imagen-elenco width-50 height-auto position-absolute"
-                                src="img/elenco-programas/elenco-stream-master.webp" alt="Elenco del programa"
-                                loading="lazy">
+                            <img class="imagen-elenco height-auto position-absolute width-custom"
+                                style="--custom-width: 60%;" src="img/elenco-programas/elenco-stream-master.webp"
+                                alt="Elenco del programa" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -386,7 +402,7 @@
 
             <div
                 class="marquesina-mensaje-ondemand bg-color-secundario ondemand-3 align-items width-full overflow-hidden no-seleccionar flex">
-                <div class="mensaje-ondemand-contenido align-items flex texto-negrita color-primario">
+                <div class="mensaje-ondemand-contenido align-items flex color-primario">
                     <span class="inline-block"> • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON
                         DEMAND • EN VIVO • ON
                         DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND • EN VIVO • ON DEMAND •
