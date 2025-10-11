@@ -220,7 +220,7 @@ header {
   border-radius: 50px;
   box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
   z-index: 3000;
-  font-size: 15px;
+  font: 600 16px var(--font-principal);
   padding: 15px;
   gap: 5px;
   width: 85px;
@@ -397,7 +397,7 @@ iframe {
 
 .texto-iformacion-programa {
   margin: 0;
-  font: 600 18px Arial;
+  font: 900 18px var(--font-principal);
   bottom: 5%;
   left: 5%;
   text-align: start;
