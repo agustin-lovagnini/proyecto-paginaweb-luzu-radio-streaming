@@ -2,39 +2,13 @@
 <html lang="es">
 
 <head>
+    <!-- ✅ Codificación y viewport (siempre primero) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Título y Favicon -->
     <title>LuzuTV</title>
-
-    <!-- ✅ Favicon -->
     <link rel="icon" href="img/logos/favicon.png">
-
-    <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
-        as="style">
-
-    <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <!-- ✅ Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </noscript>
-    <!-- ✅ Hoja de estilos y script -->
-    <link rel="stylesheet" href="estilos.css">
-    <script src="script.js" defer></script>
 
     <!-- ✅ Meta SEO -->
     <meta name="description" content="Sitio web no oficial inspirado en LuzuTV. Diseño y contenido hecho por Agustín.">
@@ -59,11 +33,39 @@
         content="https://agustin-lovagnini.github.io/proyecto-paginaWeb-luzuRadioStreaming/img/logos/logo-header.webp">
     <meta name="twitter:site" content="@LuzuComunidad">
 
-    <!-- ✅ Preload de imágenes importantes -->
+    <!-- ✅ Preconnect para mejorar tiempos de carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- ✅ Preload de recursos críticos -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        as="style">
     <link rel="preload" as="image" href="img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp"
         fetchpriority="high" type="image/webp">
     <link rel="preload" as="image" href="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
         fetchpriority="high">
+
+    <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- ✅ Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </noscript>
+
+    <!-- ✅ Hoja de estilos y script -->
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
 </head>
 
 
