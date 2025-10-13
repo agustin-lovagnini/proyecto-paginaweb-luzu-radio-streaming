@@ -41,7 +41,6 @@ contenedores.forEach(contenedor => {
 
 // animacion programacion diaria
 const programas = document.querySelectorAll('.programacion-diaria-programa');
-let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 if (programas.length > 0) { 
     programas[0].classList.add('programa-visible');
