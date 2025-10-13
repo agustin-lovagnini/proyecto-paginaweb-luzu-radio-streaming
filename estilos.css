@@ -103,10 +103,6 @@ html {
   object-fit: cover;
 }
 
-.background-cover {
-  background: center/cover no-repeat;
-}
-
 /**---  SECTION HEADER  ---*/
 header {
   flex-direction: row;
@@ -332,9 +328,10 @@ main {
 
 .seccion-streaming-en-vivo iframe {
   width: 100%;
-  aspect-ratio: 16/9;
   height: auto;
   background-color: #000;
+  aspect-ratio: 16/9;
+
 }
 
 
@@ -344,9 +341,6 @@ iframe {
 
 /*!---  PAGINA DE INICIO  ---*/
 /*?--- GALERIA ---*/
-.fondo-main-index {
-  background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-mobile-tablet.webp");
-}
 
 .fondo-main-programacion-diaria {
   background-image: url("img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-mobile-tablet.webp");
@@ -409,6 +403,7 @@ iframe {
   right: var(--custom-right, 0);
   filter: drop-shadow(3px 1px 0 #000);
   z-index: 300;
+  aspect-ratio: 1/1;
 }
 
 .imagen-elenco-mask {
@@ -471,8 +466,11 @@ iframe {
 }
 
 .programacion-diaria-img-programa {
-  width: 110%;
+  width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
+    object-fit: cover;
+
 }
 
 .informacion-programa {
@@ -698,9 +696,6 @@ footer {
   }
 
   /*?--- GALERIA ---*/
-  .fondo-main-index {
-    background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop.webp");
-  }
 
   .fondo-main-programacion-diaria {
     background-image: url("img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-desktop.webp");
@@ -870,11 +865,5 @@ footer {
 
   .logo-footer {
     width: 130px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .fondo-main-index {
-    background-image: url("img/fondos/fondos-main/fondo-pagina-index/fondo-main-desktop-2560×1440.webp");
   }
 }

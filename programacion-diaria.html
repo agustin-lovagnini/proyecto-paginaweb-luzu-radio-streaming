@@ -222,8 +222,13 @@
         <!-- seccion-grilla-programas -->
         <section class="text-align height-auto width-full fondo-seccion background-cover">
             <div class="grilla-programas">
-                <img class="height-auto width-full" src="img/elenco-programas/diseño-de-programacion-diaria.webp"
-                    alt="imagen grilla de programas" fetchpriority="high" loading="eager">
+                <picture>
+                    <source media="(max-width: 767px)"
+                        srcset="img/presentaciones-programas/grilla-programas/diseño-de-programacion-diaria-mobile-tablet.webp">
+                    <img class="height-auto width-full" style="object-fit: contain;"
+                        src="img/presentaciones-programas/grilla-programas/diseño-de-programacion-diaria-desktop.webp"
+                        alt="imagen grilla de programas" loading="lazy" width="905" height="509">
+                </picture>
             </div>
         </section>
 
