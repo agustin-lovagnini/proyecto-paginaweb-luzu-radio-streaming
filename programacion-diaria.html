@@ -48,11 +48,6 @@
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
         as="style">
-    <link rel="preload" as="image"
-        href="img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-mobile-tablet.webp"
-        fetchpriority="high" type="image/webp">
-    <link rel="preload" as="image" href="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
-        fetchpriority="high">
 
     <!-- ✅ Fuentes de Google (carga asíncrona para rendimiento) -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700;900&display=swap"
@@ -170,7 +165,6 @@
         </a>
     </header>
 
-
     <main class="flex flex-direction-column">
         <div class="contenido-pagina-resumido">
             <h2 class="bg-color-secundario text-align height-auto width-full color-primario">TODAS LAS NOTICIAS
@@ -220,14 +214,26 @@
         </div>
 
         <!-- seccion-grilla-programas -->
-        <section class="text-align height-auto width-full fondo-seccion background-cover">
+        <section class="height-auto contenedor-fondo fondo-seccion text-align">
+            <!-- Imagen de fondo -->
+            <picture class="contenedor-imagen-fondo">
+                <!-- Desktop -->
+                <source media="(min-width: 1025px)"
+                    srcset="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-desktop.webp" type="image/webp">
+
+                <!-- Mobile/Tablet -->
+                <img src="img/fondos/fondos-seccion-inicial/fondo-streaming-en-vivo-mobile-tablet.webp"
+                    alt="Fondo de la sección de streaming en vivo de LuzuTV" class="imagen-fondo" loading="lazy">
+            </picture>
+
             <div class="grilla-programas">
                 <picture>
                     <source media="(max-width: 767px)"
                         srcset="img/presentaciones-programas/grilla-programas/diseño-de-programacion-diaria-mobile-tablet.webp">
                     <img class="height-auto width-full" style="object-fit: contain;"
                         src="img/presentaciones-programas/grilla-programas/diseño-de-programacion-diaria-desktop.webp"
-                        alt="imagen grilla de programas" loading="lazy" width="905" height="509">
+                        alt="Diseño de la grilla de programación diaria de LuzuTV" loading="lazy" width="905"
+                        height="509">
                 </picture>
             </div>
         </section>
@@ -244,7 +250,20 @@
         </div>
 
         <!-- Galeria programacion diaria -->
-        <div class="fondo-main-programacion-diaria background-cover">
+        <div class="fondo-main-programacion-diaria contenedor-fondo">
+            <!-- Imagen de fondo -->
+            <picture class="contenedor-imagen-fondo">
+                <!-- Desktop -->
+                <source media="(min-width: 1025px)"
+                    srcset="img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-desktop.webp"
+                    type="image/webp">
+
+                <!-- Mobile/Tablet -->
+                <img src="img/fondos/fondos-main/fondo-pagina-programacion-diaria/fondo-main-programacion-diaria-mobile-tablet.webp"
+                    alt="Fondo principal de la página de programación diaria de LuzuTV" class="imagen-fondo"
+                    loading="lazy">
+            </picture>
+
             <div class="contenido-programacion-diaria flex flex-direction-column">
                 <!-- Programa: fm -->
                 <div class="programacion-diaria-programa">
