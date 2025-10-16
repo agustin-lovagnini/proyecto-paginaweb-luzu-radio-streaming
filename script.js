@@ -1,5 +1,4 @@
-
-// menus hamburguesa
+// MENÚ HAMBURGUESA
 const buttonHamburguesa = document.querySelector('.menu-hamburguesa');
 const menuItems = document.querySelectorAll('.contenido-menu');
 
@@ -18,20 +17,29 @@ buttonHamburguesa.addEventListener('click', () => {
     }
 });
 
-// maruquee efecto
+// MARQUEE EFECTO 
 const contenedores = document.querySelectorAll(".mensaje-ondemand-contenido");
 
 contenedores.forEach(contenedor => {
-    contenedor.innerHTML += contenedor.innerHTML;
-
+    const span = contenedor.querySelector("span");
+    
+    if (!span) return;
+    
+    const clon = span.cloneNode(true);
+    span.parentNode.appendChild(clon);
+    
     let pos = 0;
     const velocidad = 0.2;
+    
+    const anchoUnico = span.scrollWidth;
 
     function moverTexto() {
         pos -= velocidad;
-        if (Math.abs(pos) >= contenedor.scrollWidth / 2) {
+        
+        if (Math.abs(pos) >= anchoUnico) {
             pos = 0;
         }
+        
         contenedor.style.transform = `translateX(${pos}px)`;
         requestAnimationFrame(moverTexto);
     }
@@ -39,7 +47,7 @@ contenedores.forEach(contenedor => {
     moverTexto();
 });
 
-// animacion programacion diaria
+// ANIMACIÓN PROGRAMACIÓN DIARIA
 const programas = document.querySelectorAll('.programacion-diaria-programa');
 
 if (programas.length > 0) { 
@@ -62,10 +70,3 @@ function getVisibleProgramas() {
         return rect.top < window.innerHeight && rect.bottom > 0;
     });
 }
-
-
-
-
-
-
-
