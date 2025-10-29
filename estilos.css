@@ -317,8 +317,8 @@ main {
 .streaming-en-vivo,
 .grilla-programas {
   margin: 30px 12px;
-  position: relative;  
-  z-index: 1;         
+  position: relative;
+  z-index: 1;
 }
 
 .seccion-streaming-en-vivo iframe,
@@ -490,7 +490,7 @@ iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-    object-fit: cover;
+  object-fit: cover;
 
 }
 
@@ -522,6 +522,7 @@ iframe {
 footer {
   border-top: 2px solid var(--bg-color-icons);
   z-index: 4000;
+  padding-bottom: 15px;
 }
 
 .footer-contenedor {
@@ -578,7 +579,7 @@ footer {
   body {
     padding-bottom: 0;
   }
-  
+
   header {
     padding: 0px 15px;
     text-align: left;
@@ -863,6 +864,10 @@ footer {
   }
 
   /**---  SECTION FOOTER  ---*/
+  footer {
+    padding-bottom: 30px;
+  }
+
   .footer-contenedor {
     flex-direction: row;
     justify-content: space-between;
